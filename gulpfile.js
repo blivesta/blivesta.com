@@ -199,7 +199,6 @@ gulp.task('cleanup', function(cb) {
 
 gulp.task('ghpages', function() {
   return gulp
-
     .src('./gh-pages/**/*')
     .pipe(ghpages({
       remoteUrl: 'git@github.com:blivesta-com/blivesta-com.github.io.git',
