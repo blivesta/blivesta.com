@@ -180,7 +180,8 @@ gulp.task('copy', function() {
   return gulp
     .src([
       './src/webfonts/**',
-      './src/ico/**'
+      './src/ico/**',
+      './src/CNAME'
     ],{
       base:"./src"
     })
