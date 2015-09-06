@@ -1,0 +1,15 @@
+.Block {
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.Block--borderTop {
+  border-top: 3px solid var(--g-borderColor);
+}
+
+@media (--g-viewport-sm) {
+	.Block {
+	  padding-top: 8%;
+	  padding-bottom: 8%;
+	}
+}

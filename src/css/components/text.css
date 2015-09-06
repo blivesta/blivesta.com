@@ -1,0 +1,68 @@
+.Name,
+.Total,
+.Lead,
+.Heading {
+  letter-spacing: var(--g-letterSpace-sm);
+}
+
+.Name,
+.Lead,
+.Total,
+.Heading {
+  text-align: center;
+}
+
+.Name,
+.Total {
+  line-height: 1;
+  margin-top: 3%;
+  margin-bottom: 0;
+}
+
+
+.Total {
+  font-size: 26vw;
+}
+@media (--g-viewport-sm) {
+	.Total {
+	  font-size: 13vw;
+	}
+}
+
+
+.Name {
+  font-size: 20vw;
+}
+@media (--g-viewport-sm) {
+	.Name {
+	  font-size: 16vw;
+	}
+}
+@media (--g-viewport-lg) {
+	.Name {
+	  font-size: 14vw;
+	}
+}
+
+
+.Heading {
+  font-size: 10vw;
+	margin-bottom: var(--g-space-xs);
+}
+@media (--g-viewport-sm) {
+	.Heading {
+	  font-size: 6vw;
+	}
+}
+
+
+.Lead {
+  font-size: 4vw;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (--g-viewport-sm) {
+	.Lead {
+	  font-size: 2vw;
+	}
+}

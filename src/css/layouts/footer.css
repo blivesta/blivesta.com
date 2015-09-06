@@ -1,0 +1,6 @@
+.Footer {
+  z-index:1;
+  position: relative;
+    border-top: 3px solid var(--g-borderColor);
+
+}

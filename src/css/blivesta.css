@@ -1,0 +1,37 @@
+@import "normalize.css";
+
+@import "sircus";
+
+@import "./elements/elements";
+
+@import "./layouts/header";
+@import "./layouts/footer";
+
+@import "./components/wrap";
+@import "./components/icon";
+@import "./components/card";
+@import "./components/block";
+@import "./components/text";
+@import "./components/sns";
+@import "./components/ruler";
+
+
+:root {
+  --g-primary: rgba(0, 0, 0, 1);
+
+  --g-fontFamily-ag: "ITCAvantGardeW04-Bold";
+  --g-fontFamily-sansEn: "Helvetica Neue", Helvetica, sans-serif;
+  --g-fontFamily: var(--g-fontFamily-ag);
+
+  --g-borderColor: var(--g-primary);
+
+  --body-fontFamily: var(--g-fontFamily);
+  --body-fontColor: var(--g-primary);
+  --body-fill: var(--g-primary);
+
+  --heading-color: var(--g-primary);
+
+  --link-color: var(--g-primary);
+  --link-color-hover: var(--g-primary);
+
+}

@@ -1,0 +1,18 @@
+.Header {
+  margin-top: 15%;
+  margin-bottom: 20%;
+  padding-top:10px;
+}
+
+@media (--g-viewport-sm) {
+	.Header {
+	  margin-top: 5%;
+	  margin-bottom: 5%;
+	}
+}
+@media (--g-viewport-lg) {
+	.Header {
+	  margin-top: 1%;
+	  margin-bottom: 1%;
+	}
+}

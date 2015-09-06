@@ -1,0 +1,41 @@
+.Sns {
+  border-top: 3px solid var(--g-borderColor);
+  border-bottom: 2px solid var(--g-borderColor);
+  text-align: center;
+}
+.Sns.Block {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+@media (--g-viewport-sm) {
+  .Sns.Block {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+}
+
+
+.Sns a {
+  padding:0;
+  display: block;
+}
+
+
+.Sns .Icon {
+  width: 32px;
+  height: 32px;
+}
+
+@media (--g-viewport-md) {
+	.Sns .Icon {
+	  width: 42px;
+	  height: 42px;
+	}
+}
+
+@media (--g-viewport-lg) {
+	.Sns .Icon {
+	  width: 48px;
+	  height: 48px;
+	}
+}
