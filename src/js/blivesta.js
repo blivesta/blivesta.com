@@ -6,7 +6,7 @@ var GetRepo = {
     var d = $.Deferred();
     $.get({
       url: 'https://api.github.com/search/repositories?q=user:blivesta+user:sircus&sort=stars',
-      data: { access_token: "f6468a94bb282f9dff6ba9fc1cc66c1482752218" },
+      data: { access_token: "99e3be7ff8812c3d01d64260fe7bef0446f88351" },
       dataType: "jsonp",
       success: d.resolve,
       error: d.reject
