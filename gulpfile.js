@@ -245,8 +245,7 @@ gulp.task('default', ['build'], function(cb) {
 
 gulp.task('build', ['cleanup'], function(cb) {
   runSequence(
-    'js',
-    'css', 'html', 'copy',
+    'js', 'css', 'html', 'copy',
     ['sitemap', 'jshint', 'htmlhint'],
     cb
   );

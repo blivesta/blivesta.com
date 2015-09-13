@@ -3,7 +3,6 @@ var icon = require('./icon');
 
 module.exports = function(datas) {
 
-  var repoCount = datas.data.length;
   var ranking = 8;
 	var starTotal = 0;
 	var forkTotal = 0;
