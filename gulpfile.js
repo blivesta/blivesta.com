@@ -180,7 +180,17 @@ gulp.task('copy', function() {
   return gulp
     .src([
       './src/webfonts/**',
-      './src/ico/**',
+      './src/ico/**'
+    ],{
+      base:"./src"
+    })
+    .pipe(gulp.dest('./gh-pages/'));
+});
+
+
+gulp.task('copy-cname', function() {
+  return gulp
+    .src([
       './src/CNAME'
     ],{
       base:"./src"
@@ -203,7 +213,8 @@ gulp.task('ghpages', function() {
     .src('./gh-pages/**/*')
     .pipe(ghpages({
       remoteUrl: 'git@github.com:blivesta-com/blivesta-com.github.io.git',
-      branch: 'master'
+      branch: 'master',
+      push: true
     }));
 });
 
@@ -234,7 +245,8 @@ gulp.task('default', ['build'], function(cb) {
 
 gulp.task('build', ['cleanup'], function(cb) {
   runSequence(
-    'js', 'css', 'html', 'copy',
+    'js',
+    'css', 'html', 'copy',
     ['sitemap', 'jshint', 'htmlhint'],
     cb
   );
@@ -244,8 +256,9 @@ gulp.task('build', ['cleanup'], function(cb) {
 
 gulp.task('deploy', ['build'], function(cb) {
   runSequence(
-    ['minify'],
-    'ghpages', ['pagespeed'],
+    ['minify','copy-cname'],
+    'ghpages',
+    ['pagespeed'],
     cb
   );
 });
