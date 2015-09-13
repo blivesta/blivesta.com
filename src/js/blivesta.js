@@ -1,24 +1,12 @@
 var $ = require('jquery');
 var repoBlivesta = require('./getrepo-blivesta');
-var repoSircus = require('./getrepo-sircus');
 
 var GetRepo = {
   blivesta: function() {
     var d = $.Deferred();
-    $.ajax({
-      url: 'https://api.github.com/users/blivesta/repos',
-      data: { access_token: "64f825c5471958c54227629640bc3659fc14d81c" },
-      dataType: "jsonp",
-      success: d.resolve,
-      error: d.reject
-    });
-    return d.promise();
-  },
-  sircus: function() {
-    var d = $.Deferred();
-    $.ajax({
-      url: 'https://api.github.com/orgs/sircus/repos',
-      data: { access_token: "15f2af8f454997c983a77f748e525090db5707b7" },
+    $.get({
+      url: 'https://api.github.com/search/repositories?q=user:blivesta+user:sircus&sort=stars',
+      data: { access_token: "f6468a94bb282f9dff6ba9fc1cc66c1482752218" },
       dataType: "jsonp",
       success: d.resolve,
       error: d.reject
@@ -33,11 +21,3 @@ GetRepo.blivesta().done(function(datas) {
 });
 
 GetRepo.blivesta().fail(function(datas) {});
-
-
-GetRepo.sircus().done(function(datas) {
-  repoSircus(datas);
-});
-
-
-GetRepo.sircus().fail(function(datas) {});
