@@ -1,5 +1,5 @@
 .Block {
-  padding-top: 20%;
+  padding-top: 15%;
   padding-bottom: 20%;
 }
 
@@ -9,7 +9,7 @@
 
 @media (--g-viewport-sm) {
 	.Block {
-	  padding-top: 8%;
+	  padding-top: 6%;
 	  padding-bottom: 8%;
 	}
 }
