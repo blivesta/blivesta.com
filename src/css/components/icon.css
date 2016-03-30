@@ -10,40 +10,23 @@
   fill:var(--g-primary);
 }
 
-.Icon-heart {
-  width: 40px;
-  height: 40px;
-}
-
-
-
-
 .IconWrap,
 .IconWrap .IconXl {
-  width: 64px;
-  height: 64px;
+  width: 15vw;
+  height: 15vw;
 }
 
 @media (--g-viewport-sm) {
 	.IconWrap,
 	.IconWrap .IconXl {
-	  width: 96px;
-	  height: 96px;
+    width: 10vw;
+    height: 10vw;
 	}
 }
-
-@media (--g-viewport-md) {
+@media (--g-viewport-xl) {
 	.IconWrap,
 	.IconWrap .IconXl {
-	  width: 128px;
-	  height: 128px;
-	}
-}
-
-@media (--g-viewport-lg) {
-	.IconWrap,
-	.IconWrap .IconXl {
-	  width: 138px;
-	  height: 138px;
+    width: 8vw;
+    height: 8vw;
 	}
 }
