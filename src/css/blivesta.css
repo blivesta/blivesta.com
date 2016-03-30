@@ -14,6 +14,7 @@
 @import "./components/sns";
 @import "./components/ruler";
 
+@custom-media --g-viewport-xl (min-width: 87.5em);
 
 :root {
   --g-primary: rgba(0, 0, 0, 1);

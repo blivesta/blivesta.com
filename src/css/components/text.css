@@ -29,30 +29,40 @@
 	  font-size: 13vw;
 	}
 }
+@media (--g-viewport-lg) {
+	.Total {
+	  font-size: 10vw;
+	}
+}
 
 
 .Name {
-  font-size: 20vw;
+  font-size: 18vw;
 }
 @media (--g-viewport-sm) {
 	.Name {
-	  font-size: 16vw;
+	  font-size: 15vw;
 	}
 }
 @media (--g-viewport-lg) {
 	.Name {
-	  font-size: 14vw;
+	  font-size: 13vw;
+	}
+}
+@media (--g-viewport-xl) {
+	.Name {
+	  font-size: 11vw;
 	}
 }
 
 
 .Heading {
-  font-size: 10vw;
+  font-size: 8vw;
 	margin-bottom: var(--g-space-xs);
 }
-@media (--g-viewport-sm) {
+@media (--g-viewport-md) {
 	.Heading {
-	  font-size: 6vw;
+	  font-size: 4vw;
 	}
 }
 
@@ -65,5 +75,10 @@
 @media (--g-viewport-sm) {
 	.Lead {
 	  font-size: 2vw;
+	}
+}
+@media (--g-viewport-lg) {
+	.Lead {
+	  font-size: 1.5vw;
 	}
 }

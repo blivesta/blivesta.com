@@ -1,15 +1,23 @@
 .Block {
-  padding-top: 15%;
-  padding-bottom: 20%;
-}
-
-.Block--borderTop {
-  border-top: 3px solid var(--g-borderColor);
+  margin-top: 40%;
+  margin-bottom: 40%;
 }
 
 @media (--g-viewport-sm) {
 	.Block {
-	  padding-top: 6%;
-	  padding-bottom: 8%;
+	  margin-top: 30%;
+	  margin-bottom: 30%;
+	}
+}
+@media (--g-viewport-md) {
+	.Block {
+	  margin-top: 20%;
+	  margin-bottom: 20%;
+	}
+}
+@media (--g-viewport-lg) {
+	.Block {
+	  margin-top: 12%;
+	  margin-bottom: 12%;
 	}
 }
