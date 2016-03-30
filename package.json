@@ -1,7 +1,7 @@
 {
   "name": "blivesta.com",
   "description": "Desgin & Build Based in Tokyo",
-  "author": "Yasuyuki Enomoto <enmt@blivesta.com> (http://blivesta.com/)",
+  "author": "blivesta <design@blivesta.com> (http://blivesta.com/)",
   "homepage": "http://blivesta.com/",
   "scripts": {
     "setup": "npm i && gulp build",
