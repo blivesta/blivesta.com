@@ -3,7 +3,7 @@ var icon = require('./icon');
 
 module.exports = function(datas) {
 
-  var ranking = 14;
+  var ranking = 16;
 	var starTotal = 0;
 	var forkTotal = 0;
   var $projects = $(".js-projects");
@@ -19,7 +19,7 @@ module.exports = function(datas) {
     var detail = repo.language + ' ' + icon.star + repo.stargazers_count + ' ' + icon.fork + repo.forks;
     var homepahge = repo.homepage ? repo.homepage : repo.html_url;
 
-    if(n != 'grunts' && n != 'site-boilerplate' ){
+    if(n != 'grunts' && n != 'site-boilerplate' && n != 'gulptasks' && n != 'docs' ){
       $projects.append(
         $("<div>").addClass("Grid-col t-sm-widthHalf t-md-width1of3")
         .append(
