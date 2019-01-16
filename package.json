@@ -7,10 +7,10 @@
     "setup": "npm i && gulp build",
     "build": "gulp build"
   },
-  "private":true,
+  "private": true,
   "dependencies": {
     "jquery": "3.0.0-alpha1",
-    "normalize.css":"^3.0.3",
+    "normalize.css": "^3.0.3",
     "sircus": "^1.0.0-alpha.3"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-cssnext": "^1.0.1",
-    "gulp-csso":"1.0.0",
+    "gulp-csso": "1.0.0",
     "gulp-front-matter": "^1.2.3",
     "gulp-hb": "^2.6.1",
     "gulp-gh-pages": "^0.5.2",
