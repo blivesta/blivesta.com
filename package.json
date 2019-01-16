@@ -7,7 +7,7 @@
     "setup": "npm i && gulp build",
     "build": "gulp build",
     "develop": "gulp",
-    "deploy": "gulp ghpages"
+    "deploy": "npm run build && gulp ghpages"
   },
   "private": true,
   "dependencies": {
