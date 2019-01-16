@@ -5,7 +5,9 @@
   "homepage": "http://blivesta.com/",
   "scripts": {
     "setup": "npm i && gulp build",
-    "build": "gulp build"
+    "build": "gulp build",
+    "develop": "gulp",
+    "deploy": "gulp ghpages"
   },
   "private": true,
   "dependencies": {
