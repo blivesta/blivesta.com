@@ -23,10 +23,10 @@
     height: 10vw;
 	}
 }
-@media (--g-viewport-xl) {
+@media (--g-viewport-lg) {
 	.IconWrap,
 	.IconWrap .IconXl {
-    width: 8vw;
-    height: 8vw;
+    width: 5vw;
+    height: 5vw;
 	}
 }

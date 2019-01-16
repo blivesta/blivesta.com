@@ -15,49 +15,43 @@
 .Name,
 .Total {
   line-height: 1;
-  margin-top: 3%;
+  margin-top: 2%;
   margin-bottom: 0;
 }
 
 
 .Total {
-  font-size: 26vw;
+  font-size: 17vw;
   line-height: 1;
 }
 @media (--g-viewport-sm) {
 	.Total {
-	  font-size: 13vw;
+	  font-size: 12vw;
 	}
 }
 @media (--g-viewport-lg) {
 	.Total {
-	  font-size: 10vw;
+	  font-size: 7vw;
 	}
 }
 
 
 .Name {
-  font-size: 18vw;
+  font-size: 17vw;
 }
 @media (--g-viewport-sm) {
 	.Name {
-	  font-size: 15vw;
+	  font-size: 12vw;
 	}
 }
 @media (--g-viewport-lg) {
 	.Name {
-	  font-size: 13vw;
+	  font-size: 7vw;
 	}
 }
-@media (--g-viewport-xl) {
-	.Name {
-	  font-size: 11vw;
-	}
-}
-
 
 .Heading {
-  font-size: 8vw;
+  font-size: 6vw;
 	margin-bottom: var(--g-space-xs);
 }
 @media (--g-viewport-md) {
@@ -66,9 +60,15 @@
 	}
 }
 
+@media (--g-viewport-lg) {
+	.Heading {
+	  font-size: 3vw;
+	}
+}
+
 
 .Lead {
-  font-size: 4vw;
+  font-size: 2.5vw;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -79,6 +79,6 @@
 }
 @media (--g-viewport-lg) {
 	.Lead {
-	  font-size: 1.5vw;
+	  font-size: 1.2vw;
 	}
 }
