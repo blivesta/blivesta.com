@@ -1,13 +1,13 @@
-import { Link } from "gatsby"
-import React from "react"
-import styled from "styled-components"
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledHeader = styled.header`
   background: #000;
   margin-bottom: 1.45rem;
-`
+`;
 interface HeaderProps {
-  siteTitle: string
+  siteTitle: string;
 }
 
 const Header = ({ siteTitle }: HeaderProps) => (
@@ -32,10 +32,10 @@ const Header = ({ siteTitle }: HeaderProps) => (
       </h1>
     </div>
   </StyledHeader>
-)
+);
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;
