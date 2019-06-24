@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
@@ -7,8 +6,11 @@ const StyledHeader = styled.header`
   background: #000;
   margin-bottom: 1.45rem;
 `
+interface HeaderProps {
+  siteTitle: string
+}
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }: HeaderProps) => (
   <StyledHeader>
     <div
       style={{
@@ -31,10 +33,6 @@ const Header = ({ siteTitle }) => (
     </div>
   </StyledHeader>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
 
 Header.defaultProps = {
   siteTitle: ``,
