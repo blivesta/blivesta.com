@@ -1,44 +1,41 @@
 {
   "name": "blivesta.com",
-  "version": "1.1.3",
+  "version": "2.0.0-beta",
   "description": "Design engineering & Content strategy",
   "author": "blivesta <design@blivesta.com> (http://blivesta.com/)",
   "homepage": "http://blivesta.com/",
-  "scripts": {
-    "setup": "npm i && gulp build",
-    "build": "gulp build",
-    "develop": "gulp",
-    "deploy": "gulp deploy"
-  },
   "private": true,
   "dependencies": {
-    "jquery": "3.0.0-alpha1",
-    "normalize.css": "^3.0.3",
-    "sircus": "^1.0.0-alpha.3"
+    "gatsby": "^2.10.0",
+    "gatsby-image": "^2.2.1",
+    "gatsby-plugin-manifest": "^2.2.0",
+    "gatsby-plugin-offline": "^2.2.0",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.2.1",
+    "gatsby-source-filesystem": "^2.1.0",
+    "gatsby-transformer-sharp": "^2.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.8.0",
-    "browserify": "^11.0.0",
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-cssnext": "^1.0.1",
-    "gulp-csso": "1.0.0",
-    "gulp-front-matter": "^1.2.3",
-    "gulp-hb": "^2.6.1",
-    "gulp-gh-pages": "^0.5.2",
-    "gulp-header": "^1.2.2",
-    "gulp-htmlhint": "^0.3.0",
-    "gulp-htmlmin": "^1.1.3",
-    "gulp-jshint": "^1.11.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sitemap": "^2.1.1",
-    "gulp-uglify": "^1.2.0",
-    "htmlhint-stylish": "^1.0.3",
-    "js-yaml": "^3.3.1",
-    "jshint-stylish": "^2.0.1",
-    "psi": "^1.0.6",
-    "run-sequence": "^1.1.2",
-    "site-boilerplate-helpers": "^1.0.1",
-    "vinyl-source-stream": "^1.1.0"
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blivesta/blivesta.com"
   }
 }
