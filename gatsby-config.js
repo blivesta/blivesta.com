@@ -58,5 +58,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `GitHub`,
+        fieldName: `github`,
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `bearer db590ccbc7ff5c9b07e0c5230983bdcd882e8246`,
+        },
+        fetchOptions: {},
+      },
+    },
   ],
 }
