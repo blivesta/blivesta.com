@@ -12,13 +12,14 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Roboto'],
+          families: [`Roboto`],
         },
         typekit: {
-          families: ['ITC Avant Garde Gothic Pro Bold'],
+          id: `iql2ukf`,
+          families: [`ITC Avant Garde Gothic Pro Bold`, `vinyl`],
         },
       },
     },

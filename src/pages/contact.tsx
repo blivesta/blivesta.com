@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/templates/layout';
 import SEO from '../components/atoms/seo';
 
-const SecondPage = () => (
+const Contact = () => (
   <Layout>
     <SEO title="Page two" />
     <h1>Hi from the second page</h1>
@@ -13,4 +13,4 @@ const SecondPage = () => (
   </Layout>
 );
 
-export default SecondPage;
+export default Contact;

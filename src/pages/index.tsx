@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/templates/layout';
-import Image from '../components/image';
 import SEO from '../components/atoms/seo';
 import Container from '../components/atoms/container';
 
@@ -24,6 +23,16 @@ const IndexPage = () => (
         <li>Web development</li>
         <li>GRAPHIC DESIGN</li>
       </ul>
+    </Container>
+    <Container>
+      <h1>Open Source Projects</h1>
+      <h2>The total of my GutHub stars is over 4000</h2>
+      <div></div>
+      <p>
+        <a href="" target="_blank" rel="noopener">
+          More Project
+        </a>
+      </p>
     </Container>
   </Layout>
 );
