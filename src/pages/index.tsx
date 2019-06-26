@@ -25,7 +25,16 @@ const IndexPage = () => {
       }
     }
   `);
-  console.log(data);
+
+  const githubData = data.github.user.repositories.nodes;
+  const totalStar = githubData
+    .map((item: any) => {
+      return item.stargazers.totalCount;
+    })
+    .reduce((total: number, data: number) => {
+      return total + data;
+    });
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -47,8 +56,21 @@ const IndexPage = () => {
       </Container>
       <Container>
         <h1>Open Source Projects</h1>
-        <h2>The total of my GutHub stars is over 4000</h2>
-        <div>{}</div>
+        <h2>The total of my GutHub stargazers is over {totalStar}</h2>
+        <div>
+          {githubData.slice(0, 8).map((item: any) => {
+            return (
+              <div>
+                <a href={item.url} target="_blank" rel="noopener">
+                  <p>{item.name}</p>
+                  <p>{item.description}</p>
+                  <p>Star: {item.stargazers.totalCount}</p>
+                  <p>Fork: {item.forkCount}</p>
+                </a>
+              </div>
+            );
+          })}
+        </div>
         <p>
           <a href="" target="_blank" rel="noopener">
             More Project
