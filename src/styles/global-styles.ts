@@ -5,6 +5,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    background: #000;
+    color: #fff;
   }
   body {
     margin: 0;
@@ -18,7 +20,11 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
   }
-  
+
+  a {
+    color: #fff;
+  }
+
   /* article,
   aside,
   details,

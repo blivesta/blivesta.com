@@ -5,6 +5,16 @@
   "author": "blivesta <design@blivesta.com> (http://blivesta.com)",
   "homepage": "http://blivesta.com",
   "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{ts,tsx,js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "lint": "eslint -c ./.eslintrc.js 'src/**/*.{js,ts,tsx}'"
+  },
   "dependencies": {
     "@types/node": "^12.0.10",
     "@types/react": "^16.8.22",
@@ -40,19 +50,6 @@
     "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.18.2"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{ts,tsx,js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "lint": "eslint -c ./.eslintrc.js 'src/**/*.{js,ts,tsx}'"
   },
   "repository": {
     "type": "git",

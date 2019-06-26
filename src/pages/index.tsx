@@ -58,11 +58,11 @@ const IndexPage = () => {
         <h1>Open Source Projects</h1>
         <h2>The total of my GutHub stargazers is over {totalStar}</h2>
         <div>
-          {githubData.slice(0, 8).map((item: any) => {
+          {githubData.slice(0, 8).map((item: any, i: number) => {
             return (
-              <div>
+              <div key={i}>
                 <a href={item.url} target="_blank" rel="noopener">
-                  <p>{item.name}</p>
+                  <h3>{item.name}</h3>
                   <p>{item.description}</p>
                   <p>Star: {item.stargazers.totalCount}</p>
                   <p>Fork: {item.forkCount}</p>
