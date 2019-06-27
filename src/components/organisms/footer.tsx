@@ -4,7 +4,12 @@ import { Link } from 'gatsby';
 
 import Container from '../atoms/container';
 
-const Wrapper = styled.footer``;
+const Wrapper = styled.footer`
+  background-repeat: repeat-x;
+  background-image: url('/images/footer-bg.svg');
+  background-position: left bottom;
+  background-size: 50%;
+`;
 
 interface FooterProps {
   siteTitle: string;
