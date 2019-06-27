@@ -38,6 +38,7 @@ module.exports = {
         trackingId: `UA-21878354-1`,
       },
     },
+    `gatsby-plugin-react-svg`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
