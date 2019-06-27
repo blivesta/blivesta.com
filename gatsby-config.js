@@ -46,6 +46,7 @@ module.exports = {
         siteUrl: siteUrl,
       },
     },
+    `gatsby-plugin-robots-txt'`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
