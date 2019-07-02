@@ -6,6 +6,9 @@ import Layout from '../components/templates/layout';
 import SEO from '../components/atoms/seo';
 import Container from '../components/atoms/container';
 
+const USER = process.env.GITHUB_USER;
+const TOKEN = process.env.GITHUB_TOKEN;
+
 const IndexPage = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [datas, setDatas] = React.useState({
@@ -25,13 +28,13 @@ const IndexPage = () => {
       const result = await axios({
         url: 'https://api.github.com/graphql',
         headers: {
-          Authorization: `bearer db590ccbc7ff5c9b07e0c5230983bdcd882e8246`,
+          Authorization: `bearer ${TOKEN}`,
           Accept: 'application/vnd.github.v4.idl',
         },
         method: 'POST',
         data: {
           query: `query { 
-            user(login: "blivesta") {
+            user(login: ${USER}) {
               repositories(first: 50, privacy: PUBLIC, orderBy: { field: STARGAZERS, direction: DESC }) {
                 nodes {
                   name

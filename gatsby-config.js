@@ -1,5 +1,7 @@
 const siteUrl = `https://www.blivesta.com`;
 
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `blivesta`,
