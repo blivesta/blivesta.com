@@ -1,5 +1,6 @@
 import * as React from 'react';
 import axios from 'axios';
+import { Link } from 'gatsby';
 
 import Layout from '../components/templates/layout';
 import SEO from '../components/atoms/seo';
@@ -113,6 +114,9 @@ const IndexPage = () => {
             More Project
           </a>
         </p>
+        <div>
+          <Link to="/contact">Contact</Link>
+        </div>
       </Container>
     </Layout>
   );
