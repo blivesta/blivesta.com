@@ -1,13 +1,13 @@
-const siteUrl = `https://www.blivesta.com`;
-
 require('dotenv').config();
+
+const SITE_URL = `https://www.blivesta.com`;
 
 module.exports = {
   siteMetadata: {
     title: `blivesta`,
     description: `Design engineering and Content storategy.`,
     author: `@blivesta`,
-    siteUrl: siteUrl,
+    siteUrl: SITE_URL,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: siteUrl,
+        siteUrl: SITE_URL,
       },
     },
     {
