@@ -24,17 +24,17 @@ const IndexPage = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-
-      const result = await axios({
-        url: 'https://api.github.com/graphql',
-        headers: {
-          Authorization: `bearer db590ccbc7ff5c9b07e0c5230983bdcd882e8246`,
-          // Accept: 'application/vnd.github.v4.idl',
-        },
-        method: 'POST',
-        data: {
-          query: `query { 
-            user(login: blivesta) {
+      try {
+        const result = await axios({
+          url: 'https://api.github.com/graphql',
+          headers: {
+            Authorization: `bearer ${TOKEN}`,
+            // Accept: 'application/vnd.github.v4.idl',
+          },
+          method: 'POST',
+          data: {
+            query: `query { 
+            user(login: ${USER}) {
               repositories(first: 50, privacy: PUBLIC, orderBy: { field: STARGAZERS, direction: DESC }) {
                 nodes {
                   name
@@ -48,10 +48,14 @@ const IndexPage = () => {
               }
             }
           }`,
-        },
-      });
-      setDatas(result.data);
-      setIsLoading(false);
+          },
+        });
+        setDatas(result.data);
+        setIsLoading(false);
+      } catch (error) {
+        const { status, statusText } = error.response;
+        console.log(`Error! HTTP Status: ${status} ${statusText}`);
+      }
     };
 
     fetchData();
