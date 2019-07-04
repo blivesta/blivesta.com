@@ -29,7 +29,7 @@ const IndexPage = () => {
         url: 'https://api.github.com/graphql',
         headers: {
           Authorization: `bearer ${TOKEN}`,
-          Accept: 'application/vnd.github.v4.idl',
+          // Accept: 'application/vnd.github.v4.idl',
         },
         method: 'POST',
         data: {
