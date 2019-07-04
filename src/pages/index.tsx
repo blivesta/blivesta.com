@@ -28,7 +28,7 @@ const IndexPage = () => {
         const result = await axios({
           url: 'https://api.github.com/graphql',
           headers: {
-            Authorization: `bearer ${TOKEN}`,
+            Authorization: `bearer db590ccbc7ff5c9b07e0c5230983bdcd882e8246`,
             Accept: 'application/vnd.github.v4.idl',
           },
           method: 'POST',
@@ -59,7 +59,7 @@ const IndexPage = () => {
     };
 
     fetchData();
-  }, [datas]);
+  }, []);
 
   return (
     <Layout>
