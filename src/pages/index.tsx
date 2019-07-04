@@ -34,7 +34,7 @@ const IndexPage = () => {
           method: 'POST',
           data: {
             query: `query { 
-            user(login: ${USER}) {
+            user(login: blivesta) {
               repositories(first: 50, privacy: PUBLIC, orderBy: { field: STARGAZERS, direction: DESC }) {
                 nodes {
                   name
