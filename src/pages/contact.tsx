@@ -13,7 +13,7 @@ import Container from '../components/atoms/container';
 const URL = process.env.WP_REST_API_BASE_URL;
 const USER = process.env.WP_USER;
 const PASSWORD = process.env.WP_APPLICATION_PASSWORD;
-const TOKEN = window.btoa(`${USER}:${PASSWORD}`); // Convert Base64
+const TOKEN = typeof window !== 'undefined' && window.btoa(`${USER}:${PASSWORD}`); // Convert Base64
 const CF7_ID = process.env.WP_CF7_ID;
 
 const axiosConfig = {
@@ -76,7 +76,6 @@ const ContactPage = () => {
                     onBlur={handleBlur}
                     value={values.formSubject}
                   />
-                  {/* {errors.formSubject && touched.formSubject && errors.formSubject} */}
                   {errors.formSubject && touched.formSubject ? <div>{errors.formSubject}</div> : null}
                 </label>
               </div>
@@ -90,7 +89,6 @@ const ContactPage = () => {
                     onBlur={handleBlur}
                     value={values.formName}
                   />
-                  {/* {errors.formName && touched.formName && errors.formName} */}
                   {errors.formName && touched.formName ? <div>{errors.formName}</div> : null}
                 </label>
               </div>
@@ -104,7 +102,6 @@ const ContactPage = () => {
                     onBlur={handleBlur}
                     value={values.formEmail}
                   />
-                  {/* {errors.formEmail && touched.formEmail && errors.formEmail} */}
                   {errors.formEmail && touched.formEmail ? <div>{errors.formEmail}</div> : null}
                 </label>
               </div>
@@ -118,7 +115,6 @@ const ContactPage = () => {
                     onBlur={handleBlur}
                     value={values.formMessage}
                   />
-                  {/* {errors.formMessage && touched.formMessage && errors.formMessage} */}
                   {errors.formMessage && touched.formMessage ? <div>{errors.formMessage}</div> : null}
                 </label>
               </div>
