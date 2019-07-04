@@ -6,8 +6,8 @@ import Layout from '../components/templates/layout';
 import SEO from '../components/atoms/seo';
 import Container from '../components/atoms/container';
 
-const USER = process.env.GITHUB_USER;
-const TOKEN = process.env.GITHUB_TOKEN;
+const USER = process.env.GATSBY_GITHUB_USER;
+const TOKEN = process.env.GATSBY_GITHUB_TOKEN;
 
 const IndexPage = () => {
   const [isLoading, setIsLoading] = React.useState(false);

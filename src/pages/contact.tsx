@@ -10,11 +10,11 @@ import Layout from '../components/templates/layout';
 import SEO from '../components/atoms/seo';
 import Container from '../components/atoms/container';
 
-const URL = process.env.WP_REST_API_BASE_URL;
-const USER = process.env.WP_USER;
-const PASSWORD = process.env.WP_APPLICATION_PASSWORD;
+const URL = process.env.GATSBY_WP_REST_API_BASE_URL;
+const USER = process.env.GATSBY_WP_USER;
+const PASSWORD = process.env.GATSBY_WP_APPLICATION_PASSWORD;
 const TOKEN = typeof window !== 'undefined' && window.btoa(`${USER}:${PASSWORD}`); // Convert Base64
-const CF7_ID = process.env.WP_CF7_ID;
+const CF7_ID = process.env.GATSBY_WP_CF7_ID;
 
 const axiosConfig = {
   headers: {
