@@ -1,11 +1,5 @@
 # [blivesta.com](http://blivesta.com)
 
-## Public Web
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e3560d59-9538-407e-98ae-0b6111e48328/deploy-status)](https://app.netlify.com/sites/confident-swanson-46b74a/deploys)
 
-https://github.com/blivesta-com/blivesta-com.github.io
 
-## Deploy
-
-```
-npm run deploy
-```
