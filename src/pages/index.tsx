@@ -65,7 +65,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Container>
+      <Container id="about">
         <h1>About</h1>
         <h2>Design to accelerate growth</h2>
         <p>
@@ -81,7 +81,7 @@ const IndexPage = () => {
           <li>GRAPHIC DESIGN</li>
         </ul>
       </Container>
-      <Container>
+      <Container id="oss">
         <h1>Open Source Projects</h1>
         <h2>
           The total of my GutHub stargazers is over{' '}

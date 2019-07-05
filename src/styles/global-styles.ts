@@ -17,9 +17,12 @@ const GlobalStyles = createGlobalStyle`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
-  img {
-    max-width: 100%;
-  }
+img,
+svg {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
 
   a {
     color: #fff;
