@@ -2,6 +2,8 @@ import * as React from 'react';
 import axios from 'axios';
 import { Link } from 'gatsby';
 
+import { responseError } from '../utils/response-error';
+
 import Layout from '../components/templates/layout';
 import SEO from '../components/atoms/seo';
 import Container from '../components/atoms/container';
@@ -53,8 +55,7 @@ const IndexPage = () => {
         setDatas(result.data);
         setIsLoading(false);
       } catch (error) {
-        const { status, statusText } = error.response;
-        console.log(`Error! HTTP Status: ${status} ${statusText}`);
+        responseError(error);
       }
     };
 

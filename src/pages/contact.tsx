@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 import { Formik } from 'formik';
 
 import { convertJsontoUrlencoded } from '../utils/convert-json-to-url-encoded';
+import { responseError } from '../utils/response-error';
 
 import Layout from '../components/templates/layout';
 import SEO from '../components/atoms/seo';
@@ -15,13 +16,6 @@ const USER = process.env.GATSBY_WP_USER;
 const PASSWORD = process.env.GATSBY_WP_APPLICATION_PASSWORD;
 const TOKEN = typeof window !== 'undefined' && window.btoa(`${USER}:${PASSWORD}`); // Convert Base64
 const CF7_ID = process.env.GATSBY_WP_CF7_ID;
-
-const axiosConfig = {
-  headers: {
-    Authorization: `Basic ${TOKEN}`,
-    'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
-  },
-};
 
 const formSchema = Yup.object().shape({
   formName: Yup.string().required('Required'),
@@ -48,20 +42,25 @@ const ContactPage = () => {
           validationSchema={formSchema}
           onSubmit={(values, { setSubmitting }) => {
             // alert(JSON.stringify(values, null, 2));
-            return axios
-              .post(
-                `${URL}/contact-form-7/v1/contact-forms/${CF7_ID}/feedback`,
-                convertJsontoUrlencoded(values),
-                axiosConfig,
-              )
-              .then(response => {
-                console.log(response);
-                setState(response.data.message);
+            const submitData = async () => {
+              try {
+                const result = await axios({
+                  url: `${URL}/contact-form-7/v1/contact-forms/${CF7_ID}/feedback`,
+                  headers: {
+                    Authorization: `Basic ${TOKEN}`,
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+                  },
+                  method: 'POST',
+                  data: convertJsontoUrlencoded(values),
+                });
+                setState(result.data.message);
                 setSubmitting(false);
-              })
-              .catch(error => {
+              } catch (error) {
                 setState('送信に失敗しました。再度お試しください。');
-              });
+                responseError(error);
+              }
+            };
+            submitData();
           }}
         >
           {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
