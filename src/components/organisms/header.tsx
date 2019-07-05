@@ -1,5 +1,5 @@
+import * as React from 'react';
 import { Link } from 'gatsby';
-import React from 'react';
 import styled from 'styled-components';
 
 import { vars } from '../../styles';

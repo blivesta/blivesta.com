@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import Layout from '../components/templates/layout';
 import SEO from '../components/atoms/seo';
