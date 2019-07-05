@@ -12,7 +12,7 @@
     "format": "prettier --write src/**/*.{ts,tsx,js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "svg": "svgo {src/assets,static}/**/*.svg",
+    "svg": "svgo {src/assets,static}/**/*.svg --enable=removeDimensions",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "lint": "eslint -c ./.eslintrc.js 'src/**/*.{js,ts,tsx}'"
   },
