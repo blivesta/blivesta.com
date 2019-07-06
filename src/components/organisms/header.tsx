@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { vars } from '../../styles';
 
 import Container from '../atoms/container';
+import Li from '../atoms/li';
+import Ul from '../atoms/ul';
 
 import Logo from '../../assets/inline-svg/logo.svg';
 
@@ -58,28 +60,6 @@ const Contents = styled.div`
 
 const Nav = styled.nav`
   padding-top: 32px;
-`;
-
-const Ul = styled.ul`
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-`;
-
-const Li = styled.li`
-  margin-right: 12px;
-  letter-spacing: 0.15em;
-  font-size: 14px;
-
-  &:not(:last-child)::after {
-    display: inline-flex;
-    content: '|';
-    margin-left: 12px;
-  }
-
-  a {
-    text-decoration: none;
-  }
 `;
 
 interface HeaderProps {
