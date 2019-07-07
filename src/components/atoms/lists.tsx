@@ -5,6 +5,7 @@ const Ul = styled.ul`
   display: flex;
   list-style: none;
   padding-left: 0;
+  margin-top: 0;
 
   li {
     margin-right: 12px;

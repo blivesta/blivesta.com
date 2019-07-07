@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -8,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     background: #000;
     color: #fff;
   }
+
   body {
     margin: 0;
     padding: 0;
@@ -15,18 +20,23 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      line-height: 1.5;
   }
 
-img,
-svg {
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-}
+  img,
+  svg {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+  }
 
   a {
     color: #fff;
     text-decoration: none;
+  }
+
+  p {
+    margin-top: 0;
   }
 
   /* article,

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -32,7 +31,6 @@ const H3 = styled.h3`
   text-transform: uppercase;
   letter-spacing: 0.15em;
   line-height: 1;
-  margin-bottom: 0;
   font-family: ${vars.fontFamily.roboto};
 `;
 
@@ -48,6 +46,15 @@ const StyledLists = styled(Lists)`
 
 const Li = styled.li`
   width: 31%;
+`;
+
+const More = styled.p`
+  width: 100%;
+  font-size: 16px;
+  font-family: ${vars.fontFamily.avantGarde};
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding-top: 24px;
 `;
 
 const IndexPage = () => {
@@ -125,11 +132,11 @@ const IndexPage = () => {
           <TotalStar data={datas.data.user.repositories.nodes} isLoading={isLoading} />
         </H2>
         <Repository data={datas.data.user.repositories.nodes.slice(0, 4)} isLoading={isLoading} />
-        <p>
-          <a href="" target="_blank" rel="noopener">
+        <More>
+          <a href="https://github.com/blivesta" target="_blank" rel="noopener">
             More Project
           </a>
-        </p>
+        </More>
       </ContentBlock>
     </Layout>
   );

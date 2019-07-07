@@ -42,22 +42,22 @@ const Footer = ({ siteTitle }: FooterProps) => (
       <Flex>
         <Lists>
           <li>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="https://github.com/blivesta" target="_blank" rel="noopener">
               GitHub
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="https://dribbble.com/blivesta" target="_blank" rel="noopener">
               dribbble
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="https://instagram.com/blivesta" target="_blank" rel="noopener">
               Instagram
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="https://twitter.com/blivesta" target="_blank" rel="noopener">
               Twitter
             </a>
           </li>

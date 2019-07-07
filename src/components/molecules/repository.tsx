@@ -12,6 +12,14 @@ const Wrapper = styled.div`
 const Item = styled.div`
   display: flex;
   width: 50%;
+  margin-bottom: 32px;
+
+  &:nth-child(odd) {
+    padding-right: 12px;
+  }
+  &:nth-child(even) {
+    padding-left: 12px;
+  }
 `;
 
 const A = styled.a`
@@ -26,6 +34,13 @@ const Number = styled.p`
 
 const H3 = styled.h3`
   margin-top: 0;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+  line-height: 1.3;
+`;
+
+const P = styled.p`
+  margin-bottom: 8px;
 `;
 
 interface RepositoryProps {
@@ -45,7 +60,7 @@ const Repository = ({ data, isLoading }: RepositoryProps) => (
               <Number>{`0${i + 1}`}</Number>
               <div>
                 <H3>{item.name}</H3>
-                <p>{item.description}</p>
+                <P>{item.description}</P>
                 <Lists isNotPipeline>
                   <li>
                     <Octicon icon={Star} />
