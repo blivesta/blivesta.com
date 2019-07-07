@@ -11,7 +11,7 @@ const ContactPage = () => {
     <Layout>
       <SEO title="Contact" />
       <ContentBlock id="contact" title="Contact">
-        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form name="contact" method="POST" action="thanks" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
           <input type="hidden" name="bot-field" />
           <p>
