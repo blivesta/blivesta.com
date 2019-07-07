@@ -1,13 +1,12 @@
 require('dotenv').config();
-
-const SITE_URL = `https://www.blivesta.com`;
+const pkg = require('./package.json');
 
 module.exports = {
   siteMetadata: {
     title: `blivesta`,
-    description: `Design engineering and Content storategy.`,
+    description: pkg.description,
     author: `@blivesta`,
-    siteUrl: SITE_URL,
+    siteUrl: pkg.homepage,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,7 +19,7 @@ module.exports = {
           families: [`Roboto`],
         },
         typekit: {
-          id: `iql2ukf`,
+          id: process.env.GATSBY_TYPE_KIT_ID,
           families: [`ITC Avant Garde Gothic Pro Bold`, `vinyl`],
         },
       },
@@ -46,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: SITE_URL,
+        siteUrl: pkg.homepage,
       },
     },
     {
@@ -62,17 +61,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    // {
-    //   resolve: `gatsby-source-graphql`,
-    //   options: {
-    //     typeName: `GitHub`,
-    //     fieldName: `github`,
-    //     url: `https://api.github.com/graphql`,
-    //     headers: {
-    //       Authorization: `bearer db590ccbc7ff5c9b07e0c5230983bdcd882e8246`,
-    //     },
-    //     fetchOptions: {},
-    //   },
-    // },
   ],
 };
