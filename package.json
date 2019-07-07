@@ -2,8 +2,8 @@
   "name": "blivesta.com",
   "version": "2.0.0-beta",
   "description": "Design engineering & Content strategy.",
-  "author": "blivesta <design@blivesta.com> (http://blivesta.com)",
-  "homepage": "http://blivesta.com",
+  "author": "blivesta <design@blivesta.com> (https://blivesta.com)",
+  "homepage": "https://blivesta.com",
   "private": true,
   "license": "MIT",
   "scripts": {
