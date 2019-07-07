@@ -4,6 +4,8 @@ import Octicon, { Star, RepoForked } from '@primer/octicons-react';
 
 import { vars } from '../../styles';
 
+import Lists from '../atoms/lists';
+
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -46,13 +48,15 @@ const Repository = ({ data, isLoading }: RepositoryProps) => (
               <div>
                 <H3>{item.name}</H3>
                 <p>{item.description}</p>
-                <p>
-                  <Octicon icon={Star} />
-                  {item.stargazers.totalCount}
-                </p>
-                <p>
-                  <Octicon icon={RepoForked} /> {item.forkCount}
-                </p>
+                <Lists notPipeline>
+                  <li>
+                    <Octicon icon={Star} />
+                    {item.stargazers.totalCount}
+                  </li>
+                  <li>
+                    <Octicon icon={RepoForked} /> {item.forkCount}
+                  </li>
+                </Lists>
               </div>
             </A>
           </Item>

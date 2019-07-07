@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { vars } from '../../styles';
 
 import Container from '../atoms/container';
-import Li from '../atoms/li';
-import Ul from '../atoms/ul';
+import Lists from '../atoms/lists';
 
 const Wrapper = styled.footer`
   background-repeat: repeat-x;
@@ -40,28 +39,28 @@ const Footer = ({ siteTitle }: FooterProps) => (
   <Wrapper>
     <Container>
       <Flex>
-        <Ul>
-          <Li>
+        <Lists>
+          <li>
             <a href="#" target="_blank" rel="noopener">
               GitHub
             </a>
-          </Li>
-          <Li>
+          </li>
+          <li>
             <a href="#" target="_blank" rel="noopener">
               dribbble
             </a>
-          </Li>
-          <Li>
+          </li>
+          <li>
             <a href="#" target="_blank" rel="noopener">
               Instagram
             </a>
-          </Li>
-          <Li>
+          </li>
+          <li>
             <a href="#" target="_blank" rel="noopener">
               Twitter
             </a>
-          </Li>
-        </Ul>
+          </li>
+        </Lists>
       </Flex>
       <CopyRight>
         &copy; {new Date().getFullYear()} {siteTitle}

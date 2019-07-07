@@ -5,8 +5,7 @@ import styled from 'styled-components';
 import { vars } from '../../styles';
 
 import Container from '../atoms/container';
-import Li from '../atoms/li';
-import Ul from '../atoms/ul';
+import Lists from '../atoms/lists';
 
 import Logo from '../../assets/inline-svg/logo.svg';
 
@@ -80,17 +79,17 @@ const Header = ({ siteTitle }: HeaderProps) => (
           <p>Yasuyuki Enomoto</p>
           <h2>Design engineering and Content storategy.</h2>
           <Nav>
-            <Ul>
-              <Li>
+            <Lists>
+              <li>
                 <Link to="/#about">ABOUT</Link>
-              </Li>
-              <Li>
+              </li>
+              <li>
                 <Link to="/#oss">OPEN SOUECE PROJECTS</Link>
-              </Li>
-              <Li>
+              </li>
+              <li>
                 <Link to="/contact">CONTACT </Link>
-              </Li>
-            </Ul>
+              </li>
+            </Lists>
           </Nav>
         </Contents>
       </Flex>

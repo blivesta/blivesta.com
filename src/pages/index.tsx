@@ -14,8 +14,7 @@ import Repository from '../components/molecules/repository';
 
 import TotalStar from '../components/atoms/total-star';
 import SEO from '../components/atoms/seo';
-import Li from '../components/atoms/li';
-import Ul from '../components/atoms/ul';
+import Lists from '../components/atoms/lists';
 
 const USER = process.env.GATSBY_GITHUB_USER;
 const TOKEN = process.env.GATSBY_GITHUB_TOKEN;
@@ -42,20 +41,13 @@ const Description = styled.p`
   margin-bottom: 32px;
 `;
 
-const StyledUl = styled(Ul)`
+const StyledLists = styled(Lists)`
   flex-wrap: wrap;
   position: relative;
 `;
 
-const StyledLi = styled(Li)`
+const Li = styled.li`
   width: 31%;
-  margin-bottom: 4px;
-  letter-spacing: 0;
-
-  &:not(:last-child)::after {
-    content: '';
-    margin-left: 0;
-  }
 `;
 
 const IndexPage = () => {
@@ -118,14 +110,14 @@ const IndexPage = () => {
           デザインを戦略的に考え、企業やブランドを成長させるためのお手伝いをしています。リサーチ、コンセプト策定からビジュアルやUI、ソフトウェア・Webサイトの開発全般を行い、運用開始後も分析・提案に取り組んでいます。
         </Description>
         <H3>Capabilities</H3>
-        <StyledUl>
-          <StyledLi>Research</StyledLi>
-          <StyledLi>Strategy</StyledLi>
-          <StyledLi>BRAND IDENTITY</StyledLi>
-          <StyledLi>HUMAN INTERFACE DESIGN</StyledLi>
-          <StyledLi>Web development</StyledLi>
-          <StyledLi>GRAPHIC DESIGN</StyledLi>
-        </StyledUl>
+        <StyledLists notPipeline>
+          <Li>Research</Li>
+          <Li>Strategy</Li>
+          <Li>BRAND IDENTITY</Li>
+          <Li>HUMAN INTERFACE DESIGN</Li>
+          <Li>Web development</Li>
+          <Li>GRAPHIC DESIGN</Li>
+        </StyledLists>
       </ContentBlock>
       <ContentBlock id="oss" title="Open Source Projects">
         <H2>
