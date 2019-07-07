@@ -14,6 +14,7 @@ const Wrapper = styled.header`
   background-repeat: repeat-x;
   background-image: url(/images/ruler.svg);
   background-size: 50px;
+  background-attachment: fixed;
 `;
 
 const H1 = styled.h1`
