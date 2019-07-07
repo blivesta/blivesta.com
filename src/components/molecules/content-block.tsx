@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { vars } from '../../styles';
 
@@ -8,12 +8,17 @@ import Container from '../atoms/container';
 const Flex = styled.div`
   display: flex;
   padding-bottom: 30vh;
+
+  ${(props: ContentBlockProps) =>
+    props.logo &&
+    css`
+      padding-top: 30vh;
+    `}
 `;
 
 const TitleColumn = styled.div`
   width: 80px;
   margin-right: 16px;
-  display: flex;
   position: relative;
 `;
 
@@ -23,7 +28,7 @@ const H1 = styled.h1`
   top: 0;
   right: 16px;
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 1rem;
   transform: rotate(-90deg);
   transform-origin: top right;
   text-transform: uppercase;
@@ -37,20 +42,23 @@ const MainColumn = styled.div`
 `;
 
 interface ContentBlockProps {
-  id: string;
-  title: string;
+  id?: string;
+  title?: string;
+  logo?: React.ReactNode;
   children: React.ReactNode;
 }
 
-const ContentBlock = ({ id, title, children }: ContentBlockProps) => (
-  <Container id={id}>
-    <Flex>
-      <TitleColumn>
-        <H1>{title}</H1>
-      </TitleColumn>
-      <MainColumn>{children}</MainColumn>
+const ContentBlock = (props: ContentBlockProps) => (
+  <Container {...props}>
+    <Flex logo={props.logo}>
+      <TitleColumn>{props.logo ? props.logo : <H1>{props.title}</H1>}</TitleColumn>
+      <MainColumn>{props.children}</MainColumn>
     </Flex>
   </Container>
 );
+
+ContentBlock.defaultProps = {
+  isHeader: false,
+};
 
 export default ContentBlock;

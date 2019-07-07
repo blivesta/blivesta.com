@@ -4,8 +4,9 @@ import styled from 'styled-components';
 
 import { vars } from '../../styles';
 
-import Container from '../atoms/container';
 import Lists from '../atoms/lists';
+
+import ContentBlock from '../molecules/content-block';
 
 import Logo from '../../assets/inline-svg/logo.svg';
 
@@ -15,46 +16,28 @@ const Wrapper = styled.header`
   background-size: 50px;
 `;
 
-const Flex = styled.div`
-  display: flex;
-  padding-top: 30vh;
-  padding-bottom: 30vh;
+const H1 = styled.h1`
+  font-family: ${vars.fontFamily.avantGarde};
+  font-weight: 700;
+  font-size: 96px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  line-height: 1;
 `;
 
-const Avatar = styled.div`
-  width: 80px;
-  margin-right: 16px;
-  padding-top: 4px;
+const H2 = styled.h2`
+  font-size: 16px;
+  font-weight: normal;
+  font-family: ${vars.fontFamily.roboto};
+  margin-top: 0;
+  margin-bottom: 0;
 `;
 
-const Contents = styled.div`
-  flex: 1;
-
-  h1 {
-    font-family: ${vars.fontFamily.avantGarde};
-    font-weight: 700;
-    font-size: 88px;
-    margin-top: 0;
-    margin-bottom: 8px;
-    line-height: 1;
-  }
-
-  p,
-  h2 {
-    font-family: ${vars.fontFamily.roboto};
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  h2 {
-    font-size: 16px;
-    font-weight: normal;
-  }
-
-  p {
-    font-size: 24px;
-    margin-bottom: 12px;
-  }
+const P = styled.p`
+  font-family: ${vars.fontFamily.roboto};
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 24px;
 `;
 
 const Nav = styled.nav`
@@ -67,33 +50,30 @@ interface HeaderProps {
 
 const Header = ({ siteTitle }: HeaderProps) => (
   <Wrapper>
-    <Container>
-      <Flex>
-        <Avatar>
-          <Link to="/">
-            <Logo />
-          </Link>
-        </Avatar>
-        <Contents>
-          <h1>{siteTitle}</h1>
-          <p>Yasuyuki Enomoto</p>
-          <h2>Design engineering and Content storategy.</h2>
-          <Nav>
-            <Lists>
-              <li>
-                <Link to="/#about">ABOUT</Link>
-              </li>
-              <li>
-                <Link to="/#oss">OPEN SOUECE PROJECTS</Link>
-              </li>
-              <li>
-                <Link to="/contact">CONTACT </Link>
-              </li>
-            </Lists>
-          </Nav>
-        </Contents>
-      </Flex>
-    </Container>
+    <ContentBlock
+      logo={
+        <Link to="/">
+          <Logo />
+        </Link>
+      }
+    >
+      <H1>{siteTitle}</H1>
+      <P>Yasuyuki Enomoto</P>
+      <H2>Design engineering and Content storategy.</H2>
+      <Nav>
+        <Lists>
+          <li>
+            <Link to="/#about">ABOUT</Link>
+          </li>
+          <li>
+            <Link to="/#oss">OPEN SOUECE PROJECTS</Link>
+          </li>
+          <li>
+            <Link to="/contact">CONTACT </Link>
+          </li>
+        </Lists>
+      </Nav>
+    </ContentBlock>
   </Wrapper>
 );
 

@@ -14,7 +14,7 @@ const Ul = styled.ul`
     margin-bottom: 4px;
 
     ${(props: ListsProps) =>
-      !props.notPipeline
+      !props.isNotPipeline
         ? css`
             &:not(:last-child)::after {
               display: inline-flex;
@@ -30,7 +30,7 @@ const Ul = styled.ul`
 
 interface ListsProps {
   children: React.ReactNode;
-  notPipeline?: boolean;
+  isNotPipeline?: boolean;
 }
 
 const Lists = (props: ListsProps) => <Ul {...props}>{props.children}</Ul>;

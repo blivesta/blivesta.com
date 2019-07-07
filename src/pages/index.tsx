@@ -110,7 +110,7 @@ const IndexPage = () => {
           デザインを戦略的に考え、企業やブランドを成長させるためのお手伝いをしています。リサーチ、コンセプト策定からビジュアルやUI、ソフトウェア・Webサイトの開発全般を行い、運用開始後も分析・提案に取り組んでいます。
         </Description>
         <H3>Capabilities</H3>
-        <StyledLists notPipeline>
+        <StyledLists isNotPipeline>
           <Li>Research</Li>
           <Li>Strategy</Li>
           <Li>BRAND IDENTITY</Li>

@@ -24,11 +24,12 @@ const CopyRight = styled.p`
   margin: 0;
   position: fixed;
   top: 50%;
-  left: -28px;
+  left: -16px;
   font-family: ${vars.fontFamily.roboto};
   font-size: 12px;
   line-height: 0;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
+  transform-origin: center;
 `;
 
 interface FooterProps {
