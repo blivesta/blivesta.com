@@ -51,10 +51,12 @@ const Li = styled.li`
 const More = styled.p`
   width: 100%;
   font-size: 16px;
-  font-family: ${vars.fontFamily.avantGarde};
+  font-family: ${vars.fontFamily.roboto};
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   padding-top: 24px;
+  padding-left: 36px;
 `;
 
 const IndexPage = () => {

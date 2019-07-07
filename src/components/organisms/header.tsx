@@ -62,12 +62,12 @@ const Header = ({ siteTitle }: HeaderProps) => (
       <H2>Design engineering and Content storategy.</H2>
       <Nav>
         <Lists>
-          <li>
+          {/* <li>
             <Link to="/#about">ABOUT</Link>
           </li>
           <li>
             <Link to="/#oss">OPEN SOUECE PROJECTS</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/contact">CONTACT </Link>
           </li>

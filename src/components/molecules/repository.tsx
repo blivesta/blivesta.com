@@ -64,10 +64,12 @@ const Repository = ({ data, isLoading }: RepositoryProps) => (
                 <Lists isNotPipeline>
                   <li>
                     <Octicon icon={Star} />
+                    &nbsp;
                     {item.stargazers.totalCount}
                   </li>
                   <li>
-                    <Octicon icon={RepoForked} /> {item.forkCount}
+                    <Octicon icon={RepoForked} />
+                    &nbsp;{item.forkCount}
                   </li>
                 </Lists>
               </div>

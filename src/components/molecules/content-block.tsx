@@ -26,7 +26,7 @@ const H1 = styled.h1`
   display: flex;
   position: absolute;
   top: 0;
-  right: 16px;
+  right: 20px;
   white-space: nowrap;
   font-size: 1rem;
   transform: rotate(-90deg);
@@ -35,6 +35,7 @@ const H1 = styled.h1`
   font-family: ${vars.fontFamily.roboto};
   margin: 0;
   letter-spacing: 0.15em;
+  color: #555;
 `;
 
 const MainColumn = styled.div`
