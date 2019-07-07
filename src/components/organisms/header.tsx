@@ -26,8 +26,8 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-  font-size: 16px;
-  font-weight: normal;
+  font-size: 24px;
+  font-weight: bold;
   font-family: ${vars.fontFamily.roboto};
   margin-top: 0;
   margin-bottom: 0;
@@ -36,8 +36,9 @@ const H2 = styled.h2`
 const P = styled.p`
   font-family: ${vars.fontFamily.roboto};
   margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 24px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  letter-spacing: 0.15em;
 `;
 
 const Nav = styled.nav`

@@ -30,13 +30,13 @@ const A = styled.a`
 const Number = styled.p`
   margin: 0;
   margin-right: 16px;
+  font-size: 24px;
 `;
 
 const H3 = styled.h3`
-  margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   text-transform: capitalize;
-  line-height: 1.3;
+  font-size: 24px;
 `;
 
 const P = styled.p`

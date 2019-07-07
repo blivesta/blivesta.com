@@ -11,25 +11,23 @@ const Wrapper = styled.footer`
   background-image: url('/images/footer-bg.svg');
   background-position: left bottom;
   background-size: 100%;
+  padding-top: 5vw;
+  padding-bottom: 20vw;
 `;
 
 const Flex = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 5vw;
-  padding-bottom: 25vw;
 `;
 
 const CopyRight = styled.p`
+  width: 100%;
   margin: 0;
-  position: fixed;
-  top: 50%;
-  left: -16px;
   font-family: ${vars.fontFamily.roboto};
   font-size: 12px;
-  line-height: 0;
-  transform: rotate(-90deg);
-  transform-origin: center;
+  text-align: center;
+  padding-top: 48px;
+  color: #777;
 `;
 
 interface FooterProps {

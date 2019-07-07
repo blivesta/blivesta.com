@@ -8,7 +8,7 @@ const Ul = styled.ul`
   margin-top: 0;
 
   li {
-    margin-right: 12px;
+    padding-right: 12px;
     letter-spacing: 0.15em;
     font-size: 14px;
     text-transform: uppercase;
@@ -20,7 +20,7 @@ const Ul = styled.ul`
             &:not(:last-child)::after {
               display: inline-flex;
               content: '|';
-              margin-left: 12px;
+              padding-left: 12px;
             }
           `
         : css`

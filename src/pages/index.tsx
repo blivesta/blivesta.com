@@ -45,7 +45,7 @@ const StyledLists = styled(Lists)`
 `;
 
 const Li = styled.li`
-  width: 31%;
+  width: 33.333333%;
 `;
 
 const More = styled.p`
@@ -114,18 +114,21 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <ContentBlock id="about" title="About">
-        <H2>Design to accelerate growth</H2>
+        <H2>
+          Design to <br />
+          accelerate growth
+        </H2>
         <Description>
           デザインを戦略的に考え、企業やブランドを成長させるためのお手伝いをしています。リサーチ、コンセプト策定からビジュアルやUI、ソフトウェア・Webサイトの開発全般を行い、運用開始後も分析・提案に取り組んでいます。
         </Description>
         <H3>Capabilities</H3>
         <StyledLists isNotPipeline>
-          <Li>Research</Li>
-          <Li>Strategy</Li>
-          <Li>BRAND IDENTITY</Li>
-          <Li>HUMAN INTERFACE DESIGN</Li>
+          <Li>Human interface design</Li>
+          <Li>User exprerience design</Li>
           <Li>Web development</Li>
-          <Li>GRAPHIC DESIGN</Li>
+          <Li>Brand Identity</Li>
+          <Li>Project direction</Li>
+          <Li>Graphic design</Li>
         </StyledLists>
       </ContentBlock>
       <ContentBlock id="oss" title="Open Source Projects">
