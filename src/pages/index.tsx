@@ -107,7 +107,9 @@ const IndexPage = () => {
       }
     };
 
-    fetchData();
+    if (datas.data.user.repositories.nodes.length === 0) {
+      fetchData();
+    }
   }, []);
 
   return (

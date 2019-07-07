@@ -11,12 +11,7 @@ const ContactPage = () => {
     <Layout>
       <SEO title="Contact" />
       <ContentBlock id="contact" title="Contact">
-        <form name="contact" method="post" action="/thanks" data-netlify="true" data-netlify-honeypot="bot-field">
-          <p>
-            <label>
-              Don’t fill this out if you're human: <input name="bot-field" />
-            </label>
-          </p>
+        <form name="contact" method="POST" data-netlify="true">
           <p>
             <label>
               Your Name: <input type="text" name="name" />
