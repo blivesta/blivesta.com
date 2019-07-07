@@ -5,11 +5,11 @@ import { vars } from '../../styles';
 
 import Container from '../atoms/container';
 
-const Flex = styled.div`
+const Flex = styled.div<ContentBlockProps>`
   display: flex;
   padding-bottom: 30vh;
 
-  ${(props: ContentBlockProps) =>
+  ${props =>
     props.logo &&
     css`
       padding-top: 30vh;

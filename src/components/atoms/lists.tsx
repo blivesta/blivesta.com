@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 
-const Ul = styled.ul`
+const Ul = styled.ul<ListsProps>`
   display: flex;
   list-style: none;
   padding-left: 0;
@@ -14,7 +14,7 @@ const Ul = styled.ul`
     text-transform: uppercase;
     margin-bottom: 4px;
 
-    ${(props: ListsProps) =>
+    ${props =>
       !props.isNotPipeline
         ? css`
             &:not(:last-child)::after {
