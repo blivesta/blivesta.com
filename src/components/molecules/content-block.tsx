@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 import { vars } from '../../styles';
 
@@ -7,13 +8,16 @@ import Container from '../atoms/container';
 
 const Flex = styled.div<ContentBlockProps>`
   display: flex;
-  padding-bottom: 30vh;
-
+  padding-bottom: 20vh;
   ${props =>
     props.logo &&
     css`
       padding-top: 30vh;
     `}
+
+  ${media.greaterThan('small')`
+    padding-right: 80px;
+  `}
 `;
 
 const TitleColumn = styled.div`
