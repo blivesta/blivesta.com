@@ -42,7 +42,6 @@ const Main = styled.main``;
 
 const Loader = styled.div`
   color: #fff;
-  opacity: 1;
 `;
 
 export interface LayoutProps {
@@ -63,7 +62,7 @@ const Layout = ({ children }: LayoutProps) => {
     },
   };
 
-  const callback = React.useCallback((status: string) => {
+  const fontCallback = React.useCallback((status: string) => {
     return status === 'active' ? setState(true) : null;
   }, []);
 
@@ -79,7 +78,7 @@ const Layout = ({ children }: LayoutProps) => {
   `);
 
   return (
-    <WebfontLoader config={config} onStatus={callback}>
+    <WebfontLoader config={config} onStatus={fontCallback}>
       <Wrapper>
         <GlobalStyles />
         {state ? (
