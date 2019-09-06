@@ -8,11 +8,20 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import GlobalStyles from '../../styles/global-styles';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import WebfontLoader from '@dr-kobros/react-webfont-loader';
 
 import Header from '../organisms/header';
 import Footer from '../organisms/footer';
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 const Wrapper = styled.div`
   background-repeat: repeat-x;
@@ -21,18 +30,23 @@ const Wrapper = styled.div`
   background-attachment: fixed;
 `;
 
-const Contents = styled.div<LayoutProps>`
-  opacity: ${props => (props.isActive ? 1 : 0)};
-  transition: opacity 0.8s;
+const Contents = styled.div`
+  ${(props: { isActive: boolean }) =>
+    props.isActive &&
+    css`
+      animation: ${fadeIn} 1s linear;
+    `}
 `;
+
+const Main = styled.main``;
 
 const Loader = styled.div`
   color: #fff;
+  opacity: 1;
 `;
 
 export interface LayoutProps {
   children: React.ReactNode;
-  isActive: boolean;
 }
 
 const Layout = ({ children }: LayoutProps) => {
@@ -68,21 +82,21 @@ const Layout = ({ children }: LayoutProps) => {
     <WebfontLoader config={config} onStatus={callback}>
       <Wrapper>
         <GlobalStyles />
-        <Contents isActive={state}>
-          {state ? (
+        {state ? (
+          <Contents isActive={state}>
             <>
               <Header
                 siteTitle={data.site.siteMetadata.title}
                 path={path}
                 description={data.site.siteMetadata.description}
               />
-              <main>{children}</main>
+              <Main>{children}</Main>
               <Footer siteTitle={data.site.siteMetadata.title} />
             </>
-          ) : (
-            <Loader>loading</Loader>
-          )}
-        </Contents>
+          </Contents>
+        ) : (
+          <Loader>loading</Loader>
+        )}
       </Wrapper>
     </WebfontLoader>
   );
