@@ -13,18 +13,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
     {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: [`Roboto`],
-        },
-        typekit: {
-          id: process.env.GATSBY_TYPE_KIT_ID,
-          families: [`ITC Avant Garde Gothic Pro Bold`, `vinyl`],
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

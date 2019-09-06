@@ -17,6 +17,7 @@
     "lint": "eslint -c ./.eslintrc.js 'src/**/*.{js,ts,tsx}'"
   },
   "dependencies": {
+    "@dr-kobros/react-webfont-loader": "^8.0.0",
     "@primer/octicons-react": "^9.1.1",
     "@types/node": "^12.0.10",
     "@types/react": "^16.8.22",
@@ -40,7 +41,6 @@
     "gatsby-plugin-sitemap": "^2.2.0",
     "gatsby-plugin-styled-components": "^3.1.0",
     "gatsby-plugin-typescript": "^2.1.0",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.0",
     "gatsby-source-graphql": "^2.1.0",
     "gatsby-transformer-sharp": "^2.2.0",
