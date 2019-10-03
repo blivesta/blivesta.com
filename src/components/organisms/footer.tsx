@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Octicon, { Mail } from '@primer/octicons-react';
 
 import { vars } from '../../styles';
 
@@ -11,7 +12,6 @@ const Wrapper = styled.footer`
   background-image: url('/images/footer-bg.svg');
   background-position: left bottom;
   background-size: 100%;
-  padding-top: 5vw;
   padding-bottom: 20vw;
 `;
 
@@ -30,42 +30,61 @@ const CopyRight = styled.p`
   color: #777;
 `;
 
+const ContactBlock = styled(Flex)`
+  padding-bottom: 64px;
+  justify-content: center;
+`;
+
+const Icon = styled(Octicon)`
+  width: 32px;
+  margin-right: 8px;
+`;
+
 interface FooterProps {
   siteTitle: string;
 }
 
-const Footer = ({ siteTitle }: FooterProps) => (
-  <Wrapper>
-    <Container>
-      <Flex>
-        <Lists>
-          <li>
-            <a href="https://github.com/blivesta" target="_blank" rel="noopener">
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href="https://dribbble.com/blivesta" target="_blank" rel="noopener">
-              dribbble
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com/blivesta" target="_blank" rel="noopener">
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/blivesta" target="_blank" rel="noopener">
-              Twitter
-            </a>
-          </li>
-        </Lists>
-      </Flex>
-      <CopyRight>
-        &copy; {new Date().getFullYear()} {siteTitle}
-      </CopyRight>
-    </Container>
-  </Wrapper>
-);
+const Footer = ({ siteTitle }: FooterProps) => {
+  const [state, setState] = React.useState({ open: false });
+
+  return (
+    <Wrapper>
+      <Container>
+        <ContactBlock>
+          <a href="mailto:design@blivesta.com">
+            <Icon icon={Mail} />
+          </a>
+        </ContactBlock>
+        <Flex>
+          <Lists>
+            <li>
+              <a href="https://github.com/blivesta" target="_blank" rel="noopener">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://dribbble.com/blivesta" target="_blank" rel="noopener">
+                dribbble
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/blivesta" target="_blank" rel="noopener">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/blivesta" target="_blank" rel="noopener">
+                Twitter
+              </a>
+            </li>
+          </Lists>
+        </Flex>
+        <CopyRight>
+          &copy; {new Date().getFullYear()} {siteTitle}
+        </CopyRight>
+      </Container>
+    </Wrapper>
+  );
+};
 
 export default Footer;

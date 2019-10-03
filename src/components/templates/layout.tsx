@@ -40,10 +40,6 @@ const Contents = styled.div`
 
 const Main = styled.main``;
 
-const Loader = styled.div`
-  color: #fff;
-`;
-
 export interface LayoutProps {
   children: React.ReactNode;
 }
@@ -93,9 +89,7 @@ const Layout = ({ children }: LayoutProps) => {
               <Footer siteTitle={data.site.siteMetadata.title} />
             </>
           </Contents>
-        ) : (
-          <Loader>loading</Loader>
-        )}
+        ) : null}
       </Wrapper>
     </WebfontLoader>
   );

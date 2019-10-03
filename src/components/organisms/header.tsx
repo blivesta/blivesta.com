@@ -5,18 +5,11 @@ import media from 'styled-media-query';
 
 import { vars } from '../../styles';
 
-import Lists from '../atoms/lists';
-
 import ContentBlock from '../molecules/content-block';
 
 import Logo from '../../assets/inline-svg/logo.svg';
 
-const Wrapper = styled.header`
-  background-repeat: repeat-x;
-  background-image: url(/images/ruler.svg);
-  background-size: 50px;
-  background-attachment: fixed;
-`;
+const Wrapper = styled.header``;
 
 const H1 = styled.h1`
   font-family: ${vars.fontFamily.avantGarde};
@@ -34,8 +27,7 @@ const H1 = styled.h1`
 const P = styled.p`
   font-family: ${vars.fontFamily.roboto};
   margin-bottom: 0;
-  font-size: 16px;
-  letter-spacing: 0.15em;
+  font-size: 20px;
 `;
 
 const Nav = styled.nav`
@@ -44,22 +36,26 @@ const Nav = styled.nav`
 
 interface HeaderProps {
   siteTitle: string;
+  path: string;
+  description: string;
 }
 
-const Header = ({ siteTitle }: HeaderProps) => (
-  <Wrapper>
-    <ContentBlock
-      logo={
-        <Link to="/">
-          <Logo />
-        </Link>
-      }
-    >
-      <H1>{siteTitle}</H1>
-      <P>Yasuyuki Enomoto / Design engineer.</P>
-    </ContentBlock>
-  </Wrapper>
-);
+const Header = ({ siteTitle, path, description }: HeaderProps) => {
+  return (
+    <Wrapper>
+      <ContentBlock
+        logo={
+          <Link to="/">
+            <Logo />
+          </Link>
+        }
+      >
+        <H1>{siteTitle}</H1>
+        {path === '/' && <P>{description}</P>}
+      </ContentBlock>
+    </Wrapper>
+  );
+};
 
 Header.defaultProps = {
   siteTitle: ``,
