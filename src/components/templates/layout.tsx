@@ -45,7 +45,6 @@ export interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const path = location.pathname;
   const [state, setState] = React.useState(false);
 
   const config = {
@@ -80,11 +79,7 @@ const Layout = ({ children }: LayoutProps) => {
         {state ? (
           <Contents isActive={state}>
             <>
-              <Header
-                siteTitle={data.site.siteMetadata.title}
-                path={path}
-                description={data.site.siteMetadata.description}
-              />
+              <Header siteTitle={data.site.siteMetadata.title} description={data.site.siteMetadata.description} />
               <Main>{children}</Main>
               <Footer siteTitle={data.site.siteMetadata.title} />
             </>

@@ -36,11 +36,10 @@ const Nav = styled.nav`
 
 interface HeaderProps {
   siteTitle: string;
-  path: string;
   description: string;
 }
 
-const Header = ({ siteTitle, path, description }: HeaderProps) => {
+const Header = ({ siteTitle, description }: HeaderProps) => {
   return (
     <Wrapper>
       <ContentBlock
@@ -51,7 +50,7 @@ const Header = ({ siteTitle, path, description }: HeaderProps) => {
         }
       >
         <H1>{siteTitle}</H1>
-        {path === '/' && <P>{description}</P>}
+        <P>{description}</P>
       </ContentBlock>
     </Wrapper>
   );

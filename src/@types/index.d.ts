@@ -1,1 +1,1 @@
-declare module "@dr-kobros/react-webfont-loader";
+declare module '@dr-kobros/react-webfont-loader';
