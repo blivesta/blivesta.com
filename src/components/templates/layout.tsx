@@ -72,24 +72,22 @@ const Layout = ({ children }: LayoutProps) => {
     }
   `);
 
-  return (
-    typeof window !== `undefined` && (
-      <WebfontLoader config={config} onStatus={fontCallback}>
-        <Wrapper>
-          <GlobalStyles />
-          {state ? (
-            <Contents isActive={state}>
-              <>
-                <Header siteTitle={data.site.siteMetadata.title} description={data.site.siteMetadata.description} />
-                <Main>{children}</Main>
-                <Footer siteTitle={data.site.siteMetadata.title} />
-              </>
-            </Contents>
-          ) : null}
-        </Wrapper>
-      </WebfontLoader>
-    )
-  );
+  return typeof window !== `undefined` ? (
+    <WebfontLoader config={config} onStatus={fontCallback}>
+      <Wrapper>
+        <GlobalStyles />
+        {state ? (
+          <Contents isActive={state}>
+            <>
+              <Header siteTitle={data.site.siteMetadata.title} description={data.site.siteMetadata.description} />
+              <Main>{children}</Main>
+              <Footer siteTitle={data.site.siteMetadata.title} />
+            </>
+          </Contents>
+        ) : null}
+      </Wrapper>
+    </WebfontLoader>
+  ) : null;
 };
 
 export default Layout;
