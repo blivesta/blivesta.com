@@ -77,7 +77,7 @@ const IndexPage = () => {
           after the start of operation.
         </Description>
         <DescriptionJa>
-          デザインを戦略的に考え、企業やブランドをグロースさせるためのお手伝いをしています。リサーチ、コンセプト策定からビジュアルやUI、ソフトウェア・Webサイトの開発やディレクションを行い、運用開始後も分析・提案に取り組みます。
+          デザインを戦略的に考え、企業やブランドをグロースさせるためのお手伝いをしています。リサーチ、コンセプト策定からビジュアルやUI、ソフトウェア・Webサイトの開発やディレクションを行い、運用開始後も分析・提案に取り組んでいます。
         </DescriptionJa>
         <H3>Scope of work:</H3>
         <StyledLists isNotPipeline>
