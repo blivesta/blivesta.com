@@ -7,18 +7,7 @@ import Layout from '../components/templates/layout';
 import ContentBlock from '../components/molecules/content-block';
 import Lists from '../components/atoms/lists';
 import SEO from '../components/atoms/seo';
-
-const H2 = styled.h2`
-  font-family: ${vars.fontFamily.avantGarde};
-  text-transform: uppercase;
-  font-size: 32px;
-  margin-top: 0;
-  line-height: 1;
-
-  ${media.sm`
-    font-size: 56px;
-  `}
-`;
+import ContentTitle from '../components/atoms/content-title';
 
 const H3 = styled.h3`
   font-size: 20px;
@@ -82,10 +71,10 @@ const IndexPage = () => {
     <Layout>
       <SEO title={site.siteMetadata.description} location="/" />
       <ContentBlock id="about" title="About">
-        <H2>
+        <ContentTitle>
           Design to <br />
           accelerate growth
-        </H2>
+        </ContentTitle>
         <Description>
           We think strategically about design and help companies and brands grow. From research and concept development
           to visual, UI, software and website development in general, we are working on analysis and proposals even
