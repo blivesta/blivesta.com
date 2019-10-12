@@ -26,6 +26,7 @@ function SEO({ description, lang, meta, title, location }: SEOProps) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -49,27 +50,51 @@ function SEO({ description, lang, meta, title, location }: SEOProps) {
           content: metaDescription,
         },
         {
-          property: `og:title`,
-          content: site.siteMetadata.title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
+          property: `og:local`,
+          content: lang,
         },
         {
           property: `og:type`,
           content: `website`,
         },
         {
+          property: `og:title`,
+          content: isHome ? `${site.siteMetadata.title} | %s` : `${site.siteMetadata.title}`,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
           property: `og:image`,
           content: `/icons/icon-512x512.png`,
+        },
+        {
+          property: `og:image:secure_url`,
+          content: `/icons/icon-512x512.png`,
+        },
+        {
+          property: `og:image:width`,
+          content: `512`,
+        },
+        {
+          property: `og:image:height`,
+          content: `512`,
         },
         {
           name: `twitter:card`,
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
+          name: `twitter:site`,
           content: site.siteMetadata.author,
         },
         {
@@ -79,6 +104,10 @@ function SEO({ description, lang, meta, title, location }: SEOProps) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: `/icons/icon-512x512.png`,
         },
       ].concat(meta)}
     />
