@@ -19,6 +19,18 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: [`Roboto`],
+        },
+        typekit: {
+          id: process.env.GATSBY_TYPE_KIT_ID,
+          families: [`ITC Avant Garde Gothic Pro Bold`, `vinyl`],
+        }
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

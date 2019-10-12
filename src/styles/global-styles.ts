@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { rules } from '.';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -37,6 +38,15 @@ const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
+  }
+
+  .js-content {
+    opacity: 0;
+  }
+
+  .wf-active .js-content {
+    animation: ${rules.fadeIn} .5s linear;
+    animation-fill-mode: both;
   }
 `;
 

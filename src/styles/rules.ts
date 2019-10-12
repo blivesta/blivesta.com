@@ -1,7 +1,16 @@
-import { css } from 'styled-components';
+import { css, keyframes } from 'styled-components';
 import { generateMedia } from 'styled-media-query';
 
-const customMedia = generateMedia({
+export const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const customMedia = generateMedia({
   sm: '450px',
   md: '768px',
   lg: '1200px',
