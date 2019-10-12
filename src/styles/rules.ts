@@ -1,5 +1,4 @@
 import { css, keyframes } from 'styled-components';
-import { generateMedia } from 'styled-media-query';
 
 export const fadeIn = keyframes`
   0% {
@@ -9,12 +8,6 @@ export const fadeIn = keyframes`
     opacity: 1;
   }
 `;
-
-export const customMedia = generateMedia({
-  sm: '450px',
-  md: '768px',
-  lg: '1200px',
-});
 
 // export const fontAvantGarde = css`
 //   font-family: itc-avant-garde-gothic-pro, sans-serif;

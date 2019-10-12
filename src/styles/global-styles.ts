@@ -40,6 +40,7 @@ const GlobalStyles = createGlobalStyle`
     margin-top: 0;
   }
 
+  /* For webfont */
   .js-content {
     opacity: 0;
   }

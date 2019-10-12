@@ -1,3 +1,11 @@
+import { generateMedia } from 'styled-media-query';
+
+export const customMedia = generateMedia({
+  sm: '450px',
+  md: '768px',
+  lg: '1200px',
+});
+
 export const fontFamily = {
   ja:
     "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Hiragino Kaku Gothic ProN, 'ヒラギノ角ゴ ProN W3', Arial, 'メイリオ', Meiryo, sans-serif",
