@@ -1,13 +1,14 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 
-import { media } from '../../styles';
+import { media, vars } from '../../styles';
 
 const Ul = styled.ul<ListsProps>`
   display: flex;
   list-style: none;
   padding-left: 0;
   margin-top: 0;
+  font-family: ${vars.fontFamily.roboto};
 
   li {
     padding-right: 12px;
@@ -24,6 +25,7 @@ const Ul = styled.ul<ListsProps>`
                 display: inline-flex;
                 content: '|';
                 padding-left: 12px;
+                color: #777;
               }
             `}
           `

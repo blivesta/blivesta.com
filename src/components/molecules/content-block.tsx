@@ -41,6 +41,7 @@ const H1 = styled.h1`
   font-family: ${vars.fontFamily.roboto};
   margin: 0;
   letter-spacing: 0.15em;
+  color: #777;
 
   ${media.sm`
     font-size: 16px;

@@ -25,6 +25,7 @@ const P = styled.p`
   font-family: ${vars.fontFamily.roboto};
   margin-bottom: 0;
   font-size: 14px;
+  color: #ccc;
 
   ${media.sm`
     font-size: 20px;

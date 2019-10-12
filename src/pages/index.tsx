@@ -24,17 +24,13 @@ const H3 = styled.h3`
   text-transform: uppercase;
   letter-spacing: 0.15em;
   line-height: 1;
-  font-family: ${vars.fontFamily.roboto};
+  font-family: ${vars.fontFamily.avantGarde};
 `;
 
 const Description = styled.p`
   margin-top: 0;
   margin-bottom: 16px;
   font-family: ${vars.fontFamily.roboto};
-
-  ${media.sm`
-    font-size: 14px;
-  `}
 `;
 
 const DescriptionJa = styled(Description)`
