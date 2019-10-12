@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, title, location }: SEOProps) {
         lang,
       }}
       title={title}
-      titleTemplate={isHome ? `${site.siteMetadata.title} | %s` : `${site.siteMetadata.title}`}
+      titleTemplate={isHome ? `${site.siteMetadata.title} | %s` : site.siteMetadata.title}
       meta={[
         {
           name: `description`,
@@ -59,7 +59,7 @@ function SEO({ description, lang, meta, title, location }: SEOProps) {
         },
         {
           property: `og:title`,
-          content: isHome ? `${site.siteMetadata.title} | %s` : `${site.siteMetadata.title}`,
+          content: `${site.siteMetadata.title} | ${title}`,
         },
         {
           property: `og:description`,
