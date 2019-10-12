@@ -50,6 +50,10 @@ function SEO({ description, lang, meta, title, location }: SEOProps) {
           content: metaDescription,
         },
         {
+          name: `thumbnail`,
+          content: `/icons/icon-512x512.png`,
+        },
+        {
           property: `og:local`,
           content: lang,
         },
@@ -59,7 +63,7 @@ function SEO({ description, lang, meta, title, location }: SEOProps) {
         },
         {
           property: `og:title`,
-          content: `${site.siteMetadata.title} | ${title}`,
+          content: isHome ? `${site.siteMetadata.title} | ${title}` : `${title} | ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,
