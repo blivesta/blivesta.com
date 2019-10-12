@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import { media, vars } from '../styles';
 import Layout from '../components/templates/layout';
@@ -57,10 +58,29 @@ const Li = styled.li`
   `}
 `;
 
+interface IndexPageProps {
+  description: string;
+  title: string;
+  lang: string;
+  meta: any[];
+}
+
 const IndexPage = () => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            description
+          }
+        }
+      }
+    `,
+  );
+
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={site.siteMetadata.description} />
       <ContentBlock id="about" title="About">
         <H2>
           Design to <br />

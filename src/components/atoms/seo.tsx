@@ -33,13 +33,15 @@ function SEO({ description, lang, meta, title }: SEOProps) {
 
   const metaDescription = description || site.siteMetadata.description;
 
+  const isHome = location.pathname === '/';
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={isHome ? `${site.siteMetadata.title} | %s` : `${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -79,7 +81,7 @@ function SEO({ description, lang, meta, title }: SEOProps) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `ja`,
   meta: [],
   description: ``,
 };
