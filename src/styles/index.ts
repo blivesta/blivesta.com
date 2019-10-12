@@ -1,4 +1,5 @@
+import * as media from './media';
 import * as vars from './vars';
 import * as rules from './rules';
 
-export { vars, rules };
+export { media, vars, rules };

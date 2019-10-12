@@ -2,17 +2,32 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Octicon, { Mail } from '@primer/octicons-react';
 
-import { vars } from '../../styles';
-
+import { media, vars } from '../../styles';
 import Container from '../atoms/container';
 import Lists from '../atoms/lists';
 
 const Wrapper = styled.footer`
   background-repeat: repeat-x;
   background-image: url('/images/footer-bg.svg');
-  background-position: left bottom;
+  background-position: left bottom -2px;
   background-size: 100%;
   padding-bottom: 20vw;
+`;
+
+const StyledList = styled(Lists)`
+  & li {
+    font-size: 12px;
+    padding-right: 8px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    ${media.sm`
+      font-size: 14px;
+      padding-right: 12px;
+    `}
+  }
 `;
 
 const Flex = styled.div`
@@ -45,8 +60,6 @@ interface FooterProps {
 }
 
 const Footer = ({ siteTitle }: FooterProps) => {
-  const [state, setState] = React.useState({ open: false });
-
   return (
     <Wrapper>
       <Container>
@@ -56,7 +69,7 @@ const Footer = ({ siteTitle }: FooterProps) => {
           </a>
         </ContactBlock>
         <Flex>
-          <Lists>
+          <StyledList>
             <li>
               <a href="https://github.com/blivesta" target="_blank" rel="noopener">
                 GitHub
@@ -77,7 +90,7 @@ const Footer = ({ siteTitle }: FooterProps) => {
                 Twitter
               </a>
             </li>
-          </Lists>
+          </StyledList>
         </Flex>
         <CopyRight>
           &copy; {new Date().getFullYear()} {siteTitle}

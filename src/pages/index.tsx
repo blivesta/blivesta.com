@@ -1,10 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import media from 'styled-media-query';
 
-import { vars } from '../styles';
-
+import { media, vars } from '../styles';
 import Layout from '../components/templates/layout';
 import ContentBlock from '../components/molecules/content-block';
 import Lists from '../components/atoms/lists';
@@ -17,7 +14,7 @@ const H2 = styled.h2`
   margin-top: 0;
   line-height: 1;
 
-  ${media.greaterThan('small')`
+  ${media.sm`
     font-size: 56px;
   `}
 `;
@@ -33,6 +30,11 @@ const H3 = styled.h3`
 const Description = styled.p`
   margin-top: 0;
   margin-bottom: 16px;
+  font-family: ${vars.fontFamily.roboto};
+
+  ${media.sm`
+    font-size: 14px;
+  `}
 `;
 
 const DescriptionJa = styled(Description)`
@@ -42,27 +44,24 @@ const DescriptionJa = styled(Description)`
 
 const StyledLists = styled(Lists)`
   flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
   margin-bottom: 48px;
+
+  ${media.sm`
+    flex-direction: row;
+  `}
 `;
 
 const Li = styled.li`
-  width: 33.333333%;
-`;
-
-const More = styled.p`
   width: 100%;
-  font-size: 16px;
-  font-family: ${vars.fontFamily.roboto};
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  padding-top: 24px;
+
+  ${media.sm`
+    width: 33.333333%;
+  `}
 `;
 
 const IndexPage = () => {
-  const [state, setState] = React.useState({ open: false });
-
   return (
     <Layout>
       <SEO title="Home" />

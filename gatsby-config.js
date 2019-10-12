@@ -28,7 +28,7 @@ module.exports = {
         typekit: {
           id: process.env.GATSBY_TYPE_KIT_ID,
           families: [`ITC Avant Garde Gothic Pro Bold`, `vinyl`],
-        }
+        },
       },
     },
     `gatsby-transformer-sharp`,

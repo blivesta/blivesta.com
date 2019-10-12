@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
-import { vars } from '../../styles';
-
+import { media, vars } from '../../styles';
 import ContentBlock from '../molecules/content-block';
-
 import Logo from '../../assets/inline-svg/logo.svg';
 
 const Wrapper = styled.header``;
@@ -14,12 +11,12 @@ const Wrapper = styled.header``;
 const H1 = styled.h1`
   font-family: ${vars.fontFamily.avantGarde};
   font-weight: 700;
-  font-size: 56px;
+  font-size: 60px;
   margin-top: -8px;
   margin-bottom: 8px;
   line-height: 1;
 
-  ${media.greaterThan('small')`
+  ${media.sm`
     font-size: 96px;
   `}
 `;
@@ -27,11 +24,11 @@ const H1 = styled.h1`
 const P = styled.p`
   font-family: ${vars.fontFamily.roboto};
   margin-bottom: 0;
-  font-size: 20px;
-`;
+  font-size: 14px;
 
-const Nav = styled.nav`
-  padding-top: 32px;
+  ${media.sm`
+    font-size: 20px;
+  `}
 `;
 
 interface HeaderProps {

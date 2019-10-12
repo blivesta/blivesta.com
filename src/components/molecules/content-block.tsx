@@ -1,9 +1,6 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import media from 'styled-media-query';
-
-import { vars } from '../../styles';
-
+import { media, vars } from '../../styles';
 import Container from '../atoms/container';
 
 const Flex = styled.div<ContentBlockProps>`
@@ -13,17 +10,22 @@ const Flex = styled.div<ContentBlockProps>`
     props.logo &&
     css`
       padding-top: 30vh;
+      padding-bottom: 30vh;
     `}
 
-  ${media.greaterThan('small')`
+  ${media.sm`
     padding-right: 80px;
   `}
 `;
 
 const TitleColumn = styled.div`
-  width: 80px;
+  width: 44px;
   margin-right: 16px;
   position: relative;
+
+  ${media.sm`
+    width: 80px;
+  `}
 `;
 
 const H1 = styled.h1`
@@ -32,14 +34,17 @@ const H1 = styled.h1`
   top: 0;
   right: 24px;
   white-space: nowrap;
-  font-size: 1rem;
+  font-size: 14px;
   transform: rotate(-90deg);
   transform-origin: top right;
   text-transform: uppercase;
   font-family: ${vars.fontFamily.roboto};
   margin: 0;
   letter-spacing: 0.15em;
-  color: #777;
+
+  ${media.sm`
+    font-size: 16px;
+  `}
 `;
 
 const MainColumn = styled.div`

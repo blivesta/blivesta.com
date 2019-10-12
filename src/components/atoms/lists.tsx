@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 
+import { media } from '../../styles';
+
 const Ul = styled.ul<ListsProps>`
   display: flex;
   list-style: none;
@@ -17,11 +19,13 @@ const Ul = styled.ul<ListsProps>`
     ${props =>
       !props.isNotPipeline
         ? css`
-            &:not(:last-child)::after {
-              display: inline-flex;
-              content: '|';
-              padding-left: 12px;
-            }
+            ${media.sm`
+              &:not(:last-child)::after {
+                display: inline-flex;
+                content: '|';
+                padding-left: 12px;
+              }
+            `}
           `
         : css`
             letter-spacing: 0;
