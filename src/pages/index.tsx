@@ -80,7 +80,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title={site.siteMetadata.description} />
+      <SEO title={site.siteMetadata.description} location="/" />
       <ContentBlock id="about" title="About">
         <H2>
           Design to <br />

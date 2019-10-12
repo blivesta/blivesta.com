@@ -14,9 +14,10 @@ interface SEOProps {
   title: string;
   lang: string;
   meta: any[];
+  location?: string;
 }
 
-function SEO({ description, lang, meta, title }: SEOProps) {
+function SEO({ description, lang, meta, title, location }: SEOProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -33,7 +34,7 @@ function SEO({ description, lang, meta, title }: SEOProps) {
 
   const metaDescription = description || site.siteMetadata.description;
 
-  const isHome = location.pathname === '/';
+  const isHome = location === '/';
 
   return (
     <Helmet
