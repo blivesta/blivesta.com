@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Layout from '../components/templates/layout';
-import SEO from '../components/atoms/seo';
+import SEO from '../components/parts/seo';
 import ContentBlock from '../components/molecules/content-block';
 import ContentTitle from '../components/atoms/content-title';
 

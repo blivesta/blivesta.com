@@ -8,7 +8,7 @@ import Lists from '../atoms/lists';
 
 const Wrapper = styled.footer`
   background-repeat: repeat-x;
-  background-image: url('/images/footer-bg.svg');
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDgwIDEyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMjIyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMjAuMjc3LjA2OWwxMjAuMjA4IDEyMC4yMDhILjA3TDEyMC4yNzcuMDd6Ii8+PHBhdGggZD0iTTM2MC4xMy40MjNsMTE5LjUwMiAxMTkuNS0xMTkuODU1LjM1NC0xMTkuODU0LjM1NHoiLz48L2c+PC9zdmc+');
   background-position: left bottom -2px;
   background-size: 100%;
   padding-bottom: 20vw;

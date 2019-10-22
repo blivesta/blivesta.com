@@ -4,10 +4,10 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { media, vars } from '../styles';
 import Layout from '../components/templates/layout';
+import SEO from '../components/parts/seo';
 import ContentBlock from '../components/molecules/content-block';
-import Lists from '../components/atoms/lists';
-import SEO from '../components/atoms/seo';
 import ContentTitle from '../components/atoms/content-title';
+import Lists from '../components/atoms/lists';
 
 const H3 = styled.h3`
   font-size: 20px;
