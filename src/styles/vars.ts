@@ -7,8 +7,8 @@ export const fontFamily = {
 };
 
 export const fontSize = {
-  // mi: '0.625rem',
-  // tn: '0.6875rem',
+  mi: '0.625rem',
+  tn: '0.6875rem',
   xs: '0.75rem', // 12px
   sm: '0.875rem', // 14px
   md: '1rem', // 16px
@@ -37,69 +37,3 @@ export const gutters = {
   lg: spaces.sm,
   xl: spaces.md,
 };
-
-// export const borderRadius = {
-//   xs: '2px',
-//   sm: '3px',
-//   md: '4px',
-//   lg: '6px',
-//   xl: '8px',
-// };
-
-// export const shadow = {
-//   xs: '0 1px 1px 1px',
-//   sm: '0 1px 4px 1px',
-//   md: '0 6px 10px 0',
-//   lg: '0 13px 25px 0',
-//   xl: '0 20px 40px 0',
-// };
-
-// export const lineHeight = {
-//   xs: '1.1',
-//   sm: '1.2',
-//   md: '1.5',
-//   lg: '1.8',
-//   xl: '2',
-// };
-
-// export const letterSpacing = {
-//   xs: '-0.08em',
-//   sm: '-0.04em',
-//   md: '0',
-//   lg: '0.15em',
-//   xl: '0.3em',
-// };
-
-// export const fontWeight = {
-//   lighter: 'lighter',
-//   normal: 'normal',
-//   bold: 'bold',
-// };
-
-// export const controlBorder = {
-//   size: '2px',
-//   radius: borderRadius.xs,
-// };
-
-// export const controlHeight = {
-//   sm: `calc(2.125rem - ${controlBorder.size})`,
-//   md: `calc(2.625rem - ${controlBorder.size})`,
-//   lg: `calc(3.125rem - ${controlBorder.size})`,
-// };
-
-// export const controlSpaceV = {
-//   sm: '0.125rem',
-//   md: spaces.mi,
-//   lg: spaces.tn,
-// };
-
-// export const controlSpaceH = {
-//   sm: gutters.sm,
-//   md: gutters.lg,
-//   lg: '2rem',
-// };
-
-// export const controlTransition = {
-//   duration: '0.2s',
-//   easing: 'ease-out',
-// };

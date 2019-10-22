@@ -81,13 +81,13 @@ const Footer = ({ siteTitle }: FooterProps) => {
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/blivesta" target="_blank" rel="noopener">
-                Instagram
+              <a href="https://twitter.com/blivesta" target="_blank" rel="noopener">
+                Twitter
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/blivesta" target="_blank" rel="noopener">
-                Twitter
+              <a href="https://instagram.com/blivesta" target="_blank" rel="noopener">
+                Instagram
               </a>
             </li>
           </StyledList>
