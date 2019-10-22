@@ -26,6 +26,7 @@ const Description = styled.p`
 const DescriptionJa = styled(Description)`
   margin-bottom: 48px;
   font-size: 14px;
+  line-height: 1.7;
 `;
 
 const StyledLists = styled(Lists)`
@@ -34,9 +35,21 @@ const StyledLists = styled(Lists)`
   position: relative;
   margin-bottom: 48px;
 
-  ${media.sm`
+  ${media.md`
     flex-direction: row;
   `}
+
+  & li {
+    ${media.sm`
+      width: 100%;
+    `}
+    ${media.md`
+      width: 50%;
+    `}
+    ${media.lg`
+      width: 33.333333%;
+    `}
+  }
 `;
 
 const Li = styled.li`
@@ -76,21 +89,21 @@ const IndexPage = () => {
           accelerate growth
         </ContentTitle>
         <Description>
-          We think strategically about design and help companies and brands grow. From research and concept development
-          to visual, UI, software and website development in general, we are working on analysis and proposals even
-          after the start of operation.
+          We think strategically about design and help companies and brands grows. We conduct research concept
+          formulation, visual UI, web application and site development as a whole, and we are also working on analysis,
+          proposal and improvement in operation.
         </Description>
         <DescriptionJa>
-          デザインを戦略的に考え、企業やブランドをグロースさせるためのお手伝いをしています。リサーチ、コンセプト策定からビジュアルやUI、ソフトウェア・Webサイトの開発やディレクションを行い、運用開始後も分析・提案に取り組んでいます。
+          デザインを戦略的に考え、企業やブランドをグロースさせるためのお手伝いをしています。リサーチ・コンセプト策定、ビジュアル・UI、Webアプリ・サイト開発を一環して行い、運用でも分析・提案・改善に取り組んでいます。
         </DescriptionJa>
         <H3>Scope of work:</H3>
         <StyledLists isNotPipeline>
-          <Li>Human interface design</Li>
+          <Li>User interface design</Li>
           <Li>User exprerience design</Li>
+          <Li>Brand Identity design</Li>
           <Li>Web development</Li>
-          <Li>Brand Identity</Li>
-          <Li>Project direction</Li>
-          <Li>Graphic design</Li>
+          <Li>Softwear development</Li>
+          <Li>Project/Product management</Li>
         </StyledLists>
       </ContentBlock>
     </Layout>

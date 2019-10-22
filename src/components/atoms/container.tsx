@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 984px;
   padding: 0px 2rem 1.5rem;
   padding-top: 0;
 `;
