@@ -89,7 +89,7 @@ const IndexPage = () => {
           accelerate growth
         </ContentTitle>
         <Description>
-          We think strategically about design and help companies and brands grows. We conduct research concept
+          We think strategically about design and help companies and brands growth. We conduct research concept
           formulation, visual UI, web application and site development as a whole, and we are also working on analysis,
           proposal and improvement in operation.
         </Description>
