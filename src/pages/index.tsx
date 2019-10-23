@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
 
 import { media, vars } from '../styles';
+import { useSiteMetadata } from '../components/hooks/use-site-metadata';
 import Layout from '../components/templates/layout';
 import SEO from '../components/parts/seo';
 import ContentBlock from '../components/molecules/content-block';
@@ -27,6 +27,7 @@ const DescriptionJa = styled(Description)`
   margin-bottom: 48px;
   font-size: 14px;
   line-height: 1.7;
+  text-align: justify;
 `;
 
 const StyledLists = styled(Lists)`
@@ -54,29 +55,12 @@ const Li = styled.li`
   `}
 `;
 
-interface IndexPageProps {
-  description: string;
-  title: string;
-  lang: string;
-  meta: any[];
-}
-
 const IndexPage = () => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            description
-          }
-        }
-      }
-    `,
-  );
+  const { description } = useSiteMetadata();
 
   return (
     <Layout>
-      <SEO title={site.siteMetadata.description} location="/" />
+      <SEO title={description} location="/" />
       <ContentBlock id="about" title="About">
         <ContentTitle>
           Design to <br />
