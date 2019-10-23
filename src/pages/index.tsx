@@ -38,24 +38,18 @@ const StyledLists = styled(Lists)`
   ${media.md`
     flex-direction: row;
   `}
-
-  & li {
-    ${media.sm`
-      width: 100%;
-    `}
-    ${media.md`
-      width: 50%;
-    `}
-    ${media.lg`
-      width: 33.333333%;
-    `}
-  }
 `;
 
 const Li = styled.li`
   width: 100%;
 
   ${media.sm`
+    width: 100%;
+  `}
+  ${media.md`
+    width: 50%;
+  `}
+  ${media.lg`
     width: 33.333333%;
   `}
 `;
