@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { media, vars } from '../styles';
-import { useSiteMetadata } from '../components/hooks/use-site-metadata';
+import { useSiteMetadata } from '../hooks/use-site-metadata';
 import Layout from '../components/templates/layout';
 import SEO from '../components/parts/seo';
 import ContentBlock from '../components/molecules/content-block';
