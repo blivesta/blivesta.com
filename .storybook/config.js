@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
+import { withScreenshot } from 'zisui';
 import pkg from '../package.json';
 import GlobalStyle from '../src/styles/global-style';
 import { theme } from '../src/styles/theme';
@@ -28,6 +29,8 @@ addParameters({
     name: pkg.name,
   },
 });
+
+addDecorator(withScreenshot());
 
 addDecorator(story => (
   <ThemeProvider theme={theme}>

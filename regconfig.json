@@ -1,0 +1,20 @@
+{
+  "core": {
+    "workingDir": ".reg",
+    "actualDir": "__screenshots__",
+    "thresholdRate": 0,
+    "addIgnore": true,
+    "ximgdiff": {
+      "invocationType": "client"
+    }
+  },
+  "plugins": {
+    "reg-keygen-git-hash-plugin": true,
+    "reg-notify-github-plugin": {
+      "clientId": "MzQztTQ1MLQ00E/KySxLLS5J1EvOz9U3trAwMbW0gAsCAA=="
+    },
+    "reg-publish-s3-plugin": {
+      "bucketName": "blivesta.com-reg"
+    }
+  }
+}
