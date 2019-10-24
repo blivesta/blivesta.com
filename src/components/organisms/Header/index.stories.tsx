@@ -4,5 +4,5 @@ import { storiesOf } from '@storybook/react';
 import Header from './';
 
 storiesOf(`component/organisms/Header`, module).add(`default`, () => (
-  <Header siteTitle="blivesta" description="description😀 😎 👍 💯" />
+  <Header siteTitle="blivesta" description="description" />
 ));
