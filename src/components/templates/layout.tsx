@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { useSiteMetadata } from '../../hooks/use-site-metadata';
-import GlobalStyles from '../../styles/global-styles';
+import GlobalStyle from '../../styles/global-style';
 import Header from '../organisms/header';
 import Footer from '../organisms/footer';
 
@@ -26,7 +26,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <Wrapper>
-      <GlobalStyles />
+      <GlobalStyle />
       <Contents className="js-content">
         <>
           <Header siteTitle={title} description={description} />
