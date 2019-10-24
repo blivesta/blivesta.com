@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Lists from './';
 
-storiesOf(`component/atomos/Lists`, module)
+storiesOf(`atoms|Lists`, module)
   .add(`default`, () => (
     <Lists>
       <li>foo</li>

@@ -3,4 +3,4 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Container from './';
 
-storiesOf(`component/atomos/Container`, module).add(`default`, () => <Container>contents</Container>);
+storiesOf(`atoms|Container`, module).add(`default`, () => <Container>contents</Container>);
