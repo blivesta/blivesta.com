@@ -70,4 +70,6 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-__screenshots__.reg
+__screenshots__
+
+.reg
