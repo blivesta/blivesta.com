@@ -23,3 +23,5 @@ jobs:
       - run: yarn screenshot
       
       - run: yarn reg
+      
+      - run: yarn build
