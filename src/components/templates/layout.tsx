@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { useSiteMetadata } from '../hooks/use-site-metadata';
+import { useSiteMetadata } from '../../hooks/use-site-metadata';
 import GlobalStyle from '../../styles/global-style';
 import Header from '../organisms/header';
 import Footer from '../organisms/footer';
