@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import { useSiteMetadata } from '../../hooks/use-site-metadata';
+import { useSiteMetadata } from '../../../hooks/use-site-metadata';
 
-interface SEOProps {
+interface SeoProps {
   description?: string;
   title: string;
   location?: string;
 }
 
-function SEO(props: SEOProps) {
+function Seo(props: SeoProps) {
   const { title, description, author, siteUrl } = useSiteMetadata();
   const metaDescription = props.description || description;
   const isHome = props.location === '/';
@@ -38,4 +38,4 @@ function SEO(props: SEOProps) {
   );
 }
 
-export default SEO;
+export default Seo;

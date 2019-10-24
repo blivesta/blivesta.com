@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import { media, vars } from '../../styles';
-import ContentBlock from '../molecules/content-block';
-import Logo from '../../assets/inline-svg/logo.svg';
+import { media, vars } from '../../../styles';
+import Logo from '../../atoms/Logo';
+import ContentBlock from '../../molecules/ContentBlock';
 
 const Wrapper = styled.header``;
 

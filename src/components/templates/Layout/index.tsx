@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { useSiteMetadata } from '../../hooks/use-site-metadata';
-import GlobalStyles from '../../styles/global-styles';
-import Header from '../organisms/header';
-import Footer from '../organisms/footer';
+import { useSiteMetadata } from '../../../hooks/use-site-metadata';
+import GlobalStyle from '../../../styles/global-style';
+import Header from '../../organisms/Header';
+import Footer from '../../organisms/Footer';
 
 const Wrapper = styled.div`
   background-repeat: repeat-x;
@@ -26,7 +26,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <Wrapper>
-      <GlobalStyles />
+      <GlobalStyle />
       <Contents className="js-content">
         <>
           <Header siteTitle={title} description={description} />
