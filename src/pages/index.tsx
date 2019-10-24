@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 import { media, vars } from '../styles';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
-import Layout from '../components/templates/layout';
-import SEO from '../components/parts/seo';
-import ContentBlock from '../components/molecules/content-block';
-import ContentTitle from '../components/atoms/content-title';
-import Lists from '../components/atoms/lists';
+import Layout from '../components/templates/Layout';
+import Seo from '../components/parts/Seo';
+import ContentBlock from '../components/molecules/ContentBlock';
+import ContentTitle from '../components/atoms/ContentTitle';
+import Lists from '../components/atoms/Lists';
 
 const H3 = styled.h3`
   font-size: 20px;
@@ -60,7 +60,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title={description} location="/" />
+      <Seo title={description} location="/" />
       <ContentBlock id="about" title="About">
         <ContentTitle>
           Design to <br />

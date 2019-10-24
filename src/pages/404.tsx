@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import Layout from '../components/templates/layout';
-import SEO from '../components/parts/seo';
-import ContentBlock from '../components/molecules/content-block';
-import ContentTitle from '../components/atoms/content-title';
+import Layout from '../components/templates/Layout';
+import Seo from '../components/parts/Seo';
+import ContentBlock from '../components/molecules/ContentBlock';
+import ContentTitle from '../components/atoms/ContentTitle';
 
 const NotFoundPage = () => (
   <Layout>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 
-import { media, vars } from '../../styles';
+import { media, vars } from '../../../styles';
 
 const Ul = styled.ul<ListsProps>`
   display: flex;

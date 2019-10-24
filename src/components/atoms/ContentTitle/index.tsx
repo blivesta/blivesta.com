@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { media, vars } from '../../styles';
+import { media, vars } from '../../../styles';
 
 const H2 = styled.h2`
   font-family: ${vars.fontFamily.avantGarde};

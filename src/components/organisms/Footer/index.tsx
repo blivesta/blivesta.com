@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Octicon, { Mail } from '@primer/octicons-react';
 
-import { media, vars } from '../../styles';
-import Container from '../atoms/container';
-import Lists from '../atoms/lists';
+import { media, vars } from '../../../styles';
+import Container from '../../atoms/Container';
+import Lists from '../../atoms/Lists';
 
 const Wrapper = styled.footer`
   background-repeat: repeat-x;
