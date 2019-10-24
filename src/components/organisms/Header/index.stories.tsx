@@ -3,6 +3,4 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Header from './';
 
-storiesOf(`component/organisms/Header`, module).add(`default`, () => (
-  <Header siteTitle="blivesta" description="description" />
-));
+storiesOf(`organisms|Header`, module).add(`default`, () => <Header siteTitle="blivesta" description="description" />);
