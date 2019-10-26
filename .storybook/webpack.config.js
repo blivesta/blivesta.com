@@ -16,6 +16,7 @@ module.exports = ({ config }) => {
   ];
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ['browser', 'module', 'main'];
+
   // Typescript
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
@@ -30,14 +31,11 @@ module.exports = ({ config }) => {
     },
   });
 
+  // Storybook
   config.module.rules.push({
-    test: /\.stories\.(ts|tsx|js|jsx)$/,
-    loaders: [
-      {
-        loader: require.resolve('@storybook/addon-storysource/loader'),
-        options: { parser: 'typescript' },
-      },
-    ],
+    test: /\.(stories|story)\.[tj]sx?$/,
+    loader: require.resolve('@storybook/source-loader'),
+    exclude: [/node_modules/],
     enforce: 'pre',
   });
 
