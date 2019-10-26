@@ -10,20 +10,7 @@ executors:
     working_directory: ~/repo
 
 commands:
-  gatsby-build:
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - yarn-cache-{{ checksum "yarn.lock" }}
-      - run:
-          name: Install Dependencies
-          command: yarn install && npm rebuild
-      - save_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
-          paths:
-            - ./node_modules
-  reg-run:
+  build:
     steps:
       - checkout
       - restore_cache:
@@ -42,7 +29,7 @@ jobs:
     executor: node-executor
     working_directory: ~/repo
     steps:
-      - gatsby-build
+      - build
       - run:
           name: Lint
           command: yarn lint
@@ -56,7 +43,7 @@ jobs:
     executor: reg
     working_directory: ~/repo
     steps:
-      - reg-run
+      - build
       - run:
           name: Screenshot
           command: yarn screenshot
