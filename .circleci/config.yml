@@ -1,27 +1,59 @@
 version: 2
-jobs:
-  build:
+executors:
+  default:
+    docker:
+      - image: circleci/node:12.10.0
+    working_directory: ~/repo        
+  reg:
     docker:
       - image: regviz/node-xcb
+    working_directory: ~/repo        
 
-    working_directory: ~/repo
-
+jobs:
+  setup:
+    executor:
+      name: default    
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+      - run: yarn install --pure-lockfile
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+  gatsby-build:
+    executor:
+      name: default    
     steps:
       - checkout
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
             - v1-dependencies-
-
-      - run: yarn
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-
-      - run: yarn screenshot
-      
-      - run: yarn reg
-      
+      - run: yarn tsc
       - run: yarn build
+  reg-run:
+    executor:
+      name: reg    
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
+      - run: yarn screenshot
+      - run: yarn reg
+
+workflows:
+  version: 2
+  build_pipeline:
+    jobs:
+      - setup  
+      - gatsby-build:
+          requires:
+            - setup
+      - reg-run:
+          requires:
+            - setup
