@@ -48,7 +48,7 @@ jobs:
           command: yarn lint
       - run:
           name: Tsc
-          command: yarn test
+          command: yarn tsc
       - run:
           name: Gatsby
           command: yarn build
