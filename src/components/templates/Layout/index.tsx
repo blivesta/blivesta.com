@@ -1,8 +1,9 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
-import { useSiteMetadata } from '../../../hooks/use-site-metadata';
-import GlobalStyle from '../../../styles/global-style';
+import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
+import GlobalStyle from '../../../styles/GlobalStyle';
+import { theme } from '../../../styles';
 import Header from '../../organisms/Header';
 import Footer from '../../organisms/Footer';
 
@@ -25,16 +26,16 @@ const Layout = ({ children }: LayoutProps) => {
   const { title, description } = useSiteMetadata();
 
   return (
-    <Wrapper>
-      <GlobalStyle />
-      <Contents className="js-content">
-        <>
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <GlobalStyle />
+        <Contents className="js-content">
           <Header siteTitle={title} description={description} />
           <Main>{children}</Main>
           <Footer siteTitle={title} />
-        </>
-      </Contents>
-    </Wrapper>
+        </Contents>
+      </Wrapper>
+    </ThemeProvider>
   );
 };
 

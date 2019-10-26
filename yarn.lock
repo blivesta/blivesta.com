@@ -1945,7 +1945,7 @@
     memoizerific "^1.11.3"
     qs "^6.6.0"
 
-"@storybook/source-loader@5.2.5":
+"@storybook/source-loader@5.2.5", "@storybook/source-loader@^5.2.5":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.5.tgz#8cb856aaaa47116f428bf7330a457e171d96c3fc"
   integrity sha512-XPhV4UhJq2h5anQn7ETuHQd/c/qQ/7qKxffVlAMQim4aXGqTKdMe0jHoziG4nyj0hMxWGjqbwHw69fCYI4pCog==

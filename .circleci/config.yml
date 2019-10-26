@@ -1,27 +1,59 @@
-version: 2
-jobs:
-  build:
+version: 2.1
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:10.16.0
+    working_directory: ~/repo        
+  reg:
     docker:
       - image: regviz/node-xcb
-
     working_directory: ~/repo
 
+commands:
+  build:
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-            - v1-dependencies-
-
-      - run: yarn
-
+            - yarn-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install
       - save_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+            - ./node_modules
 
-      - run: yarn screenshot
-      
-      - run: yarn reg
-      
-      - run: yarn build
+jobs:
+  build:
+    executor: node-executor
+    working_directory: ~/repo
+    steps:
+      - build
+      - run:
+          name: Lint
+          command: yarn lint
+      - run:
+          name: Tsc
+          command: yarn tsc
+      - run:
+          name: Gatsby
+          command: yarn build
+  regression:
+    executor: reg
+    working_directory: ~/repo
+    steps:
+      - build
+      - run:
+          name: Screenshot
+          command: yarn screenshot
+      - run:
+          name: Regression test
+          command: yarn reg
+
+workflows:
+  version: 2
+  build_pipeline:
+    jobs:
+      - build
+      - regression

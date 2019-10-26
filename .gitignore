@@ -70,6 +70,11 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+# zisui
 __screenshots__
 
+# reg-suite
 .reg
+
+# storybook
+storybook-static
