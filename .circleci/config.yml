@@ -15,12 +15,12 @@ commands:
       - checkout
       - restore_cache:
           keys:
-            - yarn-cache-{{ checksum "yarn.lock" }}
+            - yarn-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
-          command: yarn install && npm rebuild
+          command: yarn install
       - save_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
+          key: yarn-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
 
