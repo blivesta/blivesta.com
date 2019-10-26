@@ -34,10 +34,8 @@ addDecorator(withScreenshot());
 
 addDecorator(story => (
   <ThemeProvider theme={theme}>
-    <>
-      <GlobalStyle />
-      {story()}
-    </>
+    <GlobalStyle />
+    {story()}
   </ThemeProvider>
 ));
 

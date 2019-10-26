@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
 import GlobalStyle from '../../../styles/GlobalStyle';
@@ -26,16 +26,16 @@ const Layout = ({ children }: LayoutProps) => {
   const { title, description } = useSiteMetadata();
 
   return (
-    <Wrapper>
-      <GlobalStyle />
-      <Contents className="js-content">
-        <>
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <GlobalStyle />
+        <Contents className="js-content">
           <Header siteTitle={title} description={description} />
           <Main>{children}</Main>
           <Footer siteTitle={title} />
-        </>
-      </Contents>
-    </Wrapper>
+        </Contents>
+      </Wrapper>
+    </ThemeProvider>
   );
 };
 
