@@ -3,7 +3,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 import { withScreenshot } from 'zisui';
 import pkg from '../package.json';
-import GlobalStyle from '../src/styles/global-style';
+import GlobalStyle from '../src/styles/GlobalStyle';
 import { theme } from '../src/styles/theme';
 
 // automatically import all files ending in *.stories.js

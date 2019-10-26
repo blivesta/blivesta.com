@@ -2,7 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
-import GlobalStyle from '../../../styles/global-style';
+import GlobalStyle from '../../../styles/GlobalStyle';
+import { theme } from '../../../styles';
 import Header from '../../organisms/Header';
 import Footer from '../../organisms/Footer';
 
