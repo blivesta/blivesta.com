@@ -1,16 +1,15 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { media, vars } from '../../../styles';
 
 const H2 = styled.h2`
-  font-family: ${vars.fontFamily.avantGarde};
+  font-family: ${props => props.theme.fonts.avantGarde};
+  font-size: ${props => props.theme.fontSizes[4]};
   text-transform: uppercase;
-  font-size: 32px;
-  margin-top: 0;
   line-height: 1;
+  margin-top: 0;
 
-  ${media.sm`
-    font-size: 56px;
+  ${props => props.theme.media.sm`
+    font-size: ${props => props.theme.fontSizes[6]};
   `}
 `;
 

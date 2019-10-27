@@ -1,31 +1,29 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 
-import { media, vars } from '../../../styles';
-
 const Ul = styled.ul<ListsProps>`
   display: flex;
   list-style: none;
   padding-left: 0;
   margin-top: 0;
-  font-family: ${vars.fontFamily.roboto};
+  font-family: ${props => props.theme.fonts.en};
 
   li {
-    padding-right: 12px;
+    font-size: ${props => props.theme.fontSizes[1]};
     letter-spacing: 0.15em;
-    font-size: 14px;
     text-transform: uppercase;
-    margin-bottom: 4px;
+    padding-right: ${props => props.theme.spaces[2]};
+    margin-bottom: ${props => props.theme.spaces[0]};
 
     ${props =>
       !props.isNotPipeline
         ? css`
-            ${media.sm`
+            ${props.theme.media.sm`
               &:not(:last-child)::after {
                 display: inline-flex;
                 content: '|';
-                padding-left: 12px;
-                color: #777;
+                padding-left: ${props => props.theme.spaces[2]};
+                color: ${props => props.theme.colors.baseText[1]};
               }
             `}
           `

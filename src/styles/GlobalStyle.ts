@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    background: #111;
+    background: ${props => props.theme.colors.bg};
     color: #fff;
   }
 

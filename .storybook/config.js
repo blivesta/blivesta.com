@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { withScreenshot } from 'zisui';
 import pkg from '../package.json';
 import GlobalStyle from '../src/styles/GlobalStyle';
-import { theme } from '../src/styles/theme';
+import theme from '../src/styles/theme';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.(ts|tsx)$/);

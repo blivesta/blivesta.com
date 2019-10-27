@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { media, vars } from '../styles';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import Layout from '../components/templates/Layout';
 import Seo from '../components/parts/Seo';
@@ -10,33 +9,33 @@ import ContentTitle from '../components/atoms/ContentTitle';
 import Lists from '../components/atoms/Lists';
 
 const H3 = styled.h3`
-  font-size: 20px;
+  font-family: ${props => props.theme.fonts.avantGarde};
+  font-size: ${props => props.theme.fontSizes[3]};
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  line-height: 1;
-  font-family: ${vars.fontFamily.avantGarde};
 `;
 
 const Description = styled.p`
   margin-top: 0;
-  margin-bottom: 16px;
-  font-family: ${vars.fontFamily.roboto};
+  margin-bottom: ${props => props.theme.spaces[3]};
+  font-family: ${props => props.theme.fonts.en};
 `;
 
 const DescriptionJa = styled(Description)`
-  margin-bottom: 48px;
-  font-size: 14px;
+  font-size: ${props => props.theme.fontSizes[1]};
   line-height: 1.7;
   text-align: justify;
+  margin-bottom: ${props => props.theme.spaces[6]};
 `;
 
 const StyledLists = styled(Lists)`
   flex-wrap: wrap;
   flex-direction: column;
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: ${props => props.theme.spaces[6]};
 
-  ${media.md`
+  ${props => props.theme.media.md`
     flex-direction: row;
   `}
 `;
@@ -44,13 +43,13 @@ const StyledLists = styled(Lists)`
 const Li = styled.li`
   width: 100%;
 
-  ${media.sm`
+  ${props => props.theme.media.sm`
     width: 100%;
   `}
-  ${media.md`
+  ${props => props.theme.media.md`
     width: 50%;
   `}
-  ${media.lg`
+  ${props => props.theme.media.lg`
     width: 33.333333%;
   `}
 `;

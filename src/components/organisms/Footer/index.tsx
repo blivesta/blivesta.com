@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Octicon, { Mail } from '@primer/octicons-react';
 
-import { media, vars } from '../../../styles';
 import Container from '../../atoms/Container';
 import Lists from '../../atoms/Lists';
 
@@ -16,16 +15,16 @@ const Wrapper = styled.footer`
 
 const StyledList = styled(Lists)`
   & li {
-    font-size: 12px;
-    padding-right: 8px;
+    font-size: ${props => props.theme.fontSizes[0]};
+    padding-right: ${props => props.theme.spaces[1]};
 
     &:last-child {
       padding-right: 0;
     }
 
-    ${media.sm`
-      font-size: 14px;
-      padding-right: 12px;
+    ${props => props.theme.media.sm`
+      font-size: ${props => props.theme.fontSizes[1]};
+      padding-right: ${props => props.theme.spaces[2]};
     `}
   }
 `;
@@ -37,22 +36,22 @@ const Flex = styled.div`
 
 const CopyRight = styled.p`
   width: 100%;
-  margin: 0;
-  font-family: ${vars.fontFamily.roboto};
-  font-size: 12px;
+  font-family: ${props => props.theme.fonts.en};
+  font-size: ${props => props.theme.fontSizes[0]};
+  color: ${props => props.theme.colors.baseText[1]};
   text-align: center;
-  padding-top: 48px;
-  color: #777;
+  margin: 0;
+  padding-top: ${props => props.theme.spaces[6]};
 `;
 
 const ContactBlock = styled(Flex)`
-  padding-bottom: 64px;
+  padding-bottom: ${props => props.theme.spaces[7]};
   justify-content: center;
 `;
 
 const Icon = styled(Octicon)`
   width: 32px;
-  margin-right: 8px;
+  margin-right: ${props => props.theme.spaces[1]};
 `;
 
 interface FooterProps {

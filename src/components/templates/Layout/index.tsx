@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
 import GlobalStyle from '../../../styles/GlobalStyle';
-import { theme } from '../../../styles';
+import theme from '../../../styles/theme';
 import Header from '../../organisms/Header';
 import Footer from '../../organisms/Footer';
 
