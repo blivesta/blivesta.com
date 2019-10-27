@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.section`
   margin: 0 auto;
   max-width: 984px;
-  padding: 0px 2rem 1.5rem;
+  padding: 0px ${props => props.theme.spaces[5]} ${props => props.theme.spaces[4]};
   padding-top: 0;
 `;
 

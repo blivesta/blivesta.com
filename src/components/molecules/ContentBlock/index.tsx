@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { media, vars } from '../../../styles';
 import Container from '../../atoms/Container';
 
 const Flex = styled.div<ContentBlockProps>`
@@ -13,17 +12,17 @@ const Flex = styled.div<ContentBlockProps>`
       padding-bottom: 30vh;
     `}
 
-  ${media.sm`
-    padding-right: 80px;
+  ${props => props.theme.media.sm`
+    padding-right: ${props => props.theme.spaces[8]};
   `}
 `;
 
 const TitleColumn = styled.div`
   width: 44px;
-  margin-right: 16px;
+  margin-right: ${props => props.theme.spaces[3]};
   position: relative;
 
-  ${media.sm`
+  ${props => props.theme.media.sm`
     width: 80px;
   `}
 `;
@@ -32,19 +31,19 @@ const H1 = styled.h1`
   display: flex;
   position: absolute;
   top: 0;
-  right: 24px;
+  right: ${props => props.theme.spaces[4]};
+  margin: 0;
+  font-family: ${props => props.theme.fonts.en};
+  font-size: ${props => props.theme.fontSizes[1]};
+  color: ${props => props.theme.colors.baseText[1]};
+  text-transform: uppercase;
   white-space: nowrap;
-  font-size: 14px;
+  letter-spacing: 0.15em;
   transform: rotate(-90deg);
   transform-origin: top right;
-  text-transform: uppercase;
-  font-family: ${vars.fontFamily.roboto};
-  margin: 0;
-  letter-spacing: 0.15em;
-  color: #777;
 
-  ${media.sm`
-    font-size: 16px;
+  ${props => props.theme.media.sm`
+    font-size: ${props => props.theme.fontSizes[2]};
   `}
 `;
 

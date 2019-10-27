@@ -2,33 +2,32 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import { media, vars } from '../../../styles';
 import Logo from '../../atoms/Logo';
 import ContentBlock from '../../molecules/ContentBlock';
 
 const Wrapper = styled.header``;
 
 const H1 = styled.h1`
-  font-family: ${vars.fontFamily.avantGarde};
+  font-family: ${props => props.theme.fonts.avantGarde};
   font-weight: 700;
-  font-size: 60px;
+  font-size: ${props => props.theme.fontSizes[7]};
   margin-top: -8px;
-  margin-bottom: 8px;
+  margin-bottom: ${props => props.theme.spaces[1]};
   line-height: 1;
 
-  ${media.sm`
-    font-size: 96px;
+  ${props => props.theme.media.sm`
+    font-size: ${props => props.theme.fontSizes[8]};
   `}
 `;
 
 const P = styled.p`
-  font-family: ${vars.fontFamily.roboto};
+  font-family: ${props => props.theme.fonts.en};
+  font-size: ${props => props.theme.fontSizes[1]};
+  color: ${props => props.theme.colors.baseText[2]};
   margin-bottom: 0;
-  font-size: 14px;
-  color: #ccc;
 
-  ${media.sm`
-    font-size: 20px;
+  ${props => props.theme.media.sm`
+    font-size: ${props => props.theme.fontSizes[3]};
   `}
 `;
 
