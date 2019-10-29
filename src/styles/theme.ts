@@ -1,4 +1,14 @@
+import { keyframes } from 'styled-components';
 import { generateMedia } from 'styled-media-query';
+
+export const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const pxToRem = (pxSize: number) => {
   return pxSize / 16;
@@ -18,6 +28,7 @@ const theme = {
       '#777', // [1]
       '#ccc', // [2]
     ],
+    link: '#fff',
     bg: '#111',
   },
   fontSizes: [

@@ -12,6 +12,6 @@ export interface ContainerProps {
   children: React.ReactNode;
 }
 
-const Container = (props: ContainerProps) => <Wrapper {...props}>{props.children}</Wrapper>;
+const Container = ({ children }: ContainerProps) => <Wrapper>{children}</Wrapper>;
 
 export default Container;

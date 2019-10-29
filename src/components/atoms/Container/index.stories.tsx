@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import Container from './';
+import Container from '.';
 
 const Fixture = styled.div`
   background-color: #444;

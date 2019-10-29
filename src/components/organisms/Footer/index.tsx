@@ -13,22 +13,6 @@ const Wrapper = styled.footer`
   padding-bottom: 20vw;
 `;
 
-const StyledList = styled(Lists)`
-  & li {
-    font-size: ${props => props.theme.fontSizes[0]};
-    padding-right: ${props => props.theme.spaces[1]};
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    ${props => props.theme.media.sm`
-      font-size: ${props => props.theme.fontSizes[1]};
-      padding-right: ${props => props.theme.spaces[2]};
-    `}
-  }
-`;
-
 const Flex = styled.div`
   display: flex;
   justify-content: center;
@@ -68,31 +52,32 @@ const Footer = ({ siteTitle }: FooterProps) => {
           </a>
         </ContactBlock>
         <Flex>
-          <StyledList>
-            <li>
-              <a href="https://github.com/blivesta" target="_blank" rel="noopener">
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://dribbble.com/blivesta" target="_blank" rel="noopener">
-                dribbble
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/blivesta" target="_blank" rel="noopener">
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com/blivesta" target="_blank" rel="noopener">
-                Instagram
-              </a>
-            </li>
-          </StyledList>
+          <Lists
+            items={[
+              {
+                title: 'GitHub',
+                linkUrl: 'https://github.com/blivesta',
+              },
+              {
+                title: 'dribbble',
+                linkUrl: 'https://dribbble.com/blivesta',
+              },
+              {
+                title: 'Twitter',
+                linkUrl: 'https://twitter.com/blivesta',
+              },
+              {
+                title: 'Instagram',
+                linkUrl: 'https://instagram.com/blivesta',
+              },
+            ]}
+          />
         </Flex>
         <CopyRight>
-          &copy; {new Date().getFullYear()} {siteTitle}
+          &copy;&nbsp;
+          {new Date().getFullYear()}
+          &nbsp;
+          {siteTitle}
         </CopyRight>
       </Container>
     </Wrapper>
