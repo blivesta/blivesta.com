@@ -7,7 +7,7 @@ import ContentTitle from '../components/atoms/ContentTitle';
 
 const NotFoundPage = () => (
   <Layout>
-    <Seo title="404 Not found" />
+    <Seo pageTitle="404 Not found" />
     <ContentBlock id="notFound" title="NOT FOUND">
       <ContentTitle>You just hit a route that doesn&#39;t exist... the sadness.</ContentTitle>
     </ContentBlock>

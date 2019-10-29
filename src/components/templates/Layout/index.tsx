@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
+import useSiteMetadata from '../../../hooks/useSiteMetadata';
 import GlobalStyle from '../../../styles/GlobalStyle';
 import theme from '../../../styles/theme';
 import Header from '../../organisms/Header';

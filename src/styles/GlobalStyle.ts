@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import { rules } from '.';
+import { fadeIn } from './theme';
 
-const GlobalStyle = createGlobalStyle`
+export default createGlobalStyle`
   * {
     box-sizing: border-box;
   }
@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     background: ${props => props.theme.colors.bg};
-    color: #fff;
+    color: ${props => props.theme.colors.baseText[0]};
   }
 
   body {
@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      line-height: 1.5;
+    line-height: 1.5;
   }
 
   img,
@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #fff;
+    color: ${props => props.theme.colors.baseText[0]};
     text-decoration: none;
   }
 
@@ -46,9 +46,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .wf-active .js-content {
-    animation: ${rules.fadeIn} .5s linear;
+    animation: ${fadeIn} .5s linear;
     animation-fill-mode: both;
   }
 `;
-
-export default GlobalStyle;

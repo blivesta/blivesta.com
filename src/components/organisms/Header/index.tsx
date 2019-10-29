@@ -16,7 +16,7 @@ const H1 = styled.h1`
   line-height: 1;
 
   ${props => props.theme.media.sm`
-    font-size: ${props => props.theme.fontSizes[8]};
+    font-size: ${props.theme.fontSizes[8]};
   `}
 `;
 
@@ -27,7 +27,7 @@ const P = styled.p`
   margin-bottom: 0;
 
   ${props => props.theme.media.sm`
-    font-size: ${props => props.theme.fontSizes[3]};
+    font-size: ${props.theme.fontSizes[3]};
   `}
 `;
 

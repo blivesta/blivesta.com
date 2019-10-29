@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import useSiteMetadata from '../hooks/useSiteMetadata';
 import Layout from '../components/templates/Layout';
 import Seo from '../components/parts/Seo';
 import ContentBlock from '../components/molecules/ContentBlock';
@@ -29,40 +29,16 @@ const DescriptionJa = styled(Description)`
   margin-bottom: ${props => props.theme.spaces[6]};
 `;
 
-const StyledLists = styled(Lists)`
-  flex-wrap: wrap;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: ${props => props.theme.spaces[6]};
-
-  ${props => props.theme.media.md`
-    flex-direction: row;
-  `}
-`;
-
-const Li = styled.li`
-  width: 100%;
-
-  ${props => props.theme.media.sm`
-    width: 100%;
-  `}
-  ${props => props.theme.media.md`
-    width: 50%;
-  `}
-  ${props => props.theme.media.lg`
-    width: 33.333333%;
-  `}
-`;
-
 const IndexPage = () => {
   const { description } = useSiteMetadata();
 
   return (
     <Layout>
-      <Seo title={description} location="/" />
+      <Seo pageTitle={description} pageLocation="/" />
       <ContentBlock id="about" title="About">
         <ContentTitle>
-          Design to <br />
+          Design to
+          <br />
           accelerate growth
         </ContentTitle>
         <Description>
@@ -74,14 +50,29 @@ const IndexPage = () => {
           デザインを戦略的に考え、企業やブランドをグロースさせるためのお手伝いをしています。リサーチ・コンセプト策定、ビジュアル・UI、Webアプリ・サイト開発を一環して行い、運用でも分析・提案・改善に取り組んでいます。
         </DescriptionJa>
         <H3>Scope of work:</H3>
-        <StyledLists isNotPipeline>
-          <Li>User interface design</Li>
-          <Li>User exprerience design</Li>
-          <Li>Brand Identity design</Li>
-          <Li>Web development</Li>
-          <Li>Softwear development</Li>
-          <Li>Project/Product management</Li>
-        </StyledLists>
+        <Lists
+          isNotPipeline
+          items={[
+            {
+              title: 'User interface design',
+            },
+            {
+              title: 'User exprerience design',
+            },
+            {
+              title: 'Brand Identity design',
+            },
+            {
+              title: 'Web development',
+            },
+            {
+              title: 'Softwear development',
+            },
+            {
+              title: 'Project/Product management',
+            },
+          ]}
+        />
       </ContentBlock>
     </Layout>
   );

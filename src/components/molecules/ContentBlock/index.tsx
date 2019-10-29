@@ -13,7 +13,7 @@ const Flex = styled.div<ContentBlockProps>`
     `}
 
   ${props => props.theme.media.sm`
-    padding-right: ${props => props.theme.spaces[8]};
+    padding-right: ${props.theme.spaces[8]};
   `}
 `;
 
@@ -43,7 +43,7 @@ const H1 = styled.h1`
   transform-origin: top right;
 
   ${props => props.theme.media.sm`
-    font-size: ${props => props.theme.fontSizes[2]};
+    font-size: ${props.theme.fontSizes[2]};
   `}
 `;
 
@@ -58,17 +58,15 @@ interface ContentBlockProps {
   children: React.ReactNode;
 }
 
-const ContentBlock = (props: ContentBlockProps) => (
-  <Container {...props}>
-    <Flex logo={props.logo}>
-      <TitleColumn>{props.logo ? props.logo : <H1>{props.title}</H1>}</TitleColumn>
-      <MainColumn>{props.children}</MainColumn>
-    </Flex>
-  </Container>
+const ContentBlock = ({ id, title, logo, children }: ContentBlockProps) => (
+  <div id={id}>
+    <Container>
+      <Flex logo={logo}>
+        <TitleColumn>{logo || <H1>{title}</H1>}</TitleColumn>
+        <MainColumn>{children}</MainColumn>
+      </Flex>
+    </Container>
+  </div>
 );
-
-ContentBlock.defaultProps = {
-  isHeader: false,
-};
 
 export default ContentBlock;

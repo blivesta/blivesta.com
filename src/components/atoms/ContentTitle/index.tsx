@@ -9,7 +9,7 @@ const H2 = styled.h2`
   margin-top: 0;
 
   ${props => props.theme.media.sm`
-    font-size: ${props => props.theme.fontSizes[6]};
+    font-size: ${props.theme.fontSizes[6]};
   `}
 `;
 
@@ -17,6 +17,6 @@ export interface ContentTitleProps {
   children: React.ReactNode;
 }
 
-const ContentTitle = (props: ContentTitleProps) => <H2 {...props}>{props.children}</H2>;
+const ContentTitle = ({ children }: ContentTitleProps) => <H2>{children}</H2>;
 
 export default ContentTitle;

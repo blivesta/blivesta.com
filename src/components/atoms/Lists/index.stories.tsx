@@ -1,20 +1,39 @@
 import React from 'react';
 // import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import Lists from './';
+import Lists from '.';
 
 storiesOf(`atoms|Lists`, module)
   .add(`default`, () => (
-    <Lists>
-      <li>foo</li>
-      <li>bar</li>
-      <li>baz</li>
-    </Lists>
+    <Lists
+      items={[
+        {
+          title: 'foo',
+          linkUrl: 'https://blivesta.com',
+        },
+        {
+          title: 'bar',
+        },
+        {
+          title: 'baz',
+        },
+      ]}
+    />
   ))
   .add(`isNotPipeline`, () => (
-    <Lists isNotPipeline>
-      <li>foo</li>
-      <li>bar</li>
-      <li>baz</li>
-    </Lists>
+    <Lists
+      isNotPipeline
+      items={[
+        {
+          title: 'foo',
+          linkUrl: 'https://blivesta.com',
+        },
+        {
+          title: 'bar',
+        },
+        {
+          title: 'baz',
+        },
+      ]}
+    />
   ));
