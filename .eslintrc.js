@@ -40,8 +40,6 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
-    'react/prop-types': 'off',
     'react/jsx-wrap-multilines': 'off',
-    'react/jsx-one-expression-per-line': 'off',
   },
 };
