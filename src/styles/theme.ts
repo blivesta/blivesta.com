@@ -29,7 +29,7 @@ const theme = {
       '#ccc', // [2]
     ],
     link: '#fff',
-    bg: '#111',
+    bg: '#141120',
   },
   fontSizes: [
     `${pxToRem(12)}rem`, // [0]

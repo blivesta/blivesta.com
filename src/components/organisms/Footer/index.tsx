@@ -6,11 +6,24 @@ import Container from '../../atoms/Container';
 import Lists from '../../atoms/Lists';
 
 const Wrapper = styled.footer`
-  background-repeat: repeat-x;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDgwIDEyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMjIyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xMjAuMjc3LjA2OWwxMjAuMjA4IDEyMC4yMDhILjA3TDEyMC4yNzcuMDd6Ii8+PHBhdGggZD0iTTM2MC4xMy40MjNsMTE5LjUwMiAxMTkuNS0xMTkuODU1LjM1NC0xMTkuODU0LjM1NHoiLz48L2c+PC9zdmc+');
-  background-position: left bottom -2px;
-  background-size: 100%;
   padding-bottom: 20vw;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-bottom: 25vw solid ${props => props.theme.colors.baseText[0]};
+    border-right: 25vw solid transparent;
+    border-left: 25vw solid transparent;
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
 `;
 
 const Flex = styled.div`
