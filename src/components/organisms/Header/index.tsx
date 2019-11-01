@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import Logo from '../../atoms/Logo';
 import Container from '../../atoms/Container';
@@ -41,8 +41,8 @@ const P = styled.p`
 `;
 
 const Navbar = styled.nav`
-  height: 104px;
-  padding-top: ${props => props.theme.spaces[4]};
+  height: 128px;
+  padding-top: ${props => props.theme.spaces[6]};
   margin-bottom: ${props => props.theme.spaces[8]};
 `;
 
