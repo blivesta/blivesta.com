@@ -24,15 +24,22 @@ export interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const { title, description } = useSiteMetadata();
+  const [path, setPath] = React.useState('');
+
+  React.useEffect(() => {
+    if (typeof window !== `undefined`) {
+      return setPath(window.location.pathname);
+    }
+  }, [path]);
 
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
         <GlobalStyle />
         <Contents className="js-content">
-          <Header siteTitle={title} description={description} />
+          <Header siteTitle={title} description={description} pageLocation={path} />
           <Main>{children}</Main>
-          <Footer siteTitle={title} />
+          <Footer siteTitle={title} pageLocation={path} />
         </Contents>
       </Wrapper>
     </ThemeProvider>

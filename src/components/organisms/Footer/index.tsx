@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Octicon, { Mail } from '@primer/octicons-react';
+import Octicon, { Mail, Home } from '@primer/octicons-react';
+import { Link } from 'gatsby';
 
 import Container from '../../atoms/Container';
 import Lists from '../../atoms/Lists';
@@ -48,21 +49,27 @@ const ContactBlock = styled(Flex)`
 
 const Icon = styled(Octicon)`
   width: 32px;
-  margin-right: ${props => props.theme.spaces[1]};
 `;
 
 interface FooterProps {
   siteTitle: string;
+  pageLocation: string;
 }
 
-const Footer = ({ siteTitle }: FooterProps) => {
+const Footer = ({ siteTitle, pageLocation }: FooterProps) => {
   return (
     <Wrapper>
       <Container>
         <ContactBlock>
-          <a href="mailto:design@blivesta.com">
-            <Icon icon={Mail} />
-          </a>
+          {pageLocation === '/' ? (
+            <Link to="/contact/">
+              <Icon icon={Mail} />
+            </Link>
+          ) : (
+            <Link to="/">
+              <Icon icon={Home} />
+            </Link>
+          )}
         </ContactBlock>
         <Flex>
           <Lists
