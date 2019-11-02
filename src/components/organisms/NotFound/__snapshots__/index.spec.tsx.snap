@@ -6,7 +6,9 @@ exports[`NotFound snapshot 1`] = `
   title="NOT FOUND"
 >
   <styled.h1>
-    You just hit a route that doesn't exist... the sadness.
+    You just hit a route that doesn't exist...
+    <br />
+    the sadness.
   </styled.h1>
 </ContentBlock>
 `;
