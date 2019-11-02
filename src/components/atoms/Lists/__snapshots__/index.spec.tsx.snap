@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List snapshot 1`] = `
+<styled.ul
+  items={
+    Array [
+      Object {
+        "linkUrl": "https://blivesta.com",
+        "title": "foo",
+      },
+      Object {
+        "title": "bar",
+      },
+      Object {
+        "title": "baz",
+      },
+    ]
+  }
+>
+  <styled.li
+    key="0"
+  >
+    <styled.a
+      href="https://blivesta.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      foo
+    </styled.a>
+  </styled.li>
+  <styled.li
+    key="1"
+  >
+    bar
+  </styled.li>
+  <styled.li
+    key="2"
+  >
+    baz
+  </styled.li>
+</styled.ul>
+`;

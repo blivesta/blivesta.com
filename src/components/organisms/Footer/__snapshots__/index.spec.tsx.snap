@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer snapshot 1`] = `
+<styled.footer>
+  <Container>
+    <Styled(styled.div)>
+      <ForwardRef
+        to="/contact/"
+      >
+        <Styled(Octicon)
+          icon={[Function]}
+        />
+      </ForwardRef>
+    </Styled(styled.div)>
+    <styled.div>
+      <Lists
+        items={
+          Array [
+            Object {
+              "linkUrl": "https://github.com/blivesta",
+              "title": "GitHub",
+            },
+            Object {
+              "linkUrl": "https://dribbble.com/blivesta",
+              "title": "dribbble",
+            },
+            Object {
+              "linkUrl": "https://twitter.com/blivesta",
+              "title": "Twitter",
+            },
+            Object {
+              "linkUrl": "https://instagram.com/blivesta",
+              "title": "Instagram",
+            },
+          ]
+        }
+      />
+    </styled.div>
+    <styled.p>
+      © 
+      2019
+       
+      blivesta
+    </styled.p>
+  </Container>
+</styled.footer>
+`;

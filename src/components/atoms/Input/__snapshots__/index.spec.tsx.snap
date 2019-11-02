@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input snapshot 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+  ",
+          "
+  width: 100%;
+  font-size: ",
+          [Function],
+          ";
+  color: ",
+          [Function],
+          ";
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  padding: 0 ",
+          [Function],
+          ";
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid ",
+          [Function],
+          ";
+  transition: background, border-bottom 0.2s;
+
+  &:focus {
+    border-bottom: 1px solid ",
+          [Function],
+          ";
+    background: rgba(61, 16, 107, 0.15);
+  }
+",
+          "
+
+  height: 40px;
+",
+        ],
+      },
+      "displayName": "styled.input",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "input",
+      "toString": [Function],
+      "usesTheme": true,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
