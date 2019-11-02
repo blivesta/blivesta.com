@@ -31,14 +31,14 @@ jobs:
     steps:
       - build
       - run:
-          name: Jest
-          command: yarn test:ci
-      - run:
           name: Lint
           command: yarn lint
       - run:
           name: Tsc
           command: yarn tsc
+      - run:
+          name: Jest
+          command: yarn test:ci
       - run:
           name: Gatsby
           command: yarn build
