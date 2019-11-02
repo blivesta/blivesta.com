@@ -15,12 +15,12 @@ commands:
       - checkout
       - restore_cache:
           keys:
-            - v2-yarn-{{ checksum "yarn.lock" }}
+            - v2-yarn-{{ checksum "yarn.lock" }}-{{ arch}}
       - run:
           name: Install Dependencies
           command: yarn install --pure-lockfile
       - save_cache:
-          key: v2-yarn-{{ checksum "yarn.lock" }}
+          key: v2-yarn-{{ checksum "yarn.lock" }}-{{ arch}}
           paths:
             - ./node_modules
 
