@@ -2,12 +2,12 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: circleci/node:8.11.4
-    working_directory: ~/repo        
+      - image: circleci/node:10.16.0
+    working_directory: chmod -R 777 ~/repo        
   reg:
     docker:
       - image: regviz/node-xcb
-    working_directory: ~/repo
+    working_directory: chmod -R 777 ~/repo
 
 commands:
   setup:
@@ -15,12 +15,12 @@ commands:
       - checkout
       - restore_cache:
           keys:
-            - v2-yarn-{{ checksum "yarn.lock" }}-{{ arch}}
+            - yarn-cache-{{ checksum "yarn.lock" }}-{{ arch}}
       - run:
           name: Install Dependencies
           command: yarn install --pure-lockfile
       - save_cache:
-          key: v2-yarn-{{ checksum "yarn.lock" }}-{{ arch}}
+          key: yarn-cache-{{ checksum "yarn.lock" }}-{{ arch}}
           paths:
             - ~/repo/node_modules
 
