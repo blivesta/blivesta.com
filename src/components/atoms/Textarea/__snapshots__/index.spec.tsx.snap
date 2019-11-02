@@ -63,7 +63,6 @@ exports[`Textarea snapshot 1`] = `
       "styledComponentId": "sc-bwzfXH",
       "target": "textarea",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }
