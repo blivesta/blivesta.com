@@ -10,7 +10,7 @@ executors:
     working_directory: ~/repo
 
 commands:
-  build:
+  setup:
     steps:
       - checkout
       - restore_cache:
@@ -25,11 +25,11 @@ commands:
             - ~/repo/node_modules
 
 jobs:
-  build:
+  test:
     executor: node-executor
     working_directory: ~/repo
     steps:
-      - build
+      - setup
       - run:
           name: Lint
           command: yarn lint
@@ -39,6 +39,11 @@ jobs:
       - run:
           name: Jest
           command: yarn test:ci
+  build:
+    executor: node-executor
+    working_directory: ~/repo
+    steps:
+      - setup
       - run:
           name: Gatsby
           command: yarn build
@@ -46,7 +51,7 @@ jobs:
     executor: reg
     working_directory: ~/repo
     steps:
-      - build
+      - setup
       - run:
           name: Screenshot
           command: yarn screenshot
@@ -58,5 +63,14 @@ workflows:
   version: 2
   build_pipeline:
     jobs:
-      - build
+      - test
+          filters:
+            branches:
+              ignore:
+                - master
       - regression
+          filters:
+            branches:
+              ignore:
+                - master
+      - build
