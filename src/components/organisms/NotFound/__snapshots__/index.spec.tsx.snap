@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound snapshot 1`] = `
+<ContentBlock
+  id="notFound"
+  title="NOT FOUND"
+>
+  <styled.h1>
+    You just hit a route that doesn't exist... the sadness.
+  </styled.h1>
+</ContentBlock>
+`;
