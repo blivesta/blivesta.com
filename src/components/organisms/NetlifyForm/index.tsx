@@ -20,6 +20,7 @@ const Row = styled.div`
 
   ${props => props.theme.media.sm`
     flex-direction: row;
+    margin-bottom: ${props.theme.spaces[3]};
   `}
 `;
 
@@ -28,10 +29,10 @@ const Column = styled.div`
 
   ${props => props.theme.media.sm`
     &:first-child {
-      padding-right: ${props => props.theme.spaces[4]};
+      padding-right: ${props.theme.spaces[4]};
     }
     &:last-child {
-      padding-left: ${props => props.theme.spaces[4]};
+      padding-left: ${props.theme.spaces[4]};
     }
   `}
 `;
@@ -52,6 +53,13 @@ const NetlifyForm = () => {
           </InputItem>
         </Column>
         <Column>
+          <InputItem title="Company" htmlFor="company">
+            <Input type="text" id="company" name="company" />
+          </InputItem>
+        </Column>
+      </Row>
+      <Row>
+        <Column>
           <InputItem title="Email" htmlFor="email" required>
             <Input
               type="email"
@@ -63,12 +71,17 @@ const NetlifyForm = () => {
             />
           </InputItem>
         </Column>
+        <Column>
+          <InputItem title="Phone" htmlFor="phone">
+            <Input type="tel" id="phone" name="phone" />
+          </InputItem>
+        </Column>
       </Row>
       <InputItem title="Message" htmlFor="meaasage" required>
-        <Textarea id="meaasage" name="meaasage" required aria-required></Textarea>
+        <Textarea id="meaasage" name="meaasage" required aria-required />
       </InputItem>
       <ButtonBox>
-        <Button type="submit">Send</Button>
+        <Button type="submit">Submit</Button>
       </ButtonBox>
     </Form>
   );

@@ -3,10 +3,6 @@ import styled from 'styled-components';
 
 import P from '../../atoms/P';
 
-// const P = styled.p`
-//   margin-bottom: ${props => props.theme.spaces[5]};
-// `;
-
 const Label = styled.label`
   font-family: ${props => props.theme.fonts.en};
   letter-spacing: 0.25em;

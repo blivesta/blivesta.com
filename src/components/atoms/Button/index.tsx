@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   background-color: transparent;
   color: ${props => props.theme.colors.baseText[0]};
   font-weight: normal;
+  font-family: ${props => props.theme.fonts.avantGarde};
   font-size: ${props => props.theme.fontSizes[1]};
   padding: 0 ${props => props.theme.spaces[4]};
   height: 40px;

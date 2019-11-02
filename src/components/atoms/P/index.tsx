@@ -26,7 +26,7 @@ const StyledP = styled.p<PProps>`
   ${props =>
     props.last &&
     css`
-      margin-bottom: ${props => props.theme.spaces[6]};
+      margin-bottom: ${props.theme.spaces[6]};
     `}
 `;
 
