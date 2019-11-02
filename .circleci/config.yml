@@ -22,7 +22,7 @@ commands:
       - save_cache:
           key: v2-yarn-{{ checksum "yarn.lock" }}-{{ arch}}
           paths:
-            - ./node_modules
+            - ~/repo/node_modules
 
 jobs:
   build:
