@@ -30,7 +30,7 @@ const IndexPage = () => {
         <P lang="ja" last justify>
           デザインを戦略的に考え、企業やブランドをグロースさせるためのお手伝いをしています。リサーチ・コンセプト策定、ビジュアル・UI、Webアプリ・サイト開発を一環して行い、運用でも分析・提案・改善に取り組んでいます。
         </P>
-        <SubTitle>Scope of work:</SubTitle>
+        <SubTitle>Capabilitties:</SubTitle>
         <Lists
           isNotPipeline
           items={[
