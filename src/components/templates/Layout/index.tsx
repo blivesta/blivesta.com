@@ -23,7 +23,7 @@ export interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const { title, description } = useSiteMetadata();
+  const { title } = useSiteMetadata();
   const [path, setPath] = React.useState('');
 
   React.useEffect(() => {
@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Wrapper>
         <GlobalStyle />
         <Contents className="js-content">
-          <Header siteTitle={title} description={description} pageLocation={path} />
+          <Header siteTitle={title} pageLocation={path} />
           <Main>{children}</Main>
           <Footer siteTitle={title} pageLocation={path} />
         </Contents>

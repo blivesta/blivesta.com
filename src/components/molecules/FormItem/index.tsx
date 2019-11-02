@@ -20,14 +20,14 @@ const Required = styled.span`
   padding-left: ${props => props.theme.spaces[0]};
 `;
 
-interface InputItemProps {
+interface FormItemProps {
   title: string;
   htmlFor?: string;
   children: React.ReactNode;
   required?: boolean;
 }
 
-const InputItem = ({ title, required, htmlFor, children }: InputItemProps) => (
+const FormItem = ({ title, required, htmlFor, children }: FormItemProps) => (
   <P>
     <Label htmlFor={htmlFor}>
       {title}
@@ -37,4 +37,4 @@ const InputItem = ({ title, required, htmlFor, children }: InputItemProps) => (
   </P>
 );
 
-export default InputItem;
+export default FormItem;

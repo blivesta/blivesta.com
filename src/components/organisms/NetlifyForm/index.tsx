@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Button from '../../atoms/Button';
 import Input from '../../atoms/Input';
 import Textarea from '../../atoms/Textarea';
-import InputItem from '../../molecules/InputItem';
+import FormItem from '../../molecules/FormItem';
 
 const Form = styled.form`
   padding-right: ${props => props.theme.spaces[6]};
@@ -48,19 +48,19 @@ const NetlifyForm = () => {
       <Input type="hidden" name="bot-field" />
       <Row>
         <Column>
-          <InputItem title="Name" htmlFor="name" required>
+          <FormItem title="Name" htmlFor="name" required>
             <Input type="text" id="name" name="name" required aria-required />
-          </InputItem>
+          </FormItem>
         </Column>
         <Column>
-          <InputItem title="Company" htmlFor="company">
+          <FormItem title="Company" htmlFor="company">
             <Input type="text" id="company" name="company" />
-          </InputItem>
+          </FormItem>
         </Column>
       </Row>
       <Row>
         <Column>
-          <InputItem title="Email" htmlFor="email" required>
+          <FormItem title="Email" htmlFor="email" required>
             <Input
               type="email"
               id="email"
@@ -69,17 +69,17 @@ const NetlifyForm = () => {
               required
               aria-required
             />
-          </InputItem>
+          </FormItem>
         </Column>
         <Column>
-          <InputItem title="Phone" htmlFor="phone">
+          <FormItem title="Phone" htmlFor="phone">
             <Input type="tel" id="phone" name="phone" />
-          </InputItem>
+          </FormItem>
         </Column>
       </Row>
-      <InputItem title="Message" htmlFor="meaasage" required>
+      <FormItem title="Message" htmlFor="meaasage" required>
         <Textarea id="meaasage" name="meaasage" required aria-required />
-      </InputItem>
+      </FormItem>
       <ButtonBox>
         <Button type="submit">Submit</Button>
       </ButtonBox>

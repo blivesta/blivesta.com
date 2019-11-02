@@ -62,11 +62,11 @@ const Footer = ({ siteTitle, pageLocation }: FooterProps) => {
       <Container>
         <ContactBlock>
           {pageLocation === '/' ? (
-            <Link to="/contact/">
+            <Link to="/contact/" title="contact">
               <Icon icon={Mail} />
             </Link>
           ) : (
-            <Link to="/">
+            <Link to="/" title="home">
               <Icon icon={Home} />
             </Link>
           )}
