@@ -30,7 +30,8 @@ const H1 = styled.h1`
 `;
 
 const StyledLink = styled(Link)`
-  display: inline-flex;
+  display: inline-block;
+  width: 100%;
 `;
 
 const P = styled.p`
