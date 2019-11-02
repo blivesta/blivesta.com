@@ -53,7 +53,6 @@ exports[`Input snapshot 1`] = `
       "styledComponentId": "sc-bdVaJa",
       "target": "input",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }

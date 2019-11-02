@@ -33,7 +33,6 @@ exports[`Title snapshot 1`] = `
       "styledComponentId": "sc-bdVaJa",
       "target": "h1",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }

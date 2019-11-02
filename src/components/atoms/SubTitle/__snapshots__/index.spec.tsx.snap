@@ -31,7 +31,6 @@ exports[`SubTitle snapshot 1`] = `
       "styledComponentId": "sc-bdVaJa",
       "target": "h3",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }
