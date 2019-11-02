@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea snapshot 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bwzfXH",
+        "isStatic": false,
+        "rules": Array [
+          "
+  ",
+          "
+  width: 100%;
+  font-size: ",
+          [Function],
+          ";
+  color: ",
+          [Function],
+          ";
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  padding: 0 ",
+          [Function],
+          ";
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid ",
+          [Function],
+          ";
+  transition: background, border-bottom 0.2s;
+
+  &:focus {
+    border-bottom: 1px solid ",
+          [Function],
+          ";
+    background: rgba(61, 16, 107, 0.15);
+  }
+",
+          ";
+
+  height: 200px;
+  padding-top: ",
+          [Function],
+          ";
+  padding-bottom: ",
+          [Function],
+          ";
+  margin-bottom: ",
+          [Function],
+          ";
+  resize: none;
+",
+        ],
+      },
+      "displayName": "styled.textarea",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bwzfXH",
+      "target": "textarea",
+      "toString": [Function],
+      "usesTheme": true,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

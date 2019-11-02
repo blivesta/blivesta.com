@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputItem snapshot 1`] = `
+<P>
+  <styled.label>
+    title
+  </styled.label>
+  <styled.div>
+    ...
+  </styled.div>
+</P>
+`;
