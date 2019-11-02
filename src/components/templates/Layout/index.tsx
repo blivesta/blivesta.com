@@ -27,8 +27,8 @@ const Layout = ({ children }: LayoutProps) => {
   const [path, setPath] = React.useState('');
 
   React.useEffect(() => {
-    if (typeof window !== `undefined`) {
-      return setPath(window.location.pathname);
+    if (typeof window !== 'undefined') {
+      setPath(window.location.pathname);
     }
   }, [path]);
 
