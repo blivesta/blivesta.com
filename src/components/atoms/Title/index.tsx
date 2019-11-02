@@ -1,7 +1,6 @@
-import * as React from 'react';
 import styled from 'styled-components';
 
-const H2 = styled.h2`
+const Title = styled.h1`
   font-family: ${props => props.theme.fonts.avantGarde};
   font-size: ${props => props.theme.fontSizes[4]};
   text-transform: uppercase;
@@ -13,10 +12,4 @@ const H2 = styled.h2`
   `}
 `;
 
-export interface ContentTitleProps {
-  children: React.ReactNode;
-}
-
-const ContentTitle = ({ children }: ContentTitleProps) => <H2>{children}</H2>;
-
-export default ContentTitle;
+export default Title;
