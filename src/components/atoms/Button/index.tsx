@@ -28,7 +28,7 @@ const StyledButton = styled.button`
   text-decoration: none;
   letter-spacing: 0.5em;
   text-indent: 0.5em;
-  transition: background-color, color 0.2s;
+  transition: background-color 0.4s;
 
   &:last-child {
     margin-right: 0;
@@ -36,8 +36,7 @@ const StyledButton = styled.button`
   &:hover,
   &:focus,
   &:active {
-    background-color: ${props => props.theme.colors.baseText[0]};
-    color: ${props => props.theme.colors.bg};
+    background-color: rgba(255, 255, 255, 0.1);
   }
 `;
 

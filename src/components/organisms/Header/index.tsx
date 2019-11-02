@@ -29,6 +29,10 @@ const H1 = styled.h1`
   line-height: 1;
 `;
 
+const StyledLink = styled(Link)`
+  display: inline-flex;
+`;
+
 const P = styled.p`
   font-family: ${props => props.theme.fonts.en};
   font-size: ${props => props.theme.fontSizes[1]};
@@ -69,9 +73,9 @@ const Header = ({ siteTitle, description, pageLocation }: HeaderProps) => {
       {pageLocation === '/' ? (
         <ContentBlock
           logo={
-            <Link to="/">
+            <StyledLink to="/">
               <Logo />
-            </Link>
+            </StyledLink>
           }
         >
           <HomeH1>{siteTitle}</HomeH1>
@@ -80,14 +84,14 @@ const Header = ({ siteTitle, description, pageLocation }: HeaderProps) => {
       ) : (
         <Navbar>
           <Container>
-            <Link to="/">
+            <StyledLink to="/">
               <LogoWrap>
                 <StyledLogo>
                   <Logo />
                 </StyledLogo>
                 <H1>{siteTitle}</H1>
               </LogoWrap>
-            </Link>
+            </StyledLink>
           </Container>
         </Navbar>
       )}
