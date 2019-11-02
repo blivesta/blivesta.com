@@ -3,11 +3,11 @@ executors:
   node-executor:
     docker:
       - image: circleci/node:10.16.0
-    working_directory: chmod -R 777 ~/repo        
+    working_directory: ~/repo        
   reg:
     docker:
       - image: regviz/node-xcb
-    working_directory: chmod -R 777 ~/repo
+    working_directory: ~/repo
 
 commands:
   setup:
