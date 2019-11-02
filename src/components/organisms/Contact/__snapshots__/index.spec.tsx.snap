@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact snapshot 1`] = `
+<ContentBlock
+  id="contact"
+  title="Contact"
+>
+  <styled.h1>
+    Let’s talk.
+  </styled.h1>
+  <P
+    lang="en"
+  >
+    Please share your questions, comments and business inquiries below and we will get back to you as soon as possible.
+  </P>
+  <P
+    lang="ja"
+    last={true}
+  >
+    ご質問、ご意見、ビジネスに関するお問い合わせは下記にご記入ください。できるだけ早くご連絡いたします。
+  </P>
+  <NetlifyForm />
+</ContentBlock>
+`;

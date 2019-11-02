@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thanks snapshot 1`] = `
+<ContentBlock
+  id="thanks"
+  title="Send complete"
+>
+  <styled.h1>
+    Thank you for contact
+  </styled.h1>
+  <P
+    lang="en"
+  >
+    The message has been sent successfully. We will contact you as soon as possible. Thank you.
+  </P>
+  <P
+    lang="ja"
+  >
+    送信が完了しました。できるだけ早くご連絡いたします。ありがとうございました。
+  </P>
+</ContentBlock>
+`;
