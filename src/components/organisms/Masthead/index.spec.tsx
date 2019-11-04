@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Header from '.';
+import Masthead from '.';
 
-describe('Header', () => {
+describe('Masthead', () => {
   it('snapshot', () => {
-    const tree = shallow(<Header siteTitle="blivesta" pageLocation="/" />);
+    const tree = shallow(<Masthead siteTitle="blivesta" description="description" />);
     expect(toJson(tree)).toMatchSnapshot();
   });
 });

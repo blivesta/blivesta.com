@@ -13,14 +13,13 @@ const StyledButton = styled.button`
   text-decoration: none;
   user-select: none;
   white-space: nowrap;
-  background-color: transparent;
-  color: ${props => props.theme.colors.baseText[0]};
+  background-color: ${({ theme }) => theme.colors.button.bg};
+  color: ${({ theme }) => theme.colors.baseText[0]};
   font-weight: normal;
-  font-family: ${props => props.theme.fonts.avantGarde};
-  font-size: ${props => props.theme.fontSizes[1]};
-  padding: 0 ${props => props.theme.spaces[4]};
-  height: 40px;
-  border: 2px solid ${props => props.theme.colors.baseText[0]};
+  font-size: ${({ theme }) => theme.fontSizes[1]};
+  padding: 0 ${({ theme }) => theme.spaces[4]};
+  height: ${({ theme }) => theme.control.height};
+  border: 2px solid ${({ theme }) => theme.colors.button.border};
   cursor: pointer;
   opacity: 1;
   pointer-events: auto;
@@ -28,7 +27,7 @@ const StyledButton = styled.button`
   text-decoration: none;
   letter-spacing: 0.5em;
   text-indent: 0.5em;
-  transition: background-color 0.4s;
+  transition: background-color ${({ theme }) => theme.transition};
 
   &:last-child {
     margin-right: 0;
@@ -36,7 +35,7 @@ const StyledButton = styled.button`
   &:hover,
   &:focus,
   &:active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: ${({ theme }) => theme.colors.button.forcus.bg};
   }
 `;
 

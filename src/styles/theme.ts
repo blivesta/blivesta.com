@@ -1,3 +1,4 @@
+import chroma from 'chroma-js';
 import { keyframes } from 'styled-components';
 import { generateMedia } from 'styled-media-query';
 
@@ -21,16 +22,7 @@ const customMedia = generateMedia({
   xl: '1440px',
 });
 
-const theme = {
-  colors: {
-    baseText: [
-      '#fff', // [0]
-      '#777', // [1]
-      '#ccc', // [2]
-    ],
-    link: '#fff',
-    bg: '#120824',
-  },
+export const vars = {
   fontSizes: [
     `${pxToRem(12)}rem`, // [0]
     `${pxToRem(14)}rem`, // [1]
@@ -65,6 +57,90 @@ const theme = {
     lg: customMedia.greaterThan('lg'),
     xl: customMedia.greaterThan('xl'),
   },
+  control: {
+    height: `${pxToRem(40)}rem`,
+  },
+  transition: '0.4s ease-out',
 };
 
-export default theme;
+export const mainColor = '#120824';
+
+export const darkTheme = {
+  ...vars,
+  colors: {
+    baseText: [
+      '#fff', // [0]
+      chroma('#fff')
+        .alpha(0.4)
+        .hex(), // [1]
+      chroma('#fff')
+        .alpha(0.8)
+        .hex(), // [2]
+    ],
+    link: '#fff',
+    bg: mainColor,
+    logo: mainColor,
+    input: {
+      bg: 'transparent',
+      border: '#777',
+      forcus: {
+        bg: chroma(mainColor)
+          .brighten(2)
+          .alpha(0.1)
+          .hex(),
+        border: '#fff',
+      },
+    },
+    button: {
+      bg: 'transparent',
+      border: '#fff',
+      forcus: {
+        bg: chroma(mainColor)
+          .brighten(2)
+          .alpha(0.2)
+          .hex(),
+        border: '#fff',
+      },
+    },
+  },
+};
+
+export const lightTheme = {
+  ...vars,
+  colors: {
+    baseText: [
+      mainColor, // [0]
+      chroma(mainColor)
+        .alpha(0.4)
+        .hex(), // [1]
+      chroma(mainColor)
+        .alpha(0.8)
+        .hex(), // [2]
+    ],
+    link: mainColor,
+    bg: '#fff',
+    logo: mainColor,
+    input: {
+      bg: 'transparent',
+      border: '#777',
+      forcus: {
+        bg: chroma(mainColor)
+          .brighten(2)
+          .alpha(0.05)
+          .hex(),
+        border: mainColor,
+      },
+    },
+    button: {
+      bg: 'transparent',
+      border: mainColor,
+      forcus: {
+        bg: chroma(mainColor)
+          .brighten(2)
+          .alpha(0.2)
+          .hex(),
+        border: mainColor,
+      },
+    },
+  },
+};

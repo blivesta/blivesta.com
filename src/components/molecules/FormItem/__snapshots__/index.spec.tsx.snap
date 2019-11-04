@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputItem snapshot 1`] = `
+exports[`FormItem snapshot 1`] = `
 <P>
   <styled.label>
     title

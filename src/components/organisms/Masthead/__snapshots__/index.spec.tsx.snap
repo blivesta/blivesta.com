@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Masthead snapshot 1`] = `
+<ContentBlock
+  logo={
+    <ForwardRef(Styled(Component))
+      to="/"
+    >
+      <Logo />
+    </ForwardRef(Styled(Component))>
+  }
+>
+  <styled.h1>
+    blivesta
+  </styled.h1>
+  <styled.p>
+    description
+  </styled.p>
+</ContentBlock>
+`;

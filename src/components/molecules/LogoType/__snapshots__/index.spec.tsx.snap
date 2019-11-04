@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoType snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <Logo />
+  </styled.div>
+  <styled.h1>
+    blivesta
+  </styled.h1>
+</styled.div>
+`;

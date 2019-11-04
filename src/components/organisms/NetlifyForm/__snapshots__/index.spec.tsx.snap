@@ -19,7 +19,7 @@ exports[`NetlifyForm snapshot 1`] = `
   />
   <styled.div>
     <styled.div>
-      <InputItem
+      <FormItem
         htmlFor="name"
         required={true}
         title="Name"
@@ -31,10 +31,10 @@ exports[`NetlifyForm snapshot 1`] = `
           required={true}
           type="text"
         />
-      </InputItem>
+      </FormItem>
     </styled.div>
     <styled.div>
-      <InputItem
+      <FormItem
         htmlFor="company"
         title="Company"
       >
@@ -43,12 +43,12 @@ exports[`NetlifyForm snapshot 1`] = `
           name="company"
           type="text"
         />
-      </InputItem>
+      </FormItem>
     </styled.div>
   </styled.div>
   <styled.div>
     <styled.div>
-      <InputItem
+      <FormItem
         htmlFor="email"
         required={true}
         title="Email"
@@ -61,10 +61,10 @@ exports[`NetlifyForm snapshot 1`] = `
           required={true}
           type="email"
         />
-      </InputItem>
+      </FormItem>
     </styled.div>
     <styled.div>
-      <InputItem
+      <FormItem
         htmlFor="phone"
         title="Phone"
       >
@@ -73,10 +73,10 @@ exports[`NetlifyForm snapshot 1`] = `
           name="phone"
           type="tel"
         />
-      </InputItem>
+      </FormItem>
     </styled.div>
   </styled.div>
-  <InputItem
+  <FormItem
     htmlFor="meaasage"
     required={true}
     title="Message"
@@ -87,7 +87,7 @@ exports[`NetlifyForm snapshot 1`] = `
       name="meaasage"
       required={true}
     />
-  </InputItem>
+  </FormItem>
   <styled.div>
     <Button
       type="submit"

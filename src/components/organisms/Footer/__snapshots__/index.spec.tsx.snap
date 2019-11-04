@@ -2,14 +2,13 @@
 
 exports[`Footer snapshot 1`] = `
 <styled.footer>
-  <Container>
+  <styled.div>
     <Styled(styled.div)>
       <ForwardRef
+        title="contact"
         to="/contact/"
       >
-        <Styled(Octicon)
-          icon={[Function]}
-        />
+        <[object Object] />
       </ForwardRef>
     </Styled(styled.div)>
     <styled.div>
@@ -42,6 +41,6 @@ exports[`Footer snapshot 1`] = `
        
       blivesta
     </styled.p>
-  </Container>
+  </styled.div>
 </styled.footer>
 `;

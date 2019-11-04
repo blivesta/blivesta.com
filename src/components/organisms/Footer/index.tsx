@@ -1,8 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Octicon, { Mail, Home } from '@primer/octicons-react';
 import { Link } from 'gatsby';
 
+import IconMail from '../../../assets/icons/mail.svg';
+import IconHome from '../../../assets/icons/home.svg';
 import Container from '../../atoms/Container';
 import Lists from '../../atoms/Lists';
 
@@ -24,6 +25,13 @@ const Wrapper = styled.footer`
   }
   &::after {
     right: 0;
+  }
+
+  & svg {
+    fill: ${({ theme }) => theme.colors.baseText[0]};
+    width: 32px;
+    height: 32px;
+    margin-top: -4px;
   }
 `;
 
@@ -47,10 +55,6 @@ const ContactBlock = styled(Flex)`
   justify-content: center;
 `;
 
-const Icon = styled(Octicon)`
-  width: 32px;
-`;
-
 interface FooterProps {
   siteTitle: string;
   pageLocation: string;
@@ -62,12 +66,12 @@ const Footer = ({ siteTitle, pageLocation }: FooterProps) => {
       <Container>
         <ContactBlock>
           {pageLocation === '/' ? (
-            <Link to="/contact/">
-              <Icon icon={Mail} />
+            <Link to="/contact/" title="contact">
+              <IconMail />
             </Link>
           ) : (
-            <Link to="/">
-              <Icon icon={Home} />
+            <Link to="/" title="home">
+              <IconHome />
             </Link>
           )}
         </ContactBlock>

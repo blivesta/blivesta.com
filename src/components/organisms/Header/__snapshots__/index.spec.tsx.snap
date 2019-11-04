@@ -2,21 +2,32 @@
 
 exports[`Header snapshot 1`] = `
 <styled.header>
-  <ContentBlock
-    logo={
-      <ForwardRef(Styled(Component))
-        to="/"
-      >
-        <Logo />
-      </ForwardRef(Styled(Component))>
-    }
+  <Styled(styled.div)
+    pageLocation="/"
+    siteTitle="blivesta"
   >
-    <styled.h1>
-      blivesta
-    </styled.h1>
-    <styled.p>
-      description
-    </styled.p>
-  </ContentBlock>
+    <styled.nav>
+      <styled.ul>
+        <styled.li>
+          <ForwardRef
+            title="contact"
+            to="/contact/"
+          >
+            <[object Object] />
+          </ForwardRef>
+        </styled.li>
+        <styled.li>
+          <styled.div
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <[object Object] />
+          </styled.div>
+        </styled.li>
+      </styled.ul>
+    </styled.nav>
+  </Styled(styled.div)>
 </styled.header>
 `;

@@ -2,106 +2,106 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import Logo from '../../atoms/Logo';
+import IconMail from '../../../assets/icons/mail.svg';
+import IconHome from '../../../assets/icons/home.svg';
+import IconSun from '../../../assets/icons/sunny.svg';
+import IconMoon from '../../../assets/icons/moon.svg';
+import LogoType from '../../molecules/LogoType';
 import Container from '../../atoms/Container';
-import ContentBlock from '../../molecules/ContentBlock';
 
-const Wrapper = styled.header``;
-
-const HomeH1 = styled.h1`
-  font-family: ${props => props.theme.fonts.avantGarde};
-  font-weight: 700;
-  font-size: ${props => props.theme.fontSizes[7]};
-  margin-top: -8px;
-  margin-bottom: ${props => props.theme.spaces[1]};
-  line-height: 1;
-
-  ${props => props.theme.media.sm`
-    font-size: ${props.theme.fontSizes[8]};
-  `}
-`;
-
-const H1 = styled.h1`
-  font-family: ${props => props.theme.fonts.avantGarde};
-  font-weight: 700;
-  font-size: ${props => props.theme.fontSizes[3]};
-  margin-bottom: 0;
-  line-height: 1;
-`;
-
-const StyledLink = styled(Link)`
-  display: inline-block;
-  width: 100%;
-`;
-
-const P = styled.p`
-  font-family: ${props => props.theme.fonts.en};
-  font-size: ${props => props.theme.fontSizes[1]};
-  color: ${props => props.theme.colors.baseText[2]};
-  margin-bottom: 0;
-
-  ${props => props.theme.media.sm`
-    font-size: ${props.theme.fontSizes[3]};
-  `}
-`;
-
-const Navbar = styled.nav`
+const StyledHeader = styled.header`
   height: 128px;
-  padding-top: ${props => props.theme.spaces[6]};
-  margin-bottom: ${props => props.theme.spaces[8]};
+  margin-bottom: ${({ theme }) => theme.spaces[8]};
+  position: relative;
 `;
 
-const LogoWrap = styled.div`
+const StyledContainer = styled(Container)<HeaderProps>`
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: ${props => (props.pageLocation === '/' ? 'flex-end' : 'space-between')};
 `;
 
-const StyledLogo = styled.div`
-  width: 32px;
-  height: 32px;
-  margin-right: ${props => props.theme.spaces[1]};
+const Nav = styled.nav`
+  font-size: ${({ theme }) => theme.fontSizes[1]};
+
+  & svg {
+    fill: ${({ theme }) => theme.colors.baseText[0]};
+    width: 20px;
+    height: 20px;
+    margin-top: -4px;
+  }
+`;
+
+const Ul = styled.ul`
+  display: flex;
+  margin: 0;
+  list-style: none;
+`;
+
+const Li = styled.li`
+  text-transform: uppercase;
+  padding-right: ${props => props.theme.spaces[4]};
+
+  &:last-child {
+    padding-right: 0;
+  }
+`;
+
+const ModeButton = styled.div`
+  cursor: pointer;
+  fill: ${({ theme }) => theme.colors.baseText[0]};
+  transition: opacity ${({ theme }) => theme.transition};
+  will-change: opacity;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 interface HeaderProps {
   siteTitle: string;
-  description: string;
   pageLocation: string;
+  themeState?: string | null;
+  themeSwich?: () => void;
 }
 
-const Header = ({ siteTitle, description, pageLocation }: HeaderProps) => {
-  return (
-    <Wrapper>
-      {pageLocation === '/' ? (
-        <ContentBlock
-          logo={
-            <StyledLink to="/">
-              <Logo />
-            </StyledLink>
-          }
-        >
-          <HomeH1>{siteTitle}</HomeH1>
-          <P>{description}</P>
-        </ContentBlock>
-      ) : (
-        <Navbar>
-          <Container>
-            <StyledLink to="/">
-              <LogoWrap>
-                <StyledLogo>
-                  <Logo />
-                </StyledLogo>
-                <H1>{siteTitle}</H1>
-              </LogoWrap>
-            </StyledLink>
-          </Container>
-        </Navbar>
-      )}
-    </Wrapper>
-  );
-};
+const Header = ({ siteTitle, pageLocation, themeSwich, themeState }: HeaderProps) => {
+  const themeToggle = () => {
+    return themeSwich && themeSwich();
+  };
 
-Header.defaultProps = {
-  siteTitle: ``,
+  return (
+    <StyledHeader>
+      <StyledContainer pageLocation={pageLocation} siteTitle={siteTitle}>
+        {pageLocation !== '/' && (
+          <Link to="/">
+            <LogoType siteTitle={siteTitle} />
+          </Link>
+        )}
+        <Nav>
+          <Ul>
+            <Li>
+              {pageLocation === '/' ? (
+                <Link to="/contact/" title="contact">
+                  <IconMail />
+                </Link>
+              ) : (
+                <Link to="/" title="home">
+                  <IconHome />
+                </Link>
+              )}
+            </Li>
+            <Li>
+              <ModeButton onClick={themeToggle} onKeyPress={themeToggle} role="button" tabIndex={0}>
+                {themeState === 'light' ? <IconMoon /> : <IconSun />}
+              </ModeButton>
+            </Li>
+          </Ul>
+        </Nav>
+      </StyledContainer>
+    </StyledHeader>
+  );
 };
 
 export default Header;

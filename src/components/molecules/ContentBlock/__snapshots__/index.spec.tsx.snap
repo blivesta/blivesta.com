@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentBlock snapshot 1`] = `
-<div>
-  <Container>
+<styled.section>
+  <styled.div>
     <styled.div>
       <styled.div>
         <styled.h1 />
@@ -11,6 +11,6 @@ exports[`ContentBlock snapshot 1`] = `
         ...
       </styled.div>
     </styled.div>
-  </Container>
-</div>
+  </styled.div>
+</styled.section>
 `;

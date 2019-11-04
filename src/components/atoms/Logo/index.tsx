@@ -6,7 +6,7 @@ const PathLeft = styled.path`
 `;
 
 const PathRight = styled.path`
-  fill: ${props => props.theme.colors.bg};
+  fill: ${({ theme }) => theme.colors.logo};
 `;
 
 const Logo = () => {

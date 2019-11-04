@@ -14,16 +14,16 @@ exports[`Input snapshot 1`] = `
   ",
           "
   width: 100%;
+  padding: 0 ",
+          [Function],
+          ";
   font-size: ",
           [Function],
           ";
   color: ",
           [Function],
           ";
-  background: transparent;
-  outline: none;
-  box-shadow: none;
-  padding: 0 ",
+  background-color: ",
           [Function],
           ";
   border-top: 0;
@@ -32,18 +32,26 @@ exports[`Input snapshot 1`] = `
   border-bottom: 1px solid ",
           [Function],
           ";
-  transition: background, border-bottom 0.2s;
+  outline: none;
+  box-shadow: none;
+  transition: background, border-bottom ",
+          [Function],
+          ";
 
   &:focus {
     border-bottom: 1px solid ",
           [Function],
           ";
-    background: rgba(61, 16, 107, 0.15);
+    background-color: ",
+          [Function],
+          ";
   }
 ",
           "
 
-  height: 40px;
+  height: ",
+          [Function],
+          ";
 ",
         ],
       },

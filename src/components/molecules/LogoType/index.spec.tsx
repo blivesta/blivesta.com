@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import InputItem from '.';
+import LogoType from '.';
 
-describe('InputItem', () => {
+describe('LogoType', () => {
   it('snapshot', () => {
-    const tree = shallow(<InputItem title="title">...</InputItem>);
+    const tree = shallow(<LogoType siteTitle="blivesta" />);
     expect(toJson(tree)).toMatchSnapshot();
   });
 });

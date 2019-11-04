@@ -1,6 +1,9 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
+
 import Container from '../../atoms/Container';
+
+const Wrapper = styled.section``;
 
 const Flex = styled.div<ContentBlockProps>`
   display: flex;
@@ -8,7 +11,7 @@ const Flex = styled.div<ContentBlockProps>`
   ${props =>
     props.logo &&
     css`
-      padding-top: 30vh;
+      padding-top: 15vh;
       padding-bottom: 30vh;
     `}
 
@@ -59,14 +62,14 @@ interface ContentBlockProps {
 }
 
 const ContentBlock = ({ id, title, logo, children }: ContentBlockProps) => (
-  <div id={id}>
+  <Wrapper id={id}>
     <Container>
       <Flex logo={logo}>
         <TitleColumn>{logo || <H1>{title}</H1>}</TitleColumn>
         <MainColumn>{children}</MainColumn>
       </Flex>
     </Container>
-  </div>
+  </Wrapper>
 );
 
 export default ContentBlock;
