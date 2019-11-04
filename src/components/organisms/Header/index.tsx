@@ -39,9 +39,15 @@ const Li = styled.li`
 interface HeaderProps {
   siteTitle: string;
   pageLocation: string;
+  themeState?: string | null;
+  themeSwich?: () => void;
 }
 
-const Header = ({ siteTitle, pageLocation }: HeaderProps) => {
+const Header = ({ siteTitle, pageLocation, themeSwich, themeState }: HeaderProps) => {
+  const themeToggle = () => {
+    return themeSwich && themeSwich();
+  };
+
   return (
     <StyledHeader>
       <StyledContainer pageLocation={pageLocation} siteTitle={siteTitle}>
@@ -62,6 +68,11 @@ const Header = ({ siteTitle, pageLocation }: HeaderProps) => {
                   <Octicon icon={Home} />
                 </Link>
               )}
+            </Li>
+            <Li>
+              <div onClick={themeToggle} onKeyPress={themeToggle} role="button" tabIndex={0}>
+                {themeState === 'light' ? 'Dark' : 'Light'}
+              </div>
             </Li>
           </Ul>
         </Nav>

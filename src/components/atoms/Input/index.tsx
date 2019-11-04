@@ -2,28 +2,28 @@ import styled, { css } from 'styled-components';
 
 export const inputStyle = css`
   width: 100%;
-  font-size: ${props => props.theme.fontSizes[2]};
-  color: ${props => props.theme.colors.baseText[0]};
-  background: transparent;
-  outline: none;
-  box-shadow: none;
-  padding: 0 ${props => props.theme.spaces[1]};
+  padding: 0 ${({ theme }) => theme.spaces[1]};
+  font-size: ${({ theme }) => theme.fontSizes[2]};
+  color: ${({ theme }) => theme.colors.baseText[0]};
+  background-color: ${({ theme }) => theme.colors.input.bg};
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 1px solid ${props => props.theme.colors.baseText[1]};
-  transition: background, border-bottom 0.2s;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.input.border};
+  outline: none;
+  box-shadow: none;
+  transition: background, border-bottom ${({ theme }) => theme.transition};
 
   &:focus {
-    border-bottom: 1px solid ${props => props.theme.colors.baseText[0]};
-    background: rgba(61, 16, 107, 0.15);
+    border-bottom: 1px solid ${({ theme }) => theme.colors.input.forcus.border};
+    background-color: ${({ theme }) => theme.colors.input.forcus.bg};
   }
 `;
 
 const Input = styled.input`
   ${inputStyle}
 
-  height: 40px;
+  height: ${({ theme }) => theme.control.height};
 `;
 
 export default Input;

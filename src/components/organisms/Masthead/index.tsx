@@ -12,10 +12,12 @@ const H1 = styled.h1`
   margin-top: -8px;
   margin-bottom: ${props => props.theme.spaces[1]};
   line-height: 1;
+  letter-spacing: -0.025em;
+  text-indent: -0.025em;
 
   ${props => props.theme.media.sm`
     font-size: ${props.theme.fontSizes[8]};
-  `}
+  `};
 `;
 
 const StyledLink = styled(Link)`
