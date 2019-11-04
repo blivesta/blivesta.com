@@ -1,14 +1,17 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Octicon, { Mail, Home } from '@primer/octicons-react';
 
+import IconMail from '../../../assets/icons/mail.svg';
+import IconHome from '../../../assets/icons/home.svg';
+import IconSun from '../../../assets/icons/sunny.svg';
+import IconMoon from '../../../assets/icons/moon.svg';
 import LogoType from '../../molecules/LogoType';
 import Container from '../../atoms/Container';
 
 const StyledHeader = styled.header`
   height: 128px;
-  margin-bottom: ${props => props.theme.spaces[8]};
+  margin-bottom: ${({ theme }) => theme.spaces[8]};
   position: relative;
 `;
 
@@ -19,7 +22,16 @@ const StyledContainer = styled(Container)<HeaderProps>`
   justify-content: ${props => (props.pageLocation === '/' ? 'flex-end' : 'space-between')};
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  font-size: ${({ theme }) => theme.fontSizes[1]};
+
+  & svg {
+    fill: ${({ theme }) => theme.colors.baseText[0]};
+    width: 20px;
+    height: 20px;
+    margin-top: -4px;
+  }
+`;
 
 const Ul = styled.ul`
   display: flex;
@@ -33,6 +45,17 @@ const Li = styled.li`
 
   &:last-child {
     padding-right: 0;
+  }
+`;
+
+const ModeButton = styled.div`
+  cursor: pointer;
+  fill: ${({ theme }) => theme.colors.baseText[0]};
+  transition: opacity ${({ theme }) => theme.transition};
+  will-change: opacity;
+
+  &:hover {
+    opacity: 0.6;
   }
 `;
 
@@ -61,18 +84,18 @@ const Header = ({ siteTitle, pageLocation, themeSwich, themeState }: HeaderProps
             <Li>
               {pageLocation === '/' ? (
                 <Link to="/contact/" title="contact">
-                  <Octicon icon={Mail} />
+                  <IconMail />
                 </Link>
               ) : (
                 <Link to="/" title="home">
-                  <Octicon icon={Home} />
+                  <IconHome />
                 </Link>
               )}
             </Li>
             <Li>
-              <div onClick={themeToggle} onKeyPress={themeToggle} role="button" tabIndex={0}>
-                {themeState === 'light' ? 'Dark' : 'Light'}
-              </div>
+              <ModeButton onClick={themeToggle} onKeyPress={themeToggle} role="button" tabIndex={0}>
+                {themeState === 'light' ? <IconMoon /> : <IconSun />}
+              </ModeButton>
             </Li>
           </Ul>
         </Nav>

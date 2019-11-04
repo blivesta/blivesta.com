@@ -13,7 +13,7 @@
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
     "format:ci": "prettier 'src/**/*.{tsx,ts}'",
     "serve": "gatsby serve",
-    "svg": "svgo {src/assets,static}/**/*.svg --enable=removeDimensions",
+    "svg": "svgo src/assets/**/*.svg --enable=removeDimensions",
     "test": "jest --watch",
     "test:ci": "jest",
     "tsc": "tsc -p tsconfig.json --skipLibCheck",
@@ -24,7 +24,6 @@
     "screenshot": "zisui --serverCmd 'start-storybook -p 6006 -s ./public' http://localhost:6006 --serverTimeout 1000000 --viewport '1280x800'"
   },
   "dependencies": {
-    "@primer/octicons-react": "^9.2.0",
     "@storybook/react": "^5.2.5",
     "@types/react": "^16.9.9",
     "chroma-js": "^2.1.0",

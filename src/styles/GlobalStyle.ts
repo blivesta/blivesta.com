@@ -10,8 +10,8 @@ export default createGlobalStyle`
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    background: ${props => props.theme.colors.bg};
-    color: ${props => props.theme.colors.baseText[0]};
+    background: ${({ theme }) => theme.colors.bg};
+    color: ${({ theme }) => theme.colors.baseText[0]};
   }
 
   body {
@@ -19,7 +19,7 @@ export default createGlobalStyle`
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: ${props => props.theme.fonts.ja};
+    font-family: ${({ theme }) => theme.fonts.ja};
     line-height: 1.5;
   }
 
@@ -31,13 +31,13 @@ export default createGlobalStyle`
   }
 
   a {
-    color: ${props => props.theme.colors.baseText[0]};
+    color: ${({ theme }) => theme.colors.baseText[0]};
     text-decoration: none;
-    transition: opacity .4s;
+    transition: opacity ${({ theme }) => theme.transition};
     will-change: opacity;
 
     &:hover {
-      opacity: .8;
+      opacity: .6;
     }
   }
 
