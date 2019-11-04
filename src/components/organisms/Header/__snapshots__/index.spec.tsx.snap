@@ -13,13 +13,18 @@ exports[`Header snapshot 1`] = `
             title="contact"
             to="/contact/"
           >
-            <Octicon
-              className="octicon"
-              icon={[Function]}
-              size={16}
-              verticalAlign="text-bottom"
-            />
+            <[object Object] />
           </ForwardRef>
+        </styled.li>
+        <styled.li>
+          <styled.div
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <[object Object] />
+          </styled.div>
         </styled.li>
       </styled.ul>
     </styled.nav>

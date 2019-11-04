@@ -8,9 +8,7 @@ exports[`Footer snapshot 1`] = `
         title="contact"
         to="/contact/"
       >
-        <Styled(Octicon)
-          icon={[Function]}
-        />
+        <[object Object] />
       </ForwardRef>
     </Styled(styled.div)>
     <styled.div>
