@@ -5,7 +5,7 @@ import Header from '.';
 
 describe('Header', () => {
   it('snapshot', () => {
-    const tree = shallow(<Header siteTitle="blivesta" description="description" pageLocation="/" />);
+    const tree = shallow(<Header siteTitle="blivesta" pageLocation="/" />);
     expect(toJson(tree)).toMatchSnapshot();
   });
 });

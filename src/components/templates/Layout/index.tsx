@@ -22,7 +22,7 @@ const Contents = styled.div``;
 const Main = styled.main``;
 
 export interface LayoutProps {
-  themeState: string | null;
+  themeState?: string | null;
   children: React.ReactNode;
 }
 
