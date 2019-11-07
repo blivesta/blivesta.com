@@ -6,8 +6,8 @@ import ContentBlock from '../../molecules/ContentBlock';
 
 const H1 = styled.h1`
   font-family: ${({ theme }) => theme.fonts.avantGarde};
-  font-weight: 700;
   font-size: ${({ theme }) => theme.fontSizes[7]};
+  font-weight: 700;
   margin-top: -8px;
   margin-bottom: ${({ theme }) => theme.spaces[1]};
   line-height: 1;
