@@ -75,7 +75,7 @@ const Header = ({ siteTitle, pageLocation, themeSwich, themeState }: HeaderProps
     <StyledHeader>
       <StyledContainer pageLocation={pageLocation} siteTitle={siteTitle}>
         {pageLocation !== '/' && (
-          <Link to="/">
+          <Link to="/" title="logo">
             <LogoType siteTitle={siteTitle} />
           </Link>
         )}

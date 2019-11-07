@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import P from '../../atoms/P';
 
 const Label = styled.label`
-  font-family: ${props => props.theme.fonts.en};
+  font-family: ${({ theme }) => theme.fonts.en};
   letter-spacing: 0.25em;
   text-transform: uppercase;
   text-indent: 0.25em;
-  margin-bottom: ${props => props.theme.spaces[1]};
+  margin-bottom: ${({ theme }) => theme.spaces[1]};
 `;
 
 const Item = styled.div`
@@ -17,7 +17,7 @@ const Item = styled.div`
 `;
 
 const Required = styled.span`
-  padding-left: ${props => props.theme.spaces[0]};
+  padding-left: ${({ theme }) => theme.spaces[0]};
 `;
 
 interface FormItemProps {

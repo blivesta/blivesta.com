@@ -2,23 +2,23 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 
 const en = css`
-  font-family: ${props => props.theme.fonts.en};
-  font-size: ${props => props.theme.fontSizes[2]};
+  font-family: ${({ theme }) => theme.fonts.en};
+  font-size: ${({ theme }) => theme.fontSizes[2]};
 `;
 
 const ja = css`
-  font-family: ${props => props.theme.fonts.ja};
-  font-size: ${props => props.theme.fontSizes[1]};
+  font-family: ${({ theme }) => theme.fonts.ja};
+  font-size: ${({ theme }) => theme.fontSizes[1]};
   line-height: 1.7;
 `;
 
 const StyledP = styled.p<PProps>`
   margin-top: 0;
-  margin-bottom: ${props => props.theme.spaces[3]};
+  margin-bottom: ${({ theme }) => theme.spaces[3]};
 
-  ${props => (props.lang === 'en' ? en : ja)}
-  ${props =>
-    props.justify &&
+  ${({ lang }) => (lang === 'en' ? en : ja)}
+  ${({ justify }) =>
+    justify &&
     css`
       text-align: justify;
     `}

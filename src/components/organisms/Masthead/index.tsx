@@ -1,38 +1,32 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import Logo from '../../atoms/Logo';
 import ContentBlock from '../../molecules/ContentBlock';
 
 const H1 = styled.h1`
-  font-family: ${props => props.theme.fonts.avantGarde};
+  font-family: ${({ theme }) => theme.fonts.avantGarde};
   font-weight: 700;
-  font-size: ${props => props.theme.fontSizes[7]};
+  font-size: ${({ theme }) => theme.fontSizes[7]};
   margin-top: -8px;
-  margin-bottom: ${props => props.theme.spaces[1]};
+  margin-bottom: ${({ theme }) => theme.spaces[1]};
   line-height: 1;
   letter-spacing: -0.025em;
   text-indent: -0.025em;
 
-  ${props => props.theme.media.sm`
-    font-size: ${props.theme.fontSizes[8]};
+  ${({ theme }) => theme.media.sm`
+    font-size: ${theme.fontSizes[8]};
   `};
 `;
 
-const StyledLink = styled(Link)`
-  display: inline-block;
-  width: 100%;
-`;
-
 const P = styled.p`
-  font-family: ${props => props.theme.fonts.en};
-  font-size: ${props => props.theme.fontSizes[1]};
-  color: ${props => props.theme.colors.baseText[2]};
+  font-family: ${({ theme }) => theme.fonts.en};
+  font-size: ${({ theme }) => theme.fontSizes[1]};
+  color: ${({ theme }) => theme.colors.baseText[2]};
   margin-bottom: 0;
 
-  ${props => props.theme.media.sm`
-    font-size: ${props.theme.fontSizes[3]};
+  ${({ theme }) => theme.media.sm`
+    font-size: ${theme.fontSizes[3]};
   `}
 `;
 
@@ -43,13 +37,7 @@ interface MastheadProps {
 
 const Masthead = ({ siteTitle, description }: MastheadProps) => {
   return (
-    <ContentBlock
-      logo={
-        <StyledLink to="/">
-          <Logo />
-        </StyledLink>
-      }
-    >
+    <ContentBlock logo={<Logo />}>
       <H1>{siteTitle}</H1>
       <P>{description}</P>
     </ContentBlock>
