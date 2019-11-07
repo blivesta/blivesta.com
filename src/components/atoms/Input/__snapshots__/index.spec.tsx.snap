@@ -37,6 +37,8 @@ exports[`Input snapshot 1`] = `
   transition: background, border-bottom ",
           [Function],
           ";
+  -webkit-appearance: none;
+  border-radius: 0;
 
   &:focus {
     border-bottom: 1px solid ",
