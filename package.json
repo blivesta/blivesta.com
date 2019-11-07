@@ -92,6 +92,7 @@
     "reg-notify-github-plugin": "^0.7.26",
     "reg-publish-s3-plugin": "^0.7.25",
     "reg-suit": "^0.8.2",
+    "svg-react-loader": "^0.4.6",
     "svgo": "^1.3.0",
     "typescript": "^3.6.4",
     "zisui": "^1.3.5"
