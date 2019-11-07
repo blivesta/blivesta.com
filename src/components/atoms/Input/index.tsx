@@ -13,6 +13,8 @@ export const inputStyle = css`
   outline: none;
   box-shadow: none;
   transition: background, border-bottom ${({ theme }) => theme.transition};
+  -webkit-appearance: none;
+  border-radius: 0;
 
   &:focus {
     border-bottom: 1px solid ${({ theme }) => theme.colors.input.forcus.border};
