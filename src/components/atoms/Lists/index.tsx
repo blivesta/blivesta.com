@@ -6,7 +6,7 @@ const Ul = styled.ul<ListsProps>`
   list-style: none;
   padding-left: 0;
   margin-top: 0;
-  font-family: ${props => props.theme.fonts.en};
+  font-family: ${({ theme }) => theme.fonts.en};
 
   ${props =>
     props.isNotPipeline &&
@@ -23,11 +23,11 @@ const Ul = styled.ul<ListsProps>`
 `;
 
 const Li = styled.li<ListProps>`
-  font-size: ${props => props.theme.fontSizes[1]};
+  font-size: ${({ theme }) => theme.fontSizes[1]};
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding-right: ${props => props.theme.spaces[2]};
-  margin-bottom: ${props => props.theme.spaces[0]};
+  padding-right: ${({ theme }) => theme.spaces[2]};
+  margin-bottom: ${({ theme }) => theme.spaces[0]};
 
   ${props =>
     props.isNotPipeline

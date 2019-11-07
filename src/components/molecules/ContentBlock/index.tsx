@@ -8,24 +8,28 @@ const Wrapper = styled.section``;
 const Flex = styled.div<ContentBlockProps>`
   display: flex;
   padding-bottom: 20vh;
-  ${props =>
-    props.logo &&
+  ${({ logo }) =>
+    logo &&
     css`
-      padding-top: 15vh;
+      padding-top: 10vh;
       padding-bottom: 30vh;
+
+      ${({ theme }) => theme.media.sm`
+          padding-top: 15vh;
+      `}
     `}
 
-  ${props => props.theme.media.sm`
-    padding-right: ${props.theme.spaces[8]};
+  ${({ theme }) => theme.media.sm`
+    padding-right: ${theme.spaces[8]};
   `}
 `;
 
 const TitleColumn = styled.div`
   width: 44px;
-  margin-right: ${props => props.theme.spaces[3]};
+  margin-right: ${({ theme }) => theme.spaces[3]};
   position: relative;
 
-  ${props => props.theme.media.sm`
+  ${({ theme }) => theme.media.sm`
     width: 80px;
   `}
 `;
@@ -34,19 +38,19 @@ const H1 = styled.h1`
   display: flex;
   position: absolute;
   top: 0;
-  right: ${props => props.theme.spaces[4]};
+  right: ${({ theme }) => theme.spaces[4]};
   margin: 0;
-  font-family: ${props => props.theme.fonts.en};
-  font-size: ${props => props.theme.fontSizes[1]};
-  color: ${props => props.theme.colors.baseText[1]};
+  font-family: ${({ theme }) => theme.fonts.en};
+  font-size: ${({ theme }) => theme.fontSizes[1]};
+  color: ${({ theme }) => theme.colors.baseText[1]};
   text-transform: uppercase;
   white-space: nowrap;
   letter-spacing: 0.15em;
   transform: rotate(-90deg);
   transform-origin: top right;
 
-  ${props => props.theme.media.sm`
-    font-size: ${props.theme.fontSizes[2]};
+  ${({ theme }) => theme.media.sm`
+    font-size: ${theme.fontSizes[2]};
   `}
 `;
 

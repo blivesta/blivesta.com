@@ -2,13 +2,7 @@
 
 exports[`Masthead snapshot 1`] = `
 <ContentBlock
-  logo={
-    <ForwardRef(Styled(Component))
-      to="/"
-    >
-      <Logo />
-    </ForwardRef(Styled(Component))>
-  }
+  logo={<Logo />}
 >
   <styled.h1>
     blivesta

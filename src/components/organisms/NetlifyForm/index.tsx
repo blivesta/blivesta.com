@@ -7,9 +7,9 @@ import Textarea from '../../atoms/Textarea';
 import FormItem from '../../molecules/FormItem';
 
 const Form = styled.form`
-  padding-right: ${props => props.theme.spaces[6]};
+  padding-right: ${({ theme }) => theme.spaces[6]};
 
-  ${props => props.theme.media.sm`
+  ${({ theme }) => theme.media.sm`
     padding-right: 0;
   `}
 `;
@@ -18,21 +18,21 @@ const Row = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${props => props.theme.media.sm`
+  ${({ theme }) => theme.media.sm`
     flex-direction: row;
-    margin-bottom: ${props.theme.spaces[3]};
+    margin-bottom: ${theme.spaces[3]};
   `}
 `;
 
 const Column = styled.div`
   width: 100%;
 
-  ${props => props.theme.media.sm`
+  ${({ theme }) => theme.media.sm`
     &:first-child {
-      padding-right: ${props.theme.spaces[4]};
+      padding-right: ${theme.spaces[4]};
     }
     &:last-child {
-      padding-left: ${props.theme.spaces[4]};
+      padding-left: ${theme.spaces[4]};
     }
   `}
 `;
