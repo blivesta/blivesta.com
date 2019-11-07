@@ -42,16 +42,16 @@ const Flex = styled.div`
 
 const CopyRight = styled.p`
   width: 100%;
-  font-family: ${props => props.theme.fonts.en};
-  font-size: ${props => props.theme.fontSizes[0]};
-  color: ${props => props.theme.colors.baseText[1]};
+  font-family: ${({ theme }) => theme.fonts.en};
+  font-size: ${({ theme }) => theme.fontSizes[0]};
+  color: ${({ theme }) => theme.colors.baseText[1]};
   text-align: center;
   margin: 0;
-  padding-top: ${props => props.theme.spaces[6]};
+  padding-top: ${({ theme }) => theme.spaces[6]};
 `;
 
 const ContactBlock = styled(Flex)`
-  padding-bottom: ${props => props.theme.spaces[7]};
+  padding-bottom: ${({ theme }) => theme.spaces[7]};
   justify-content: center;
 `;
 
