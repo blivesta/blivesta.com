@@ -73,8 +73,3 @@ workflows:
             branches:
               ignore:
                 - master
-      - build:
-          filters:
-            branches:
-              ignore:
-                - master
