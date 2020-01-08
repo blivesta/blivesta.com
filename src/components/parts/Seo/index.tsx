@@ -19,6 +19,7 @@ function Seo(props: SeoProps) {
       <html lang="ja" />
       <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover" />
       <meta name="description" content={metaDescription} />
+      <meta name="google-site-verification" content="9Ja4n5uhvlfhdrnEG9gDR1bknvUu-6e15raExui_P9U" />
       <meta name="thumbnail" content={`${siteUrl}/icons/icon-512x512.png`} />
       <meta property="og:locale" content="ja" />
       <meta property="og:type" content="website" />
