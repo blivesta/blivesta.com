@@ -44,7 +44,7 @@ jobs:
 
     - name: run reg-suit
       run: |
-        npx reg-suit run
+        yarn reg
 
       env:
         CI: true
