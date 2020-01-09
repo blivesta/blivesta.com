@@ -18,6 +18,7 @@ exports[`Header snapshot 1`] = `
         </styled.li>
         <styled.li>
           <styled.div
+            aria-label="theme switch button"
             onClick={[Function]}
             onKeyPress={[Function]}
             role="button"
