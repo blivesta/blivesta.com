@@ -1,16 +1,9 @@
-name: Node CI
+name: Regression test
 
 on: [pull_request]
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -22,21 +15,14 @@ jobs:
       run: |
         yarn install
 
-    - name: run tsc
+    - name: workaround for detached HEAD
       run: |
-        yarn tsc
+        git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
 
-    - name: run lint
+    - name: run zisui
       run: |
-        yarn lint
+        yarn screenshot
 
-    - name: run test
+    - name: run reg-suit
       run: |
-        yarn test:ci
-
-    - name: run build
-      run: |
-        yarn build
-
-    env:
-      CI: true
+        yarn reg
