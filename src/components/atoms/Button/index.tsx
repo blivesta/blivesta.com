@@ -44,11 +44,12 @@ export interface ButtonProps {
   type?: 'submit' | 'reset' | 'button';
   name?: string;
   disabled?: boolean;
+  ariaLabel?: string;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-const Button = ({ children, type, name, disabled, onClick }: ButtonProps) => (
-  <StyledButton type={type} name={name} disabled={disabled} onClick={onClick}>
+const Button = ({ children, type, name, disabled, onClick, ariaLabel }: ButtonProps) => (
+  <StyledButton type={type} name={name} disabled={disabled} onClick={onClick} aria-label={ariaLabel}>
     {children}
   </StyledButton>
 );
