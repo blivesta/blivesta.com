@@ -32,10 +32,15 @@ const StyledButton = styled.button`
   &:last-child {
     margin-right: 0;
   }
+
   &:hover,
-  &:focus,
   &:active {
-    background-color: ${({ theme }) => theme.colors.button.forcus.bg};
+    background-color: ${({ theme }) => theme.colors.button.hover.bg};
+  }
+
+  &:focus {
+    transition: box-shadow 0.2s ease-out;
+    box-shadow: 0 0 4px 4px ${({ theme }) => theme.colors.button.forcus.shadow};
   }
 `;
 
