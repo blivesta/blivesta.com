@@ -93,7 +93,13 @@ const Header = ({ siteTitle, pageLocation, themeSwich, themeState }: HeaderProps
               )}
             </Li>
             <Li>
-              <ModeButton onClick={themeToggle} onKeyPress={themeToggle} role="button" tabIndex={0}>
+              <ModeButton
+                onClick={themeToggle}
+                onKeyPress={themeToggle}
+                role="button"
+                tabIndex={0}
+                aria-label="theme switch button"
+              >
                 {themeState === 'light' ? <IconMoon /> : <IconSun />}
               </ModeButton>
             </Li>

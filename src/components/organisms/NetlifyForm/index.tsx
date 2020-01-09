@@ -81,7 +81,9 @@ const NetlifyForm = () => {
         <Textarea id="meaasage" name="meaasage" required aria-required />
       </FormItem>
       <ButtonBox>
-        <Button type="submit">Submit</Button>
+        <Button type="submit" ariaLabel="Submit button">
+          Submit
+        </Button>
       </ButtonBox>
     </Form>
   );

@@ -90,6 +90,7 @@ exports[`NetlifyForm snapshot 1`] = `
   </FormItem>
   <styled.div>
     <Button
+      ariaLabel="Submit button"
       type="submit"
     >
       Submit

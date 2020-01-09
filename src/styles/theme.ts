@@ -94,12 +94,16 @@ export const darkTheme = {
     button: {
       bg: 'transparent',
       border: '#fff',
-      forcus: {
+      hover: {
         bg: chroma(mainColor)
           .brighten(2)
           .alpha(0.2)
           .hex(),
-        border: '#fff',
+      },
+      forcus: {
+        shadow: chroma('#fff')
+          .alpha(0.3)
+          .hex(),
       },
     },
   },
@@ -134,12 +138,16 @@ export const lightTheme = {
     button: {
       bg: 'transparent',
       border: mainColor,
-      forcus: {
+      hover: {
         bg: chroma(mainColor)
           .brighten(2)
           .alpha(0.2)
           .hex(),
-        border: mainColor,
+      },
+      forcus: {
+        shadow: chroma(mainColor)
+          .alpha(0.15)
+          .hex(),
       },
     },
   },
