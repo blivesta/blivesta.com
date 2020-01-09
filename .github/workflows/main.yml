@@ -1,0 +1,50 @@
+name: Node CI
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: yarn install
+      run: |
+        yarn install
+
+    - name: workaround for detached HEAD
+      run: |
+        git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+
+    - name: run tsc
+      run: |
+        yarn tsc
+
+    - name: run lint
+      run: |
+        yarn lint
+
+    - name: run test
+      run: |
+        yarn test:ci
+
+    - name: run build
+      run: |
+        yarn build
+
+    - name: run reg-suit
+      run: |
+        npx reg-suit run
+
+      env:
+        CI: true
