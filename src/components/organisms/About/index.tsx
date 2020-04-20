@@ -39,7 +39,7 @@ const About = () => {
             title: 'Web development',
           },
           {
-            title: 'Softwear development',
+            title: 'Software development',
           },
           {
             title: 'Project/Product management',
