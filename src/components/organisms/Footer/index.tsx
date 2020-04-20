@@ -90,6 +90,10 @@ const Footer = ({ siteTitle, pageLocation }: FooterProps) => {
                 title: 'Twitter',
                 linkUrl: 'https://twitter.com/blivesta',
               },
+              {
+                title: 'Instagram',
+                linkUrl: 'https://www.instagram.com/blivesta/',
+              },
             ]}
           />
         </Flex>

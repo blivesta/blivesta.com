@@ -27,6 +27,10 @@ exports[`Footer snapshot 1`] = `
               "linkUrl": "https://twitter.com/blivesta",
               "title": "Twitter",
             },
+            Object {
+              "linkUrl": "https://www.instagram.com/blivesta/",
+              "title": "Instagram",
+            },
           ]
         }
       />
