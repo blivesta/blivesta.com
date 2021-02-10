@@ -30,7 +30,7 @@ const About = () => {
             title: 'User interface design',
           },
           {
-            title: 'User exprerience design',
+            title: 'User experience design',
           },
           {
             title: 'Brand Identity design',
